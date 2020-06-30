@@ -284,7 +284,7 @@ The dropdown should be listed as such:
 - roomtype 
 
 ILC Criteria Configuration
---------------------------------
+--------------------------
 
 Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
@@ -439,8 +439,8 @@ same criterion used in the pairwise comparison configuration file.
    :alt: Main Configuration File
    :scale: 50
 
-3.2.1.5 History Criterion
-+++++++++++++++++++++++++
+History Criterion
++++++++++++++++++
 
 The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
@@ -467,8 +467,8 @@ comparison configuration file.
    :alt: Main Configuration File
    :scale: 50
 
-3.2.2 ILC Curtail Configuration
--------------------------------
+ILC Curtail Configuration
+-------------------------
 
 The curtail configuration parameters inform the ILC application
 what point on the device to command and the value to command
@@ -529,8 +529,8 @@ parameter should be consistent with the measurement from the building
 power meter (i.e., if the building power is measured in
 kilowatts then this value should also use kilowatts).
 
-3.3 ILC Criteria Pairwise Comparison Configuration
-==================================================
+ILC Criteria Pairwise Comparison Configuration
+==============================================
 
 The ILC application uses the AHP to prioritize loads available for
 curtailment. To implement the AHP the ILC application must be
@@ -584,9 +584,10 @@ comparisons to meet the desired consistency. When C.R is
 greater than 0.2, the ILC application provides the “inconsistent
 pairwise comparison” error message.
 
-============================================
-4.0 ILC USE CASE: HEAT PUMP COOLING CONTROLS
-============================================
+===================================================
+ILC USE CASE: HEAT PUMP COOLING CONTROLS 'delete me 
+===================================================
+// potentially not important. 
 
 A demonstration project deployed the ILC application on heat
 pumps during the 2016 summer cooling season. The following
