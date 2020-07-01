@@ -206,7 +206,7 @@ On the left side of the screen under Device clusters, you should see an icon tha
    - LIGHT
 - Cluster priority
 
-You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click <strong>Save New Cluster.</strong> </p>
+You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click Save New Cluster.
 
 
 in the *Device clusters* drop down on the left side of the screen, you should see a drop down that says your personalized cluster in a drop down. once you click on this cluster, there should be a new menu that is shown in the center of the screen once you click on that drop down. There are 5 default settings you can choose once you click the drop down for your personalized cluster. You can move them around and put them in any order you need. There is also a choice to add another cluster. The cluster should default be set like the list shown below: 
