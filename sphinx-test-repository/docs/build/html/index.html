@@ -35,29 +35,30 @@
   <div class="contents topic" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ilc-web-application-user-guide" id="id8">ILC Web application: User guide</a></p>
+<li><p><a class="reference internal" href="#ilc-web-application-user-guide" id="id1">ILC Web application: User guide</a></p>
 <ul>
-<li><p><a class="reference internal" href="#introduction" id="id9">1.0 INTRODUCTION</a></p></li>
-<li><p><a class="reference internal" href="#voltron-analytics-and-controls-platform" id="id10">2.0 VOLTRON: ANALYTICS AND CONTROLS PLATFORM</a></p></li>
-<li><p><a class="reference internal" href="#ilc-application-configuration" id="id11">ILC APPLICATION CONFIGURATION</a></p></li>
-<li><p><a class="reference internal" href="#ilc-use-case-heat-pump-cooling-controls" id="id12">4.0 ILC USE CASE: HEAT PUMP COOLING CONTROLS</a></p></li>
-<li><p><a class="reference internal" href="#ilc-use-case-vav-boxes-and-lighting-control" id="id13">5.0 ILC USE CASE: VAV BOXES AND LIGHTING CONTROL</a></p></li>
-<li><p><a class="reference internal" href="#references" id="id14">6.0 REFERENCES</a></p></li>
+<li><p><a class="reference internal" href="#ilc-application-configuration" id="id2">ILC APPLICATION CONFIGURATION</a></p>
+<ul>
+<li><p><a class="reference internal" href="#importing-master-driver-configuration-store" id="id3">Importing master driver configuration store</a></p></li>
+<li><p><a class="reference internal" href="#ilc-main-configuration-file" id="id4">ILC Main configuration File</a></p></li>
+<li><p><a class="reference internal" href="#adding-a-cluster" id="id5">Adding A cluster</a></p></li>
+<li><p><a class="reference internal" href="#ilc-device-criteria-configuration" id="id6">ILC Device/Criteria Configuration</a></p></li>
+<li><p><a class="reference internal" href="#pairwise-configuration" id="id7">Pairwise configuration</a></p></li>
+<li><p><a class="reference internal" href="#conrol-configuration-empty-add-here" id="id8">Conrol configuration: Empty add here</a></p></li>
+<li><p><a class="reference internal" href="#ilc-criteria-configuration" id="id9">ILC Criteria Configuration</a></p></li>
+<li><p><a class="reference internal" href="#ilc-criteria-pairwise-comparison-configuration" id="id10">ILC Criteria Pairwise Comparison Configuration</a></p></li>
+<li><p><a class="reference internal" href="#indices-and-tables" id="id11">Indices and tables</a></p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="ilc-web-application-user-guide">
-<h1><a class="toc-backref" href="#id8">ILC Web application: User guide</a><a class="headerlink" href="#ilc-web-application-user-guide" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id9">1.0 INTRODUCTION</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p><strong>!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!</strong></p>
-</div>
-<div class="section" id="voltron-analytics-and-controls-platform">
-<h2><a class="toc-backref" href="#id10">2.0 VOLTRON: ANALYTICS AND CONTROLS PLATFORM</a><a class="headerlink" href="#voltron-analytics-and-controls-platform" title="Permalink to this headline">¶</a></h2>
-</div>
+<h1><a class="toc-backref" href="#id1">ILC Web application: User guide</a><a class="headerlink" href="#ilc-web-application-user-guide" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="ilc-application-configuration">
-<h2><a class="toc-backref" href="#id11">ILC APPLICATION CONFIGURATION</a><a class="headerlink" href="#ilc-application-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">ILC APPLICATION CONFIGURATION</a><a class="headerlink" href="#ilc-application-configuration" title="Permalink to this headline">¶</a></h2>
+<p><strong>!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!</strong></p>
 <p>The ILC application behavior is controlled through three
 configuration files:
 the main ILC configuration file,</p>
@@ -69,7 +70,7 @@ the main ILC configuration file,</p>
 controls and the parameters defined within these configuration
 files.</p>
 <div class="section" id="importing-master-driver-configuration-store">
-<h3>Importing master driver configuration store<a class="headerlink" href="#importing-master-driver-configuration-store" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">Importing master driver configuration store</a><a class="headerlink" href="#importing-master-driver-configuration-store" title="Permalink to this headline">¶</a></h3>
 <p>If you want to import a new master driver, in the top left corner of the screen you will see a hamburger drop down menu.
 once you click on that drop down you will see 2 things:</p>
 <ol class="arabic simple">
@@ -78,12 +79,12 @@ once you click on that drop down you will see 2 things:</p>
 </ol>
 <p>if you click on the import new master driver configuration file, it will give you an option to import your
 voltron application file. Once you do this, it will give you the option to choose from the uploaded settings.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/import_Master_driver.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/import_Master_driver.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/import_Master_driver.jpg" />
 </div>
 <div class="section" id="ilc-main-configuration-file">
-<h3>ILC Main configuration File<a class="headerlink" href="#ilc-main-configuration-file" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">ILC Main configuration File</a><a class="headerlink" href="#ilc-main-configuration-file" title="Permalink to this headline">¶</a></h3>
 <p>First lets take a look at the main configuration file. There is an option right at the start that allows you to upload a file. This file that you upload will more than likeley be important to understanding your building number, etc. The nice thing about this application is it will be able to automatically read everything you upload, and give you major ease of access in order to understand your inputs.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/Tutorial_1.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/Tutorial_1.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/master_Driver.jpg" />
 <p>The ILC application behavior is controlled through three
 configuration files:
 - the main ILC configuration file,
@@ -123,7 +124,7 @@ VOLTTRON platform.</p>
 </dd>
 <dt><strong>demand_limit</strong> :</dt><dd><p>The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the <a href="#id15"><span class="problematic" id="id16">average_</span></a>
+kilowatt value. The average time is determined by the <a href="#id12"><span class="problematic" id="id13">average_</span></a>
 building_power_window parameter.</p>
 </dd>
 <dt><strong>curtailment_time</strong> :</dt><dd><p>The amount of time (minutes) the ILC
@@ -175,8 +176,9 @@ parameter is used for configuring the mapper criteria (Section
 </dl>
 <p>Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:</p>
 <a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/stagger_Release.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/stagger_Release.jpg" /></a>
+</div>
 <div class="section" id="adding-a-cluster">
-<h4>Adding A cluster<a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id5">Adding A cluster</a><a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h3>
 <p>There are a list of items that you will see in the Main configuration of this application. Once you upload your file, there should be a drop down menu on each option you see. The options you should see are:
 Main configuration:</p>
 <ul class="simple">
@@ -215,10 +217,25 @@ On the left side of the screen under Device clusters, you should see an icon tha
 <li><p>Cluster priority</p></li>
 </ul>
 <p>You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click <strong>Save New Cluster.</strong></p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/Add_cluster.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/Add_cluster.jpg" /></a>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/cluster_type.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/cluster_type.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/Add_cluster.jpg" />
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/cluster_type.jpg" />
 <div class="section" id="customized-cluster-options">
-<h5>Customized Cluster options<a class="headerlink" href="#customized-cluster-options" title="Permalink to this headline">¶</a></h5>
+<h4>Customized Cluster options<a class="headerlink" href="#customized-cluster-options" title="Permalink to this headline">¶</a></h4>
+<p><strong>Clusters:</strong>
+On the left side of the screen under Device clusters, you should see an icon that says <em>+Add cluster</em>. when you click on this item, there is an entire new list of items that it lets you choose from on the right side:
+- Cluster name
+- Cluster type</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>RTU</p></li>
+<li><p>AHU</p></li>
+<li><p>LIGHT</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Cluster priority</p></li>
+</ul>
+<p>You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click &lt;strong&gt;Save New Cluster.&lt;/strong&gt; &lt;/p&gt;</p>
 <p>in the <em>Device clusters</em> drop down on the left side of the screen, you should see a drop down that says your personalized cluster in a drop down. once you click on this cluster, there should be a new menu that is shown in the center of the screen once you click on that drop down. There are 5 default settings you can choose once you click the drop down for your personalized cluster. You can move them around and put them in any order you need. There is also a choice to add another cluster. The cluster should default be set like the list shown below:</p>
 <ul class="simple">
 <li><p>zonetempature_setpoint</p></li>
@@ -231,9 +248,8 @@ On the left side of the screen under Device clusters, you should see an icon tha
 <p>This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.</p>
 </div>
 </div>
-</div>
 <div class="section" id="ilc-device-criteria-configuration">
-<h3>ILC Device/Criteria Configuration<a class="headerlink" href="#ilc-device-criteria-configuration" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">ILC Device/Criteria Configuration</a><a class="headerlink" href="#ilc-device-criteria-configuration" title="Permalink to this headline">¶</a></h3>
 <p>The <em>ILC</em> application is used for management of peak demand for a
 building. Different types of devices are grouped into <em>clusters</em> (e.g.,
 heat pumps could be one cluster of devices while lighting fixtures
@@ -268,8 +284,6 @@ as the curtail information (highlighted in grey in Figure 4). The
 curtail information tells the ILC agent what point on the device to
 command and the value to command that point to achieve the
 desired load reduction for the device.</p>
-<div class="section" id="id1">
-<h4><em>ILC Device/Criteria Configuration</em> :<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>The ILC application is used for management of peak demand for a
 building. Different types of devices are grouped into clusters (e.g.,
 heat pumps could be one cluster of devices while lighting fixtures
@@ -291,9 +305,7 @@ The dropdown should be listed as such:</p>
 <li><p>rated_power</p></li>
 <li><p>roomtype</p></li>
 </ul>
-</div>
-<div class="section" id="ilc-criteria-configuration">
-<h4>ILC Criteria Configuration<a class="headerlink" href="#ilc-criteria-configuration" title="Permalink to this headline">¶</a></h4>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/criteria_order.jpg" />
 <p>Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
@@ -305,32 +317,12 @@ which include the following:</p>
 <li><p>constant criterion</p></li>
 <li><p>history criterion.</p></li>
 </ul>
+<p>these options will be avaliable in the dropdown of whichever option you choose.</p>
 <p>The criteria type is controlled by setting the operation_type
-parameter for each criterion. The following sections describe each
-criterion and its required configuration parameters.
-The criterion name, colored in green in Figure 3 through Figure 8,
-should match the name for the same criterion used in the pairwise
-comparison configuration file (Section 3.3).</p>
-</div>
-<div class="section" id="custom-cluster-pairwise-criteria">
-<h4>Custom cluster Pairwise Criteria:<a class="headerlink" href="#custom-cluster-pairwise-criteria" title="Permalink to this headline">¶</a></h4>
-<p>In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
-The custom cluster will be listed with 3 additional items listed as such:</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/custom_Cluster.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/custom_Cluster.jpg" /></a>
-<p>At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag
-each item in the order you prefer. There is also an additional option at the bottom to <strong>+Add criteria</strong> if you need
-to add more.</p>
-<p>underneath the custom list, you should see a dropdown called: <strong>Pairwise Criteria</strong>. This will have various other customisation
-options as well.</p>
-<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/pairwise_Criteria.jpg" />
-<p>inside of each of the options, there should be a power mode you can set.
-in a dropdown for each.</p>
-<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/zonetemperature_Setpoint.jpg" />
-<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/stage.jpg" />
-<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/history_Zonetemperature.jpg" />
-<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/rated_Power.jpg" />
-<div class="section" id="formula-criterion">
-<h5>Formula Criterion<a class="headerlink" href="#formula-criterion" title="Permalink to this headline">¶</a></h5>
+parameter for each criterion.</p>
+<div class="section" id="formula-criteria">
+<h4>formula criteria<a class="headerlink" href="#formula-criteria" title="Permalink to this headline">¶</a></h4>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/formula.jpg" />
 <p>The formula criterion allows a user to declare mathematical
 formulas that are evaluated using current device measurements
 (data from the device are published by the VOLTTRON platform.
@@ -346,17 +338,16 @@ parameter. The values associated with each point are updated
 when new device data are published by the platform.driver.
 Table 1 lists the supported mathematical operators for the
 formula criterion.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/math_Table.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/math_Table.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/math_Table.jpg" />
 <p>Figure 5 shows an example of a formula criterion configured for a
 heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_5.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_5.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_5.jpg" />
 </div>
-<div class="section" id="status-criterion">
-<h5>Status Criterion<a class="headerlink" href="#status-criterion" title="Permalink to this headline">¶</a></h5>
-<p>The status criterion reads a point (Boolean or enumeration) on the
-device and returns either an on_value or an off_value depending
+<div class="section" id="status-criteria">
+<h4>status criteria<a class="headerlink" href="#status-criteria" title="Permalink to this headline">¶</a></h4>
+<p>device and returns either an on_value or an off_value depending
 on whether the current status of the point is True (enumeration
 value of 1) or False (enumeration value of 0), respectively. The
 following list contains the status criterion configuration parameters:</p>
@@ -373,10 +364,11 @@ Figure 6 shows an example of a status criterion configured for
 a heat pump. The criterion name, rated-power, should match
 the name for the same criterion used in the pairwise comparison
 configuration file.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_6.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_6.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_6.jpg" />
 </div>
-<div class="section" id="mapper-criterion">
-<h5>Mapper Criterion<a class="headerlink" href="#mapper-criterion" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="mapper-criteria">
+<h4>mapper criteria<a class="headerlink" href="#mapper-criteria" title="Permalink to this headline">¶</a></h4>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/mapper.jpg" />
 <p>The mapper criterion allows a user to categorize loads and assign
 values to the categories. For example, room type can be used to
 set the importance of the rooms (heating or cooling of the room
@@ -386,7 +378,7 @@ assigned higher numerical values are regarded as less important
 values. Users set their own priority depending on the
 importance of the room (1: most important and 7: less important).
 Table 2 shows an example of AHP priority based on room type.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/table_2.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_2.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_2.jpg" />
 <p>The following list contains the mapper criterion configuration
 parameters:
 • dict_name – The dictionary name in the main ILC configuration
@@ -397,10 +389,11 @@ Figure 7 shows an example of a mapper criterion configured for
 a heat pump. The criterion name, room-type, should match the
 name for the same criterion used in the pairwise comparison
 configuration file.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_7.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_7.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_7.jpg" />
 </div>
-<div class="section" id="constant-criterion">
-<h5>3.2.1.4 Constant Criterion<a class="headerlink" href="#constant-criterion" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="constant-criteria">
+<h4>constant criteria<a class="headerlink" href="#constant-criteria" title="Permalink to this headline">¶</a></h4>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/constant.jpg" />
 <p>The constant criterion returns a constant value for inclusion in the
 AHP. The following list contains the status criterion configuration
 parameters:
@@ -409,10 +402,11 @@ AHP.</p>
 <p>Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_8.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_8.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_8.jpg" />
 </div>
-<div class="section" id="history-criterion">
-<h5>3.2.1.5 History Criterion<a class="headerlink" href="#history-criterion" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="history-criteria">
+<h4>history criteria<a class="headerlink" href="#history-criteria" title="Permalink to this headline">¶</a></h4>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/history.jpg" />
 <p>The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
 history criterion configuration parameters:</p>
@@ -433,22 +427,40 @@ Figure 9 shows an example of a history criterion</p>
 a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_9.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_9.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_9.jpg" />
 </div>
 </div>
-<div class="section" id="ilc-curtail-configuration">
-<h4>3.2.2 ILC Curtail Configuration<a class="headerlink" href="#ilc-curtail-configuration" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="pairwise-configuration">
+<h3><a class="toc-backref" href="#id7">Pairwise configuration</a><a class="headerlink" href="#pairwise-configuration" title="Permalink to this headline">¶</a></h3>
+<p>In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
+The custom cluster will be listed with 3 additional items listed as such:</p>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/custom_Cluster.jpg" />
+<p>At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag
+each item in the order you prefer. There is also an additional option at the bottom to <strong>+Add criteria</strong> if you need
+to add more.</p>
+<p>underneath the custom list, you should see a dropdown called: <strong>Pairwise Criteria</strong>. This will have various other customisation
+options as well.</p>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/zonetemperature_Setpoint.jpg" />
+<p>inside of each of the options, there should be a power mode you can set.
+in a dropdown for each.</p>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/zonetemperature_Setpoint.jpg" />
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/stage.jpg" />
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/history_Zonetemperature.jpg" />
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/rated_Power.jpg" />
+</div>
+<div class="section" id="conrol-configuration-empty-add-here">
+<h3><a class="toc-backref" href="#id8">Conrol configuration: Empty add here</a><a class="headerlink" href="#conrol-configuration-empty-add-here" title="Permalink to this headline">¶</a></h3>
 <p>The curtail configuration parameters inform the ILC application
 what point on the device to command and the value to command
 that point to achieve the desired load reduction for the device.
 Figure 10 shows the curtail configuration parameters for HP1.
 The conditional_curtail parameters are optional (highlighted
 in grey), but the curtail parameters are required (highlighted</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_10.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_10.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_10.jpg" />
 <p>in yellow).The curtail configuration information is essentially ifelse
 logic embedded in the Java Script Object Notation (JSON)1
 configuration file. The logic is executed as follows (Figure 11):</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_11.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_11.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_11.jpg" />
 <p>This allows the user to curtail the device differently based on
 conditions evaluated at the time of curtailment. If a user does not
 want to use conditional_curtail (this set of parameters is omitted)
@@ -487,10 +499,7 @@ the desired load reduction.
 parameter should be consistent with the measurement from the building
 power meter (i.e., if the building power is measured in
 kilowatts then this value should also use kilowatts).</p>
-</div>
-</div>
-<div class="section" id="ilc-criteria-pairwise-comparison-configuration">
-<h3>3.3 ILC Criteria Pairwise Comparison Configuration<a class="headerlink" href="#ilc-criteria-pairwise-comparison-configuration" title="Permalink to this headline">¶</a></h3>
+<p>ILC Criteria Pairwise Comparison Configuration DELETE ME</p>
 <p>The ILC application uses the AHP to prioritize loads available for
 curtailment. To implement the AHP the ILC application must be
 provided the relative importance of each individual criterion with
@@ -498,11 +507,11 @@ respect to all other criteria (criteria that are used for that device/
 criteria configuration). This information is configured in the criteria
 pairwise comparison configuration file. Figure 12 shows an example
 ILC criteria pairwise comparison configuration file:</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_12.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_12.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_12.jpg" />
 <p>The names for the criteria must match the names of the criteria used
 in the device/criteria configuration file documented in Section 3.2.
 Take the first entry in the configuration file as an example (Figure 13):</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_13.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_13.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_13.jpg" />
 <p>This tells the ILC application that the:
 • zonetemperature-setpoint-deviation criterion is seven times
 more important than the curtail_count criterion
@@ -533,10 +542,8 @@ comparison by measuring the Consistency Ratio (C.R).2
 comparisons to meet the desired consistency. When C.R is
 greater than 0.2, the ILC application provides the “inconsistent
 pairwise comparison” error message.</p>
-</div>
-</div>
-<div class="section" id="ilc-use-case-heat-pump-cooling-controls">
-<h2><a class="toc-backref" href="#id12">4.0 ILC USE CASE: HEAT PUMP COOLING CONTROLS</a><a class="headerlink" href="#ilc-use-case-heat-pump-cooling-controls" title="Permalink to this headline">¶</a></h2>
+<p>ILC USE CASE: HEAT PUMP COOLING CONTROLS ‘delete me</p>
+<p>// potentially not important.</p>
 <p>A demonstration project deployed the ILC application on heat
 pumps during the 2016 summer cooling season. The following
 section describes this use case.
@@ -544,7 +551,7 @@ The test described in this use case was conducted at PNNL
 BUILDING8. PNNL BUILDING8 is a single-story building consisting
 of office spaces and a large shop for operations and maintenance
 work. Information for PNNL BUILDING8 is summarized in Table 3:</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/table_3.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_3.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_3.jpg" />
 <p>Heating and cooling at PNNL BUILDING8 is accomplished by 10
 heat pumps that serve the building. The specifications for the
 heat pumps in PNNL BUILDING8 are given in Table 4. Three heat
@@ -564,12 +571,11 @@ Each heat pump has its own advanced building automation
 system (BAS) controller and is configured to provide discrete
 command signals to the heat pump for staging of the indoor fan,
 compressors, auxiliary heat and economizer.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/table_4.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_4.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_4.jpg" />
 <p>Each of these heat pumps has the following points (Table 5) that are
 trended by a dedicated VOLTTRON node at 1-minute intervals.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/table_5.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_5.jpg" /></a>
-<div class="section" id="ilc-use-case-heat-pump-cooling-control">
-<h3>4.1 ILC Use Case: Heat Pump Cooling Control<a class="headerlink" href="#ilc-use-case-heat-pump-cooling-control" title="Permalink to this headline">¶</a></h3>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_5.jpg" />
+<p>ILC Use Case: Heat Pump Cooling Control DELETE ME</p>
 <p>The goal of the ILC application is to intelligently limit peak demand
 within a building, thereby eliminating or reducing demand charges
 from local electric utilities. To achieve this peak reduction, the
@@ -587,14 +593,14 @@ PNNL BUILDING8 on July 11, 2016. The demand goal for this test
 was chosen to be 90% of the maximum predicted load (i.e., the
 maximum predicted load was 150 kW and the goal was 90% of this
 value – 135 kW).</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_14.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_14.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_14.jpg" />
 <p>Once a demand goal has been determined the ILC main
 configuration file can be updated. The example ILC configuration
 file provided with the ILC source code on GitHub4 contains all the
 required parameters; one must only update the values associated
 with each entry to customize the ILC application. Figure 15 shows
 the configuration file used for the ILC test at PNNL BUILDING8.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_15.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_15.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_15.jpg" />
 <p>The following list describes each parameter and the significance of
 the value configured for that parameter:</p>
 <p><em>campus</em> : The campus name as published by the VOLTTRON
@@ -690,8 +696,8 @@ the least important categories. When a heat pump serves more
 than one zone, the most important zone type served is used for
 categorical assignment.</p>
 </div>
-<div class="section" id="id2">
-<h3>4.2 ILC Criteria Configuration<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ilc-criteria-configuration">
+<h3><a class="toc-backref" href="#id9">ILC Criteria Configuration</a><a class="headerlink" href="#ilc-criteria-configuration" title="Permalink to this headline">¶</a></h3>
 <p>The AHP is multi-criteria decision-making process used by the ILC
 application. The default criteria implemented for ILC of heat pumps
 are explained in this section.</p>
@@ -723,7 +729,7 @@ does not exist (e.g., heat pump compressor turns off) and the
 may indicate internal or external loads (solar gain, perimeter
 zones with poor envelope or high infiltration loads, conference
 rooms with high occupant densities, etc.).</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/cooling_heating_mode.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/cooling_heating_mode.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/cooling_heating_mode.jpg" />
 <p>4. Temperature difference between zone and set point
 (zonetemperature-setpoint-deviation - ΔTzone-csp or ΔTzonehsp
 ): The temperature difference between zone and set point
@@ -734,7 +740,7 @@ and ΔTzone-hsp as shown in Equation 3 for cooling mode and
 Equation 4 for the heating mode. When the value between Tzone
 and Tcsp (or Thsp) is higher than or equal to 0.1, ΔTzone-csp (ΔTzone-hsp)
 should be determined to be 10.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/cooling_heating_mode2.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/cooling_heating_mode2.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/cooling_heating_mode2.jpg" />
 <p>5. Heat pump room type (room-type): Heat pump room type
 provides the means to prioritize each heat pump. The room
 with the higher assigned numerical value is regarded as less
@@ -744,7 +750,7 @@ heat pump prioritization strategy depending on the importance
 of room types served (1: Most importance and 9: Least
 importance). Table 6 shows the heat pump priority based on
 room type for PNNL BUILDING8:</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/table_6.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_6.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_6.jpg" />
 <p>6. Heat pump stages (stage): Second stage cooling results in peak
 power consumption but for shorter operating periods, whereas
 first stage cooling operates longer with a lower peak power.
@@ -757,10 +763,10 @@ stage prioritization can be determined by assigning numerical
 values to FirstStageCooling and to SecondStageCooling (for
 cooling) and to FirstStageHeating and to SecondStageHeating
 (for heating) as shown in Table 7.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/table_7.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_7.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_7.jpg" />
 </div>
-<div class="section" id="id3">
-<h3>4.3 ILC Criteria Pairwise Comparison Configuration<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ilc-criteria-pairwise-comparison-configuration">
+<h3><a class="toc-backref" href="#id10">ILC Criteria Pairwise Comparison Configuration</a><a class="headerlink" href="#ilc-criteria-pairwise-comparison-configuration" title="Permalink to this headline">¶</a></h3>
 <p>The ILC application uses the AHP to prioritize loads available for
 curtailment. To implement the AHP the ILC application must be
 provided the relative importance of each criterion with respect
@@ -768,8 +774,8 @@ to all other criteria (criteria that are used for the device/criteria
 configuration). This information is configured in the criteria pairwise
 comparison configuration file. Figure 16 shows the criteria pairwise
 comparison file used for deployment of ILC in PNNL BUILDING8:</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_16.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_16.jpg" /></a>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_17.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_17.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_16.jpg" />
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_17.jpg" />
 <p>Take the first entry in the configuration file (Figure 13):
 This tells the ILC application that the:</p>
 <ul class="simple">
@@ -814,10 +820,10 @@ criterion the configuration file entry would be modified as follows:</p>
 <p>seven times less important than curtail_count criterion
 (note that 0.1429 is 1/7).
 Take the second entry in the configuration file (Figure 18):</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_18.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_18.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_18.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
-<li><p>stage criterion is five times more important than the <a href="#id17"><span class="problematic" id="id18">curtail_</span></a></p></li>
+<li><p>stage criterion is five times more important than the <a href="#id14"><span class="problematic" id="id15">curtail_</span></a></p></li>
 </ul>
 <p>count criterion</p>
 <ul class="simple">
@@ -832,7 +838,7 @@ Take the second entry in the configuration file (Figure 18):</p>
 <li><p>stage criterion is four times more important than the ratedpower</p></li>
 </ul>
 <p>criterion.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_19.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_19.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_19.jpg" />
 <p>Take the third entry in the configuration file (Figure 19); it tells the
 ILC application that the:</p>
 <ul class="simple">
@@ -848,7 +854,7 @@ ILC application that the:</p>
 </ul>
 <p>important than rated-power criterion/
 Take the fourth entry in the configuration file (Figure 20):</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_20.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_20.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_20.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
 <li><p>curtail_count criterion is three times more important than</p></li>
@@ -859,23 +865,21 @@ Take the fourth entry in the configuration file (Figure 20):</p>
 </ul>
 <p>rated-power criterion
 Take the fifth entry in the configuration file (Figure 21):</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_21.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_21.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_21.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
 <li><p>rated-power criterion is three times more important than the</p></li>
 </ul>
 <p>room-type criterion</p>
 <p>Take the sixth entry in the configuration file (Figure 22):</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_22.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_22.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_22.jpg" />
 <p>This tells the ILC application:
 • The relative importance of the room-type criterion with respect
 to all other criteria has already been specified in the previous
 criteria configuration.
 • The parameter (with empty value) must be specified for the ILC
 application to use the criteria.</p>
-</div>
-<div class="section" id="ilc-device-criteria-configuration-for-heat-pumps-during-cooling-operations">
-<h3>4.4 ILC Device/ Criteria Configuration for Heat Pumps during Cooling Operations<a class="headerlink" href="#ilc-device-criteria-configuration-for-heat-pumps-during-cooling-operations" title="Permalink to this headline">¶</a></h3>
+<p>ILC Device/ Criteria Configuration for Heat Pumps during Cooling Operations DELETE ME</p>
 <p>Heating and cooling in PNNL BUILDING8 is achieved by 10 heat
 pumps. Five of these heat pumps have two stages of cooling (i.e.,
 two compressors that are staged on and off based on the cooling
@@ -885,8 +889,8 @@ lunch room space (thus the room-type/map_key = Lobby). The
 device/criteria configuration was covered in detail in Section 3.2.
 The following information is useful in understanding the ILC test at
 PNNL BUILDING8:</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_23_pt1.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_23_pt1.jpg" /></a>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_23_pt2.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_23_pt2.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_23_pt1.jpg" />
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_23_pt2.jpg" />
 <ul class="simple">
 <li><p>The criteria for FirstStageCooling and</p></li>
 </ul>
@@ -907,11 +911,11 @@ that point to achieve the desired load reduction for the device.
 Figure 24 shows the curtail configuration parameters for HP3. The
 conditional_curtail parameters are optional (highlighted in grey),
 but the curtail parameters are required (highlighted in yellow).</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_24.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_24.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_24.jpg" />
 <p>The curtail configuration information is essentially if-else logic
 embedded in the JSON configuration file. The logic is executed as
 follows (Figure 25):</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_25.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_25.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_25.jpg" />
 <p>This allows the user to curtail the device differently based on
 conditions evaluated at the time of curtailment. If a user does not
 want to use conditional_curtail (this set of parameters is omitted)
@@ -980,51 +984,7 @@ Currently, the ILC application releases all curtailed devices
 simultaneously, but a stagger release algorithm is in testing to
 alleviate the potential rebound effect caused by returning devices
 to normal operations.</p>
-</div>
-<div class="section" id="summary-of-ilc-interactions-during-the-experiment">
-<h3>4.5 Summary of ILC Interactions during the Experiment<a class="headerlink" href="#summary-of-ilc-interactions-during-the-experiment" title="Permalink to this headline">¶</a></h3>
-<p>The ILC application was successful at limiting the peak demand
-during the experiment. Figure 26 shows a summary of the building
-loads and the ILC actions taken during the experiment. When
-building energy consumption peaked in the morning, ILC quickly
-prioritized heat pump operations, shutting down some units
-while running others. There were five possible points of time that
-could have reached the peak demand level. The ILC application
-controlled the heat pump systems to avoid reaching the peak
-demand level, according to the priority list. The results show that
-ILC was able to control the system under the demand level of
-135 kW. Overall, ILC was successful in achieving about 10% peak
-demand reduction compared to the forecasted demand.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_26.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_26.jpg" /></a>
-</div>
-</div>
-<div class="section" id="ilc-use-case-vav-boxes-and-lighting-control">
-<h2><a class="toc-backref" href="#id13">5.0 ILC USE CASE: VAV BOXES AND LIGHTING CONTROL</a><a class="headerlink" href="#ilc-use-case-vav-boxes-and-lighting-control" title="Permalink to this headline">¶</a></h2>
-<p>The ILC application was tested in a simulation environment to
-determine control impacts on a variable air volume (VAV) air
-handling unit (AHU) and a dimmable lighting system. The simulation
-environment was set up using the building control virtual test bed
-(Wetter 2011) and EnergyPlus (Crawley 2001). The simulation model
-was validated by using measurements from the field site. For more
-information about the simulation model, please refer to Hao et al.
-(2017).</p>
-<p>An AHU serving VAV boxes responds to changes in cooling loads
-by reducing the amount of conditioned air flowing to the space
-when the zones are satisfied (lowered cooling demand). In most
-cases, increasing multiple VAV box zone cooling temperature
-setpoints above the current zone temperature creates a cascading
-efficiency load reduction effect. The increased zone temperature
-setpoints reduce the VAV box air volume requirements, which in
-turn reduce the AHU airflow requirements, which in turn reduce the
-AHU fan motor’s horsepower. As the AHU fan motor slows down, it
-also reduces the chilled water flow requirement through the cooling
-coil, resulting in a reduced electrical demand at the chilled water
-plant.</p>
-<p>A dimmable lighting system is very complementary for ILC.
-Dimming the lighting levels can result in an instantaneous electrical
-demand reduction while still maintaining adequate lighting levels.</p>
-<div class="section" id="id4">
-<h3>5.1 ILC Use Case: VAV Boxes and Lighting Control<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>5.1 ILC Use Case: VAV Boxes and Lighting Control DELETE ME</p>
 <p>As discussed in the use case for heat pump cooling control, the
 main ILC configuration file contains building-level configuration
 parameters. Figure 27 shows an example of an ILC main
@@ -1053,7 +1013,7 @@ building power as published by the platform.driver.
 VOLTTRON platform.
 • demand_limit – The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the <a href="#id19"><span class="problematic" id="id20">average_</span></a>
+kilowatt value. The average time is determined by the <a href="#id16"><span class="problematic" id="id17">average_</span></a>
 building_power_window parameter.
 • curtailment_time – The amount of time (minutes) the ILC
 application holds curtailment of devices once the building goal
@@ -1103,17 +1063,13 @@ weighting factor of 0.67 is applied to the VAV devices in the VAV
 cluster). This results in each device with its own score. That score
 determines the device priority in the array of loads that could be
 curtailed during an ILC event.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_27.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_27.jpg" /></a>
-</div>
-<div class="section" id="id5">
-<h3>5.2 ILC Criteria Configuration<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_27.jpg" />
+<p>5.2 ILC Criteria Configuration Delete me</p>
 <p>The criteria implemented for ILC configuration of VAV boxes
 and lighting systems are explained in this section. For a detailed
 description of each of ILC criterion, see Section 3.2.1. Only new
 criteria are described in this section.</p>
-</div>
-<div class="section" id="id6">
-<h3>5.3 ILC Criteria Pairwise Comparison Configuration<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>5.3 ILC Criteria Pairwise Comparison Configuration DELETE ME</p>
 <p>The AHP is multi-criteria decision-making process used by the ILC
 application and applied to different loads. In this case, we apply the
 AHP to VAV box loads with the following descriptions:</p>
@@ -1147,7 +1103,7 @@ deviation from the zone cooling setpoint.</p>
 values that are 50% or more of the maximum airflow rate values
 may affect the level of success for VAV zone cooling setpoint
 adjustments.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_28.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_28.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_28.jpg" />
 <p>2. Lighting level (lightng_levels): The lighting levels can
 have an impact on the productivity, safety, and security of
 building occupants. Therefore, the lighting power capacity
@@ -1162,10 +1118,8 @@ circuits and the dimming control capabilities that may or may
 not exist (dimmable ballasts versus non-dimmable ballasts). In
 addition, daylighting sensors, occupancy sensors, and other BAS
 strategies may already be optimizing lighting systems.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_29.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_29.jpg" /></a>
-</div>
-<div class="section" id="ilc-device-criteria-configuration-for-vav-boxes-and-lighting">
-<h3>5.4 ILC Device/Criteria Configuration for VAV Boxes and Lighting<a class="headerlink" href="#ilc-device-criteria-configuration-for-vav-boxes-and-lighting" title="Permalink to this headline">¶</a></h3>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_29.jpg" />
+<p>5.4 ILC Device/Criteria Configuration for VAV Boxes and Lighting Delete me</p>
 <p>The default criteria implemented for ILC of VAV boxes are
 explained in Figure 30. For a detailed description of ILC device/
 criteria configuration, see Section 3.2. Only new criteria are listed
@@ -1205,7 +1159,7 @@ reduction value(s). The user may need to experiment with
 different levels of zone cooling temperature setpoint increases
 to determine the optimum level of increase that also provides a
 commensurate power demand reduction value.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_30.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_30.jpg" /></a>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_30.jpg" />
 <p>The default criteria implemented for ILC of lighting are explained in
 Figure 31.</p>
 <ul class="simple">
@@ -1234,223 +1188,10 @@ reduced lighting level output commands. For example, the
 reduction in demand can be calculated by multiplying the
 number of lamps that can reduced (dimmed) by their wattage
 rating.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_31.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_31.jpg" /></a>
-</div>
-<div class="section" id="summary-of-ilc-interactions-during-simulation">
-<h3>5.5 Summary of ILC Interactions during Simulation<a class="headerlink" href="#summary-of-ilc-interactions-during-simulation" title="Permalink to this headline">¶</a></h3>
-<p>In our simulation, we evaluated AHU 1, which serves 17 thermal
-zones as shown in Table 8. Table 9 provides a description of the
-AHU under simulation with the rated baseline power.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/table_9.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/table_9.jpg" /></a>
-<p>A 1-day simulation was performed to study the potential for
-reducing the peak demand using ILC. The peak demand is assumed
-to be the highest average power consumption measured in a rolling
-30-minute period. Figure 32 shows ILC simulation results. There
-were seven possible periods during which the building 30-minute
-average peak could have exceeded the target peak demand level.
-The ILC application controlled the VAV terminal boxes (raised the
-cooling set points) to avoid exceeding the target demand limit
-value of 9.5 KW. Results show the ILC application achieved about a
-10% peak demand reduction compared to the results under no ILC
-operations.</p>
-<a class="reference internal image-reference" href="../ILC_Tutorial_Screenshots/figure_32.jpg"><img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_32.jpg" /></a>
-</div>
-</div>
-<div class="section" id="references">
-<h2><a class="toc-backref" href="#id14">6.0 REFERENCES</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p>Aalami H, MP Moghaddam, and GR Yousefi. 2010. Modeling and
-prioritizing demand response programs in power markets. Electric
-Power Systems Research 80(4), 426–435.
-Bian D, M Pipattanasomporn and S Rahman. 2015. A Human
-Expert-Based Approach to Electric Peak Demand Management.
-IEEE Trans. Power deliver 30(3), 1119–1127.
-Cheng EWL, and H Li. 2002. Construction partnering process
-and associated critical success factors: quantitative investigation.
-Journal of Management in Engineering 18(4), 194–202.
-D. B. Crawley, L. K. Lawrie, F. C. Winkelmann et al.,
-“Energyplus:Creating a new-generation building energy simulation
-program,” Energy Buildings, vol. 33, no. 4, pp. 319–331, 2001
-Ding Z, S Srivastava and D Cartes. 2006. Expert system based
-dynamic load shedding scheme for shipboard power systems.
-In Industry Applications Conference, Oct. 2006, 41st IAS Annual
-Meeting Conference Record of the 2006 IEEE, 3(2), 1338–1344.
-Goh, HH, and BC Kok. 2010. Application of Analytic Hierarchy
-Process (AHP) in load shedding scheme for electric power system.
-In International Conference Environment and Electric Engineering,
-May 2010. 9th International Conference, 365–368.
-Hao, H., Corbin, C.D., Kalsi, K. and Pratt, R.G., 2017. Transactive
-control of commercial buildings for demand response. IEEE
-Transactions on Power Systems, 32(1), pp.774-783.</p>
-<p>Lu N, and S Katipamula. 2005. Control strategies of thermostatically
-controlled appliances in a competitive electricity market. In
-Proceedings of Power Engineering Society General Meeting, June
-2005, IEEE 1, 202–207.
-M. Wetter, “Co-simulation of building energy and control systems
-with the building controls virtual test bed,” J. Building Perform.
-Simul., vol. 4, no. 3, pp. 185–203, 2011.
-Thumann A, and DP Mehta. 2001. Handbook of Energy
-Engineering. The Fairmont Press, Inc.
-Triantaphyllou E and HM Stuart. 1995. Using the analytic hierarchy
-process for decision making in engineering applications: some
-challenges, International Journal of Industrial Engineering:
-Applications and Practice 2(1), 35–44.
-Yao Y, Z Lian, S Liu and Z Hou. 2004. Hourly cooling load prediction
-by a combined forecasting model based on analytic hierarchy
-process. International Journal of Thermal Sciences 43(11), 1107–
-1118.</p>
-<p>There are a list of items that you will see in the Main configuration of this application. Once you upload your file, there should be a drop down menu on each option you see. The options you should see are:
-Main configuration:</p>
-<ul class="simple">
-<li><p>Campus</p></li>
-<li><p>Building</p></li>
-<li><dl class="simple">
-<dt>Power meter</dt><dd><ul>
-<li><p>devices</p></li>
-<li><p>Point</p></li>
-<li><p>demand formula (optional)</p></li>
-<li><p>operational Argument</p></li>
-<li><p>Calculator</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Agent ID</p></li>
-<li><p>Demand limit</p></li>
-<li><p>Control time(minutes)</p></li>
-<li><p>Curtailment Confirm</p></li>
-<li><p>Curtailment Break (minutes)</p></li>
-<li><p>Average Building Power Window (minutes)</p></li>
-</ul>
-<p><strong>Clusters:</strong>
-On the left side of the screen under Device clusters, you should see an icon that says <em>+Add cluster</em>. when you click on this item, there is an entire new list of items that it lets you choose from on the right side:
-- Cluster name
-- Cluster type</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>RTU</p></li>
-<li><p>AHU</p></li>
-<li><p>LIGHT</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Cluster priority</p></li>
-</ul>
-<p>You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click &lt;strong&gt;Save New Cluster.&lt;/strong&gt; &lt;/p&gt;
-Customized Cluster options
-==========================
-in the <em>Device clusters</em> drop down on the left side of the screen, you should see a drop down that says your personalized cluster in a drop down. once you click on this cluster, there should be a new menu that is shown in the center of the screen once you click on that drop down. There are 5 default settings you can choose once you click the drop down for your personalized cluster. You can move them around and put them in any order you need. There is also a choice to add another cluster. The cluster should default be set like the list shown below:</p>
-<ul class="simple">
-<li><p>zonetempature_setpoint</p></li>
-<li><p>setpoint</p></li>
-<li><p>history_zonetemperature</p></li>
-<li><p>rated_power</p></li>
-<li><p>roomtype</p></li>
-<li><p><strong>ADD CRITERIA</strong></p></li>
-</ul>
-<p>This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.</p>
-<div class="section" id="pairwise-criteria">
-<h3>Pairwise Criteria<a class="headerlink" href="#pairwise-criteria" title="Permalink to this headline">¶</a></h3>
-<p>This should be the next list of dropdowns you should see. By Default, this dropdown will list out a set of options based upon the previous items you chose to list in whatever order you chose. This will include the item that was put inside after you used the default and your custom addition. &lt;/p&gt;
-Details for list below:
-- <em>zonetemperature-setpoint-deviation</em> criterion is seven
-times more important than <em>curtail_count</em> criterion.</p>
-<ul class="simple">
-<li><p><em>zonetemperature-setpoint-deviation</em> criterion is five</p></li>
-</ul>
-<p>times more important than historical-comparison criterion.</p>
-<ul class="simple">
-<li><p><em>zonetemperature-setpoint-deviation</em> criterion is eight</p></li>
-</ul>
-<p>times more important than room-type criterion</p>
-<ul class="simple">
-<li><p><em>zonetemperature-setpoint-deviation</em> criterion is six times</p></li>
-</ul>
-<p>more important than rated-power criterion</p>
-<ul class="simple">
-<li><p><em>zonetemperature-setpoint-deviation</em> criterion is two</p></li>
-</ul>
-<p>times more important than stage criterion.</p>
-<p>“<em>curtail_count</em>”: 7
-- The <em>zonetemperature-setpoint-deviation</em> criterion
-is seven times more important than the curtail_count
-criterion.</p>
-<p>To configure the <em>zonetemperature-setpoint-deviation</em>
-criterion as seven time less important than <em>curtail_count</em>
-criterion the configuration file entry would be modified as follows:</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>“curtail_count”: 0.1429</dt><dd><ul>
-<li><p>The zonetemperature-setpoint-deviation criterion is</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<p>seven times less important than curtail_count criterion
-(note that 0.1429 is 1/7).</p>
-<blockquote>
-<div><dl class="simple">
-<dt>“stage” {</dt><dd><p>“curtail_coount” : 5,
-“historical-comparison”:3,
-“room-type: 6,
-“rated-power”: 4</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>This tells the ILC application that the:
-- <em>stage criterion</em> is five times more important than the <a href="#id21"><span class="problematic" id="id22">curtail_</span></a>
-count criterion
-Listed below, here is what you should see by default:
-- stage criterion is three times more important than the
-historical-comparison criterion
-- stage criterion is six times more important than the room-type
-criterion
-- stage criterion is four times more important than the ratedpower
-criterion.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>curtail for (custom named cluster)</dt><dd><ul>
-<li><p>zonetemperature_setpoint</p></li>
-<li><p>stage</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>history_zonetemperature</p></li>
-<li><p>rated_power</p></li>
-<li><p>room_type</p></li>
-</ul>
-<p>Going into the details for each listed here are some options that you will be able to use in order to adjust your settings to the right settings desired. When you click on curtail for your custom named cluster, there will be a drop down that shows up. After clicking that you should be able to click on any of the ranges of dropdown menus that you see.
-<em>zonetempurature_setpoint:</em> when you click on the dropdown of the &lt;em&gt;zonetemperature_setpoint, you should see a temperature set point. You can adjust the bar from the ranges -10 to -2 and 1 to 10. These cannot be changed. These can be adjusted for <em>room_type</em>, <em>rated_power</em>, and <em>Stage</em>.</p>
-<p>The next area we will go into is the Criteria Configuration Which will be in the drop down of your customised cluster on screen.</p>
-</div>
-<div class="section" id="id7">
-<h3>ILC Device/Criteria Configuration<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>The ILC application is used for management of peak demand for a
-building. Different types of devices are grouped into clusters (e.g.,
-heat pumps could be one cluster of devices while lighting fixtures
-could be another). Each device within a cluster must have the same
-criteria, but different clusters should have differing criteria because
-the data points and operations of differing devices are not the
-same (i.e., different criteria [conditions] need to be evaluated to
-effectively determine different devices priority for curtailment).</p>
-<p>The AHP is multi-criteria decision-making process used by the ILC
-application. The default criteria implemented for ILC of heat pumps
-are explained in this section.
-When you use the Criteria Configuration, you have the option to use items in the dropdown that were imported from your document that you uploaded at the start. This will be quite an array of options depending on what you have uploaded.</p>
-<p>Once you click an option, you should see another drop down underneath <em>Curtail</em>.
-The dropdown should be listed as such:</p>
-<ul class="simple">
-<li><p>zonetemperature_setpoint</p></li>
-<li><p>stage</p></li>
-<li><p>history_zonetemperature</p></li>
-<li><p>rated_power</p></li>
-<li><p>roomtype</p></li>
-</ul>
+<img alt="Main Configuration File" src="../ILC_Tutorial_Screenshots/figure_31.jpg" />
 </div>
 <div class="section" id="indices-and-tables">
-<h3>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">Indices and tables</a><a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
@@ -1470,53 +1211,25 @@ The dropdown should be listed as such:</p>
   <h3><a href="#">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">ILC Web application: User guide</a><ul>
-<li><a class="reference internal" href="#introduction">1.0 INTRODUCTION</a></li>
-<li><a class="reference internal" href="#voltron-analytics-and-controls-platform">2.0 VOLTRON: ANALYTICS AND CONTROLS PLATFORM</a></li>
 <li><a class="reference internal" href="#ilc-application-configuration">ILC APPLICATION CONFIGURATION</a><ul>
 <li><a class="reference internal" href="#importing-master-driver-configuration-store">Importing master driver configuration store</a></li>
-<li><a class="reference internal" href="#ilc-main-configuration-file">ILC Main configuration File</a><ul>
+<li><a class="reference internal" href="#ilc-main-configuration-file">ILC Main configuration File</a></li>
 <li><a class="reference internal" href="#adding-a-cluster">Adding A cluster</a><ul>
 <li><a class="reference internal" href="#customized-cluster-options">Customized Cluster options</a></li>
 </ul>
 </li>
-</ul>
-</li>
 <li><a class="reference internal" href="#ilc-device-criteria-configuration">ILC Device/Criteria Configuration</a><ul>
-<li><a class="reference internal" href="#id1"><em>ILC Device/Criteria Configuration</em> :</a></li>
+<li><a class="reference internal" href="#formula-criteria">formula criteria</a></li>
+<li><a class="reference internal" href="#status-criteria">status criteria</a></li>
+<li><a class="reference internal" href="#mapper-criteria">mapper criteria</a></li>
+<li><a class="reference internal" href="#constant-criteria">constant criteria</a></li>
+<li><a class="reference internal" href="#history-criteria">history criteria</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pairwise-configuration">Pairwise configuration</a></li>
+<li><a class="reference internal" href="#conrol-configuration-empty-add-here">Conrol configuration: Empty add here</a></li>
 <li><a class="reference internal" href="#ilc-criteria-configuration">ILC Criteria Configuration</a></li>
-<li><a class="reference internal" href="#custom-cluster-pairwise-criteria">Custom cluster Pairwise Criteria:</a><ul>
-<li><a class="reference internal" href="#formula-criterion">Formula Criterion</a></li>
-<li><a class="reference internal" href="#status-criterion">Status Criterion</a></li>
-<li><a class="reference internal" href="#mapper-criterion">Mapper Criterion</a></li>
-<li><a class="reference internal" href="#constant-criterion">3.2.1.4 Constant Criterion</a></li>
-<li><a class="reference internal" href="#history-criterion">3.2.1.5 History Criterion</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ilc-curtail-configuration">3.2.2 ILC Curtail Configuration</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ilc-criteria-pairwise-comparison-configuration">3.3 ILC Criteria Pairwise Comparison Configuration</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ilc-use-case-heat-pump-cooling-controls">4.0 ILC USE CASE: HEAT PUMP COOLING CONTROLS</a><ul>
-<li><a class="reference internal" href="#ilc-use-case-heat-pump-cooling-control">4.1 ILC Use Case: Heat Pump Cooling Control</a></li>
-<li><a class="reference internal" href="#id2">4.2 ILC Criteria Configuration</a></li>
-<li><a class="reference internal" href="#id3">4.3 ILC Criteria Pairwise Comparison Configuration</a></li>
-<li><a class="reference internal" href="#ilc-device-criteria-configuration-for-heat-pumps-during-cooling-operations">4.4 ILC Device/ Criteria Configuration for Heat Pumps during Cooling Operations</a></li>
-<li><a class="reference internal" href="#summary-of-ilc-interactions-during-the-experiment">4.5 Summary of ILC Interactions during the Experiment</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ilc-use-case-vav-boxes-and-lighting-control">5.0 ILC USE CASE: VAV BOXES AND LIGHTING CONTROL</a><ul>
-<li><a class="reference internal" href="#id4">5.1 ILC Use Case: VAV Boxes and Lighting Control</a></li>
-<li><a class="reference internal" href="#id5">5.2 ILC Criteria Configuration</a></li>
-<li><a class="reference internal" href="#id6">5.3 ILC Criteria Pairwise Comparison Configuration</a></li>
-<li><a class="reference internal" href="#ilc-device-criteria-configuration-for-vav-boxes-and-lighting">5.4 ILC Device/Criteria Configuration for VAV Boxes and Lighting</a></li>
-<li><a class="reference internal" href="#summary-of-ilc-interactions-during-simulation">5.5 Summary of ILC Interactions during Simulation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#references">6.0 REFERENCES</a><ul>
-<li><a class="reference internal" href="#pairwise-criteria">Pairwise Criteria</a></li>
-<li><a class="reference internal" href="#id7">ILC Device/Criteria Configuration</a></li>
+<li><a class="reference internal" href="#ilc-criteria-pairwise-comparison-configuration">ILC Criteria Pairwise Comparison Configuration</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
