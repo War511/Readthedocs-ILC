@@ -42,7 +42,7 @@ if you click on the import new master driver configuration file, it will give yo
 voltron application file. Once you do this, it will give you the option to choose from the uploaded settings. 
 
 
-.. image:: ../ILC_Tutorial_Screenshots/import_Master_driver.jpg
+.. image:: ../source/ILC_Tutorial_Screenshots/import_Master_driver.jpg
    :alt: Main Configuration File
    
 
@@ -51,10 +51,10 @@ ILC Main configuration File
 ===========================
 First lets take a look at the main configuration file. There is an option right at the start that allows you to upload a file. This file that you upload will more than likeley be important to understanding your building number, etc. The nice thing about this application is it will be able to automatically read everything you upload, and give you major ease of access in order to understand your inputs. 
 
-.. image:: ../ILC_Tutorial_Screenshots/master_Driver.jpg
+.. image:: ../source/ILC_Tutorial_Screenshots/master_Driver.jpg
    :alt: Main Configuration File
   
- 
+ s
 
 The ILC application behavior is controlled through three
 configuration files:
@@ -84,7 +84,7 @@ the main ILC configuration file:
    There will also be a drop down within the power meter setting: once you click that 
    drop down a few options, including a calculator will appear: 
 
-.. image:: ../ILC_Tutorial_Screenshots/power_Meter.jpg
+.. image:: ../source/ILC_Tutorial_Screenshots/power_Meter.jpg
    :alt: Main Configuration File
    :scale: 25
 
@@ -151,9 +151,9 @@ the main ILC configuration file:
 
 Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:
 
-.. image:: ../ILC_Tutorial_Screenshots/stagger_Release.jpg
+.. image:: ../source/ILC_Tutorial_Screenshots/stagger_Release.jpg
    :alt: Main Configuration File
-   :scale: 55
+   :scale: 100
 
 Adding A cluster
 ================
