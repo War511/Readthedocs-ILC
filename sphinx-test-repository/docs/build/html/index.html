@@ -79,7 +79,7 @@ once you click on that drop down you will see 2 things:</p>
 </ol>
 <p>if you click on the import new master driver configuration file, it will give you an option to import your
 voltron application file. Once you do this, it will give you the option to choose from the uploaded settings.</p>
-<img alt="Main Configuration File" src="../html/_images/import_Master_driver.jpg" />
+<img alt="Main Configuration File" src="_images/import_Master_driver.jpg" />
 </div>
 <div class="section" id="ilc-main-configuration-file">
 <h3><a class="toc-backref" href="#id4">ILC Main configuration File</a><a class="headerlink" href="#ilc-main-configuration-file" title="Permalink to this headline">¶</a></h3>
@@ -110,7 +110,7 @@ There will also be a drop down within the power meter setting: once you click th
 drop down a few options, including a calculator will appear:</p>
 </dd>
 </dl>
-<a class="reference internal image-reference" href="../html/_images/power_Meter.jpg"><img alt="Main Configuration File" src="../html/_images/power_Meter.jpg" /></a>
+<a class="reference internal image-reference" href="_images/power_Meter.jpg"><img alt="Main Configuration File" src="_images/power_Meter.jpg" style="width: 395.5px; height: 387.5px;" /></a>
 <dl class="simple">
 <dt><strong>device</strong> :</dt><dd><p>The device name for the building power meter as
 published by the platform.driver.</p>
@@ -174,7 +174,7 @@ parameter is used for configuring the mapper criteria (Section
 </dd>
 </dl>
 <p>Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:</p>
-<a class="reference internal image-reference" href="../html/_images/stagger_Release.jpg"><img alt="Main Configuration File" src="../html/_images/stagger_Release.jpg" /></a>
+<a class="reference internal image-reference" href="_images/stagger_Release.jpg"><img alt="Main Configuration File" src="_images/stagger_Release.jpg" style="width: 475.0px; height: 55.0px;" /></a>
 </div>
 <div class="section" id="adding-a-cluster">
 <h3><a class="toc-backref" href="#id5">Adding A cluster</a><a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h3>
@@ -216,8 +216,8 @@ On the left side of the screen under Device clusters, you should see an icon tha
 <li><p>Cluster priority</p></li>
 </ul>
 <p>You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click <strong>Save New Cluster.</strong></p>
-<a class="reference internal image-reference" href="../html/_images/Add_cluster.jpg"><img alt="Main Configuration File" src="../html/_images/Add_cluster.jpg" /></a>
-<a class="reference internal image-reference" href="../html/_images/cluster_type.jpg"><img alt="Main Configuration File" src="../html/_images/cluster_type.jpg" /></a>
+<a class="reference internal image-reference" href="_images/Add_cluster.jpg"><img alt="Main Configuration File" src="_images/Add_cluster.jpg" style="width: 850.5px; height: 453.5px;" /></a>
+<a class="reference internal image-reference" href="_images/cluster_type.jpg"><img alt="Main Configuration File" src="_images/cluster_type.jpg" style="width: 418.5px; height: 169.5px;" /></a>
 <div class="section" id="customized-cluster-options">
 <h4>Customized Cluster options<a class="headerlink" href="#customized-cluster-options" title="Permalink to this headline">¶</a></h4>
 <p><strong>Clusters:</strong>
@@ -304,7 +304,7 @@ The dropdown should be listed as such:</p>
 <li><p>rated_power</p></li>
 <li><p>roomtype</p></li>
 </ul>
-<img alt="Main Configuration File" src="../html/_images/criteria_order.jpg" />
+<img alt="Main Configuration File" src="_images/criteria_order.jpg" />
 <p>Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
@@ -321,7 +321,7 @@ which include the following:</p>
 parameter for each criterion.</p>
 <div class="section" id="formula-criteria">
 <h4>formula criteria<a class="headerlink" href="#formula-criteria" title="Permalink to this headline">¶</a></h4>
-<img alt="Main Configuration File" src="../html/_images/formula.jpg" />
+<img alt="Main Configuration File" src="_images/formula.jpg" />
 <p>The formula criterion allows a user to declare mathematical
 formulas that are evaluated using current device measurements
 (data from the device are published by the VOLTTRON platform.
@@ -337,12 +337,12 @@ parameter. The values associated with each point are updated
 when new device data are published by the platform.driver.
 Table 1 lists the supported mathematical operators for the
 formula criterion.</p>
-<img alt="Main Configuration File" src="../html/_images/math_Table.jpg" />
+<img alt="Main Configuration File" src="_images/math_Table.jpg" />
 <p>Figure 5 shows an example of a formula criterion configured for a
 heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_5.jpg" />
+<img alt="Main Configuration File" src="_images/figure_5.jpg" />
 </div>
 <div class="section" id="status-criteria">
 <h4>status criteria<a class="headerlink" href="#status-criteria" title="Permalink to this headline">¶</a></h4>
@@ -363,11 +363,11 @@ Figure 6 shows an example of a status criterion configured for
 a heat pump. The criterion name, rated-power, should match
 the name for the same criterion used in the pairwise comparison
 configuration file.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_6.jpg" />
+<img alt="Main Configuration File" src="_images/figure_6.jpg" />
 </div>
 <div class="section" id="mapper-criteria">
 <h4>mapper criteria<a class="headerlink" href="#mapper-criteria" title="Permalink to this headline">¶</a></h4>
-<img alt="Main Configuration File" src="../html/_images/mapper.jpg" />
+<img alt="Main Configuration File" src="_images/mapper.jpg" />
 <p>The mapper criterion allows a user to categorize loads and assign
 values to the categories. For example, room type can be used to
 set the importance of the rooms (heating or cooling of the room
@@ -377,7 +377,7 @@ assigned higher numerical values are regarded as less important
 values. Users set their own priority depending on the
 importance of the room (1: most important and 7: less important).
 Table 2 shows an example of AHP priority based on room type.</p>
-<img alt="Main Configuration File" src="../html/_images/table_2.jpg" />
+<img alt="Main Configuration File" src="_images/table_2.jpg" />
 <p>The following list contains the mapper criterion configuration
 parameters:
 • dict_name – The dictionary name in the main ILC configuration
@@ -388,11 +388,11 @@ Figure 7 shows an example of a mapper criterion configured for
 a heat pump. The criterion name, room-type, should match the
 name for the same criterion used in the pairwise comparison
 configuration file.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_7.jpg" />
+<img alt="Main Configuration File" src="_images/figure_7.jpg" />
 </div>
 <div class="section" id="constant-criteria">
 <h4>constant criteria<a class="headerlink" href="#constant-criteria" title="Permalink to this headline">¶</a></h4>
-<img alt="Main Configuration File" src="../html/_images/constant.jpg" />
+<img alt="Main Configuration File" src="_images/constant.jpg" />
 <p>The constant criterion returns a constant value for inclusion in the
 AHP. The following list contains the status criterion configuration
 parameters:
@@ -401,11 +401,11 @@ AHP.</p>
 <p>Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_8.jpg" />
+<img alt="Main Configuration File" src="_images/figure_8.jpg" />
 </div>
 <div class="section" id="history-criteria">
 <h4>history criteria<a class="headerlink" href="#history-criteria" title="Permalink to this headline">¶</a></h4>
-<img alt="Main Configuration File" src="../html/_images/history.jpg" />
+<img alt="Main Configuration File" src="_images/history.jpg" />
 <p>The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
 history criterion configuration parameters:</p>
@@ -426,7 +426,7 @@ Figure 9 shows an example of a history criterion</p>
 a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_9.jpg" />
+<img alt="Main Configuration File" src="_images/figure_9.jpg" />
 </div>
 </div>
 <div class="section" id="pairwise-configuration">
@@ -439,13 +439,13 @@ each item in the order you prefer. There is also an additional option at the bot
 to add more.</p>
 <p>underneath the custom list, you should see a dropdown called: <strong>Pairwise Criteria</strong>. This will have various other customisation
 options as well.</p>
-<img alt="Main Configuration File" src="../html/_images/zonetemperature_Setpoint.jpg" />
+<img alt="Main Configuration File" src="../source/pics/zonetemperature_Setpoint.jpg" />
 <p>inside of each of the options, there should be a power mode you can set.
 in a dropdown for each.</p>
-<img alt="Main Configuration File" src="../html/_images/zonetemperature_Setpoint.jpg" />
-<img alt="Main Configuration File" src="../html/_images/stage.jpg" />
-<img alt="Main Configuration File" src="../html/_images/history_Zonetemperature.jpg" />
-<img alt="Main Configuration File" src="../html/_images/rated_Power.jpg" />
+<img alt="Main Configuration File" src="../source/pics/zonetemperature_Setpoint.jpg" />
+<img alt="Main Configuration File" src="../source/pics/stage.jpg" />
+<img alt="Main Configuration File" src="../source/pics/history_Zonetemperature.jpg" />
+<img alt="Main Configuration File" src="../source/pics/rated_Power.jpg" />
 </div>
 <div class="section" id="conrol-configuration-empty-add-here">
 <h3><a class="toc-backref" href="#id8">Conrol configuration: Empty add here</a><a class="headerlink" href="#conrol-configuration-empty-add-here" title="Permalink to this headline">¶</a></h3>
@@ -455,11 +455,11 @@ that point to achieve the desired load reduction for the device.
 Figure 10 shows the curtail configuration parameters for HP1.
 The conditional_curtail parameters are optional (highlighted
 in grey), but the curtail parameters are required (highlighted</p>
-<img alt="Main Configuration File" src="../html/_images/figure_10.jpg" />
+<img alt="Main Configuration File" src="_images/figure_10.jpg" />
 <p>in yellow).The curtail configuration information is essentially ifelse
 logic embedded in the Java Script Object Notation (JSON)1
 configuration file. The logic is executed as follows (Figure 11):</p>
-<img alt="Main Configuration File" src="../html/_images/figure_11.jpg" />
+<img alt="Main Configuration File" src="_images/figure_11.jpg" />
 <p>This allows the user to curtail the device differently based on
 conditions evaluated at the time of curtailment. If a user does not
 want to use conditional_curtail (this set of parameters is omitted)
@@ -506,11 +506,11 @@ respect to all other criteria (criteria that are used for that device/
 criteria configuration). This information is configured in the criteria
 pairwise comparison configuration file. Figure 12 shows an example
 ILC criteria pairwise comparison configuration file:</p>
-<img alt="Main Configuration File" src="../html/_images/figure_12.jpg" />
+<img alt="Main Configuration File" src="_images/figure_12.jpg" />
 <p>The names for the criteria must match the names of the criteria used
 in the device/criteria configuration file documented in Section 3.2.
 Take the first entry in the configuration file as an example (Figure 13):</p>
-<img alt="Main Configuration File" src="../html/_images/figure_13.jpg" />
+<img alt="Main Configuration File" src="_images/figure_13.jpg" />
 <p>This tells the ILC application that the:
 • zonetemperature-setpoint-deviation criterion is seven times
 more important than the curtail_count criterion
@@ -550,7 +550,7 @@ The test described in this use case was conducted at PNNL
 BUILDING8. PNNL BUILDING8 is a single-story building consisting
 of office spaces and a large shop for operations and maintenance
 work. Information for PNNL BUILDING8 is summarized in Table 3:</p>
-<img alt="Main Configuration File" src="../html/_images/table_3.jpg" />
+<img alt="Main Configuration File" src="_images/table_3.jpg" />
 <p>Heating and cooling at PNNL BUILDING8 is accomplished by 10
 heat pumps that serve the building. The specifications for the
 heat pumps in PNNL BUILDING8 are given in Table 4. Three heat
@@ -570,10 +570,10 @@ Each heat pump has its own advanced building automation
 system (BAS) controller and is configured to provide discrete
 command signals to the heat pump for staging of the indoor fan,
 compressors, auxiliary heat and economizer.</p>
-<img alt="Main Configuration File" src="../html/_images/table_4.jpg" />
+<img alt="Main Configuration File" src="_images/table_4.jpg" />
 <p>Each of these heat pumps has the following points (Table 5) that are
 trended by a dedicated VOLTTRON node at 1-minute intervals.</p>
-<img alt="Main Configuration File" src="../html/_images/table_5.jpg" />
+<img alt="Main Configuration File" src="_images/table_5.jpg" />
 <p>ILC Use Case: Heat Pump Cooling Control DELETE ME</p>
 <p>The goal of the ILC application is to intelligently limit peak demand
 within a building, thereby eliminating or reducing demand charges
@@ -592,14 +592,14 @@ PNNL BUILDING8 on July 11, 2016. The demand goal for this test
 was chosen to be 90% of the maximum predicted load (i.e., the
 maximum predicted load was 150 kW and the goal was 90% of this
 value – 135 kW).</p>
-<img alt="Main Configuration File" src="../html/_images/figure_14.jpg" />
+<img alt="Main Configuration File" src="_images/figure_14.jpg" />
 <p>Once a demand goal has been determined the ILC main
 configuration file can be updated. The example ILC configuration
 file provided with the ILC source code on GitHub4 contains all the
 required parameters; one must only update the values associated
 with each entry to customize the ILC application. Figure 15 shows
 the configuration file used for the ILC test at PNNL BUILDING8.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_15.jpg" />
+<img alt="Main Configuration File" src="_images/figure_15.jpg" />
 <p>The following list describes each parameter and the significance of
 the value configured for that parameter:</p>
 <p><em>campus</em> : The campus name as published by the VOLTTRON
@@ -728,7 +728,7 @@ does not exist (e.g., heat pump compressor turns off) and the
 may indicate internal or external loads (solar gain, perimeter
 zones with poor envelope or high infiltration loads, conference
 rooms with high occupant densities, etc.).</p>
-<img alt="Main Configuration File" src="../html/_images/cooling_heating_mode.jpg" />
+<img alt="Main Configuration File" src="_images/cooling_heating_mode.jpg" />
 <p>4. Temperature difference between zone and set point
 (zonetemperature-setpoint-deviation - ΔTzone-csp or ΔTzonehsp
 ): The temperature difference between zone and set point
@@ -739,7 +739,7 @@ and ΔTzone-hsp as shown in Equation 3 for cooling mode and
 Equation 4 for the heating mode. When the value between Tzone
 and Tcsp (or Thsp) is higher than or equal to 0.1, ΔTzone-csp (ΔTzone-hsp)
 should be determined to be 10.</p>
-<img alt="Main Configuration File" src="../html/_images/cooling_heating_mode2.jpg" />
+<img alt="Main Configuration File" src="_images/cooling_heating_mode2.jpg" />
 <p>5. Heat pump room type (room-type): Heat pump room type
 provides the means to prioritize each heat pump. The room
 with the higher assigned numerical value is regarded as less
@@ -749,7 +749,7 @@ heat pump prioritization strategy depending on the importance
 of room types served (1: Most importance and 9: Least
 importance). Table 6 shows the heat pump priority based on
 room type for PNNL BUILDING8:</p>
-<img alt="Main Configuration File" src="../html/_images/table_6.jpg" />
+<img alt="Main Configuration File" src="_images/table_6.jpg" />
 <p>6. Heat pump stages (stage): Second stage cooling results in peak
 power consumption but for shorter operating periods, whereas
 first stage cooling operates longer with a lower peak power.
@@ -762,7 +762,7 @@ stage prioritization can be determined by assigning numerical
 values to FirstStageCooling and to SecondStageCooling (for
 cooling) and to FirstStageHeating and to SecondStageHeating
 (for heating) as shown in Table 7.</p>
-<img alt="Main Configuration File" src="../html/_images/table_7.jpg" />
+<img alt="Main Configuration File" src="_images/table_7.jpg" />
 </div>
 <div class="section" id="ilc-criteria-pairwise-comparison-configuration">
 <h3><a class="toc-backref" href="#id10">ILC Criteria Pairwise Comparison Configuration</a><a class="headerlink" href="#ilc-criteria-pairwise-comparison-configuration" title="Permalink to this headline">¶</a></h3>
@@ -773,8 +773,8 @@ to all other criteria (criteria that are used for the device/criteria
 configuration). This information is configured in the criteria pairwise
 comparison configuration file. Figure 16 shows the criteria pairwise
 comparison file used for deployment of ILC in PNNL BUILDING8:</p>
-<img alt="Main Configuration File" src="../html/_images/figure_16.jpg" />
-<img alt="Main Configuration File" src="../html/_images/figure_17.jpg" />
+<img alt="Main Configuration File" src="_images/figure_16.jpg" />
+<img alt="Main Configuration File" src="_images/figure_17.jpg" />
 <p>Take the first entry in the configuration file (Figure 13):
 This tells the ILC application that the:</p>
 <ul class="simple">
@@ -819,7 +819,7 @@ criterion the configuration file entry would be modified as follows:</p>
 <p>seven times less important than curtail_count criterion
 (note that 0.1429 is 1/7).
 Take the second entry in the configuration file (Figure 18):</p>
-<img alt="Main Configuration File" src="../html/_images/figure_18.jpg" />
+<img alt="Main Configuration File" src="_images/figure_18.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
 <li><p>stage criterion is five times more important than the <a href="#id14"><span class="problematic" id="id15">curtail_</span></a></p></li>
@@ -837,7 +837,7 @@ Take the second entry in the configuration file (Figure 18):</p>
 <li><p>stage criterion is four times more important than the ratedpower</p></li>
 </ul>
 <p>criterion.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_19.jpg" />
+<img alt="Main Configuration File" src="_images/figure_19.jpg" />
 <p>Take the third entry in the configuration file (Figure 19); it tells the
 ILC application that the:</p>
 <ul class="simple">
@@ -853,7 +853,7 @@ ILC application that the:</p>
 </ul>
 <p>important than rated-power criterion/
 Take the fourth entry in the configuration file (Figure 20):</p>
-<img alt="Main Configuration File" src="../html/_images/figure_20.jpg" />
+<img alt="Main Configuration File" src="_images/figure_20.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
 <li><p>curtail_count criterion is three times more important than</p></li>
@@ -864,14 +864,14 @@ Take the fourth entry in the configuration file (Figure 20):</p>
 </ul>
 <p>rated-power criterion
 Take the fifth entry in the configuration file (Figure 21):</p>
-<img alt="Main Configuration File" src="../html/_images/figure_21.jpg" />
+<img alt="Main Configuration File" src="_images/figure_21.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
 <li><p>rated-power criterion is three times more important than the</p></li>
 </ul>
 <p>room-type criterion</p>
 <p>Take the sixth entry in the configuration file (Figure 22):</p>
-<img alt="Main Configuration File" src="../html/_images/figure_22.jpg" />
+<img alt="Main Configuration File" src="_images/figure_22.jpg" />
 <p>This tells the ILC application:
 • The relative importance of the room-type criterion with respect
 to all other criteria has already been specified in the previous
@@ -888,8 +888,8 @@ lunch room space (thus the room-type/map_key = Lobby). The
 device/criteria configuration was covered in detail in Section 3.2.
 The following information is useful in understanding the ILC test at
 PNNL BUILDING8:</p>
-<img alt="Main Configuration File" src="../html/_images/figure_23_pt1.jpg" />
-<img alt="Main Configuration File" src="../html/_images/figure_23_pt2.jpg" />
+<img alt="Main Configuration File" src="_images/figure_23_pt1.jpg" />
+<img alt="Main Configuration File" src="_images/figure_23_pt2.jpg" />
 <ul class="simple">
 <li><p>The criteria for FirstStageCooling and</p></li>
 </ul>
@@ -910,11 +910,11 @@ that point to achieve the desired load reduction for the device.
 Figure 24 shows the curtail configuration parameters for HP3. The
 conditional_curtail parameters are optional (highlighted in grey),
 but the curtail parameters are required (highlighted in yellow).</p>
-<img alt="Main Configuration File" src="../html/_images/figure_24.jpg" />
+<img alt="Main Configuration File" src="_images/figure_24.jpg" />
 <p>The curtail configuration information is essentially if-else logic
 embedded in the JSON configuration file. The logic is executed as
 follows (Figure 25):</p>
-<img alt="Main Configuration File" src="../html/_images/figure_25.jpg" />
+<img alt="Main Configuration File" src="_images/figure_25.jpg" />
 <p>This allows the user to curtail the device differently based on
 conditions evaluated at the time of curtailment. If a user does not
 want to use conditional_curtail (this set of parameters is omitted)
@@ -1062,7 +1062,7 @@ weighting factor of 0.67 is applied to the VAV devices in the VAV
 cluster). This results in each device with its own score. That score
 determines the device priority in the array of loads that could be
 curtailed during an ILC event.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_27.jpg" />
+<img alt="Main Configuration File" src="_images/figure_27.jpg" />
 <p>5.2 ILC Criteria Configuration Delete me</p>
 <p>The criteria implemented for ILC configuration of VAV boxes
 and lighting systems are explained in this section. For a detailed
@@ -1102,7 +1102,7 @@ deviation from the zone cooling setpoint.</p>
 values that are 50% or more of the maximum airflow rate values
 may affect the level of success for VAV zone cooling setpoint
 adjustments.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_28.jpg" />
+<img alt="Main Configuration File" src="_images/figure_28.jpg" />
 <p>2. Lighting level (lightng_levels): The lighting levels can
 have an impact on the productivity, safety, and security of
 building occupants. Therefore, the lighting power capacity
@@ -1117,7 +1117,7 @@ circuits and the dimming control capabilities that may or may
 not exist (dimmable ballasts versus non-dimmable ballasts). In
 addition, daylighting sensors, occupancy sensors, and other BAS
 strategies may already be optimizing lighting systems.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_29.jpg" />
+<img alt="Main Configuration File" src="_images/figure_29.jpg" />
 <p>5.4 ILC Device/Criteria Configuration for VAV Boxes and Lighting Delete me</p>
 <p>The default criteria implemented for ILC of VAV boxes are
 explained in Figure 30. For a detailed description of ILC device/
@@ -1187,7 +1187,7 @@ reduced lighting level output commands. For example, the
 reduction in demand can be calculated by multiplying the
 number of lamps that can reduced (dimmed) by their wattage
 rating.</p>
-<img alt="Main Configuration File" src="../html/_images/figure_31.jpg" />
+<img alt="Main Configuration File" src="_images/figure_31.jpg" />
 </div>
 <div class="section" id="indices-and-tables">
 <h3><a class="toc-backref" href="#id11">Indices and tables</a><a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h3>
