@@ -3,27 +3,24 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. contents:: Table of contents
-    :depth: 3
-
 .. toctree:: 
     :depth: 2
 
 ILC Web application: User guide
 *******************************
 
-=================================
+=============================
 ILC APPLICATION CONFIGURATION
-=================================
+=============================
 
 **!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!**
 
 The ILC application behavior is controlled through three
 configuration files:
-the main ILC configuration file,
 
-1. the device/criteria configuration file, and
-2. the criteria pairwise comparison configuration file.
+1. the main ILC configuration file
+2. the device/criteria configuration file
+3. the criteria pairwise comparison configuration file.
 
 The following sections describe what each configuration file
 controls and the parameters defined within these configuration
@@ -32,8 +29,7 @@ files.
 Importing master driver configuration store
 ===========================================
 
-If you want to import a new master driver, in the top left corner of the screen you will see a hamburger drop down menu. 
-once you click on that drop down you will see 2 things:
+If you want to import a new master driver, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 things:
 
 1. Save configuration file 
 2. Import New Master driver Configuration file. 
@@ -42,19 +38,18 @@ if you click on the import new master driver configuration file, it will give yo
 voltron application file. Once you do this, it will give you the option to choose from the uploaded settings. 
 
 
-.. image:: ../html/_images/import_Master_driver.jpg
+.. image:: ../source/_images/import_Master_driver.jpg
    :alt: Main Configuration File
    
-
 
 ILC Main configuration File
 ===========================
 First lets take a look at the main configuration file. There is an option right at the start that allows you to upload a file. This file that you upload will more than likeley be important to understanding your building number, etc. The nice thing about this application is it will be able to automatically read everything you upload, and give you major ease of access in order to understand your inputs. 
 
-.. image:: ../html/_images/master_Driver.jpg
+.. image:: ../source/_images/master_Driver.jpg
    :alt: Main Configuration File
   
- s
+ 
 
 The ILC application behavior is controlled through three
 configuration files:
@@ -84,7 +79,7 @@ the main ILC configuration file:
    There will also be a drop down within the power meter setting: once you click that 
    drop down a few options, including a calculator will appear: 
 
-.. image:: ../html/_images/power_Meter.jpg
+.. image:: ../source/_images/power_Meter.jpg
    :alt: Main Configuration File
    :scale: 50
 
@@ -151,11 +146,11 @@ the main ILC configuration file:
 
 Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:
 
-.. image:: ../html/_images/stagger_Release.jpg
+.. image:: ../source/_images/stagger_Release.jpg
    :alt: Main Configuration File
    :scale: 100
 
-Adding A cluster
+Adding a cluster
 ================
 There are a list of items that you will see in the Main configuration of this application. Once you upload your file, there should be a drop down menu on each option you see. The options you should see are: 
 Main configuration:
@@ -184,46 +179,19 @@ On the left side of the screen under Device clusters, you should see an icon tha
    - LIGHT
 - Cluster priority
 
-You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click **Save New Cluster.**
+You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking.
+Once you click **Save New Cluster.**
 
-.. image:: ../html/_images/Add_cluster.jpg
+.. image:: ../source/_images/Add_cluster.jpg
    :alt: Main Configuration File
    :scale: 50
 
-.. image:: ../html/_images/cluster_type.jpg
+.. image:: ../source/_images/cluster_type.jpg
    :alt: Main Configuration File
    :scale: 50
 
-
-Customized Cluster options
-++++++++++++++++++++++++++
-**Clusters:**
-On the left side of the screen under Device clusters, you should see an icon that says *+Add cluster*. when you click on this item, there is an entire new list of items that it lets you choose from on the right side:
-- Cluster name 
-- Cluster type
-   - RTU
-   - AHU
-   - LIGHT
-- Cluster priority
-
-You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking. Once you click Save New Cluster.
-
-
-in the *Device clusters* drop down on the left side of the screen, you should see a drop down that says your personalized cluster in a drop down. once you click on this cluster, there should be a new menu that is shown in the center of the screen once you click on that drop down. There are 5 default settings you can choose once you click the drop down for your personalized cluster. You can move them around and put them in any order you need. There is also a choice to add another cluster. The cluster should default be set like the list shown below: 
-
-
-- zonetempature_setpoint
-- setpoint
-- history_zonetemperature
-- rated_power
-- roomtype
-- **ADD CRITERIA**
-
-
-This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.
-
-ILC Device/Criteria Configuration
-=================================
+ILC Device/Criteria Configuration and cluster options
+=====================================================
 The *ILC* application is used for management of peak demand for a
 building. Different types of devices are grouped into *clusters* (e.g.,
 heat pumps could be one cluster of devices while lighting fixtures
@@ -234,14 +202,15 @@ same (i.e., different criteria [conditions] need to be evaluated to
 effectively determine different devices priority for curtailment).
 The following conventions are used in this guide:
 
-- The text colored red in the configuration file indicates a point on
-the device. This point is published by the VOLTTRON platform.
-driver service. In the example shown in Figure 3, a total of 5
-points on the device are used in the platform driver.
-- Text colored in green indicates the name of a criterion used for
-prioritization of curtailable loads. In the example shown in Figure
-3, a total of 5 criteria are used for prioritization of curtailable
-loads in the platform driver.
+-  The text colored red in the configuration file indicates a point on
+   the device. This point is published by the VOLTTRON platform.
+   driver service. In the example shown in Figure 3, a total of 5
+   points on the device are used in the platform driver.
+
+-  Text colored in green indicates the name of a criterion used for
+   prioritization of curtailable loads. In the example shown in Figure
+   3, a total of 5 criteria are used for prioritization of curtailable
+   loads in the platform driver.
 
 The outer dictionary key must be the name of the device of interest
 as published by the VOLTTRON platform.driver service (i.e., HP1
@@ -259,8 +228,8 @@ curtail information tells the ILC agent what point on the device to
 command and the value to command that point to achieve the
 desired load reduction for the device.
 
-*ILC Device/Criteria Configuration* :
--------------------------------------
+ILC Device/Criteria Configuration
+---------------------------------
 
 The ILC application is used for management of peak demand for a
 building. Different types of devices are grouped into clusters (e.g.,
@@ -287,9 +256,10 @@ The dropdown should be listed as such:
 - roomtype 
 
 
-.. image:: ../html/_images/criteria_order.jpg
+.. image:: ../source/_images/criteria_order.jpg
    :alt: Main Configuration File
 
+This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.
 
 ILC Criteria Configuration
 --------------------------
@@ -313,7 +283,7 @@ parameter for each criterion.
 formula criteria
 ++++++++++++++++
 
-.. image:: ../html/_images/formula.jpg
+.. image:: ../source/_images/formula.jpg
    :alt: Main Configuration File
 
 The formula criterion allows a user to declare mathematical
@@ -322,16 +292,17 @@ formulas that are evaluated using current device measurements
 driver service). The following list contains the formula criterion
 configuration parameters:
 
-- operation : String representation of a mathematical formula.
-This mathematical formula is evaluated to return a numeric value.
-- operation_args : List of point names from the device (HP1)
-used to evaluate the mathematical formula in the operation
-parameter. The values associated with each point are updated
-when new device data are published by the platform.driver.
-Table 1 lists the supported mathematical operators for the
-formula criterion.
+-  operation : String representation of a mathematical formula.
+   This mathematical formula is evaluated to return a numeric value.
 
-.. image:: ../html/_images/math_Table.jpg
+-  operation_args : List of point names from the device (HP1)
+   used to evaluate the mathematical formula in the operation
+   parameter. The values associated with each point are updated
+   when new device data are published by the platform.driver.
+   Table 1 lists the supported mathematical operators for the
+   formula criterion.
+
+.. image:: ../source/_images/math_Table.jpg
    :alt: Main Configuration File
    
 
@@ -340,42 +311,41 @@ heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.
 
-.. image:: ../html/_images/figure_5.jpg
+.. image:: ../source/_images/figure_5.jpg
    :alt: Main Configuration File
    
 
 status criteria
 +++++++++++++++
 
-.. image:: ../html/_images/status.jpg
-   :alt: Main Configuration File
-
-   The status criterion reads a point (Boolean or enumeration) on the
+The status criterion reads a point (Boolean or enumeration) on the
 device and returns either an on_value or an off_value depending
 on whether the current status of the point is True (enumeration
 value of 1) or False (enumeration value of 0), respectively. The
 following list contains the status criterion configuration parameters:
 
-• point_name – The point on the device (HP1) that is evaluated.
-This device point should be a Boolean or an enumeration with a
-value of 0 or 1.
-• on_value – The numeric value returned by the criterion if the
-point on the device indicates a True or enumeration value of 1.
-• off_value – The numeric value returned by the criterion if the
-point on the device indicates a False or enumeration value of 0.
-Figure 6 shows an example of a status criterion configured for
-a heat pump. The criterion name, rated-power, should match
-the name for the same criterion used in the pairwise comparison
-configuration file.
+-  **point_name** : The point on the device (HP1) that is evaluated.
+   This device point should be a Boolean or an enumeration with a
+   value of 0 or 1.
 
-.. image:: ../html/_images/figure_6.jpg
+-  **on_value** : The numeric value returned by the criterion if the
+   point on the device indicates a True or enumeration value of 1.
+
+-  **off_value** : The numeric value returned by the criterion if the
+   point on the device indicates a False or enumeration value of 0.
+   Figure 6 shows an example of a status criterion configured for
+   a heat pump. The criterion name, rated-power, should match
+   the name for the same criterion used in the pairwise comparison
+   configuration file.
+
+.. image:: ../source/_images/figure_6.jpg
    :alt: Main Configuration File
    
 
 mapper criteria
 +++++++++++++++
 
-.. image:: ../html/_images/mapper.jpg
+.. image:: ../source/_images/mapper.jpg
    :alt: Main Configuration File
 
 The mapper criterion allows a user to categorize loads and assign
@@ -388,50 +358,52 @@ values. Users set their own priority depending on the
 importance of the room (1: most important and 7: less important).
 Table 2 shows an example of AHP priority based on room type.
 
-.. image:: ../html/_images/table_2.jpg
+.. image:: ../source/_images/table_2.jpg
    :alt: Main Configuration File
    
 
 The following list contains the mapper criterion configuration
 parameters:
-• dict_name – The dictionary name in the main ILC configuration
-file that contains the key (category) and value assigned to that
-category.
-• map_key – The category assigned to the device.
-Figure 7 shows an example of a mapper criterion configured for
-a heat pump. The criterion name, room-type, should match the
-name for the same criterion used in the pairwise comparison
-configuration file.
+-  dict_name : The dictionary name in the main ILC configuration
+   file that contains the key (category) and value assigned to that
+   category.
 
-.. image:: ../html/_images/figure_7.jpg
+-  map_key – The category assigned to the device.
+   Figure 7 shows an example of a mapper criterion configured for
+   a heat pump. The criterion name, room-type, should match the
+   name for the same criterion used in the pairwise comparison
+   configuration file.
+
+.. image:: ../source/_images/figure_7.jpg
    :alt: Main Configuration File
    
 
 constant criteria
 +++++++++++++++++
 
-.. image:: ../html/_images/constant.jpg
+.. image:: ../source/_images/constant.jpg
    :alt: Main Configuration File
 
    
 The constant criterion returns a constant value for inclusion in the
 AHP. The following list contains the status criterion configuration
 parameters:
-• value – The value returned by this criterion for inclusion in the
-AHP.
+
+-  value : The value returned by this criterion for inclusion in the
+   AHP.
 
 Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.
 
-.. image:: ../html/_images/figure_8.jpg
+.. image:: ../source/_images/figure_8.jpg
    :alt: Main Configuration File
    
 
 history criteria
 ++++++++++++++++
 
-.. image:: ../html/_images/history.jpg
+.. image:: ../source/_images/history.jpg
    :alt: Main Configuration File
 
    
@@ -439,34 +411,35 @@ The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
 history criterion configuration parameters:
 
-• point_name – The point on the device (HP1) that is evaluated.
-• comparison_type – This configuration parameter can be
-configured to be direct or inverse. A direct comparison returns
-the value of the point at the current time minus the value of the
-point at some time in the past (configured as previous_time).
-An inverse comparison returns unity divided by the value of the
-point at the current time minus the value of the point at some
-time in the past (configured as previous_time).
-• previous_time – Time in minutes in the past to compare to
-current value of the point on the device.
-Figure 9 shows an example of a history criterion
+- point_name : The point on the device (HP1) that is evaluated.
 
+-  comparison_type – This configuration parameter can be
+   configured to be direct or inverse. A direct comparison returns
+   the value of the point at the current time minus the value of the
+   point at some time in the past (configured as previous_time).
+   An inverse comparison returns unity divided by the value of the
+   point at the current time minus the value of the point at some
+   time in the past (configured as previous_time).
+
+-  previous_time : Time in minutes in the past to compare to
+   current value of the point on the device.
+   
 Figure 9 shows an example of a history criterion configured for
 a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.
 
-.. image:: ../html/_images/figure_9.jpg
+.. image:: ../source/_images/figure_9.jpg
    :alt: Main Configuration File
    
 
 Pairwise configuration
 ======================
 In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
-The custom cluster will be listed with 3 additional items listed as such: 
+The custom cluster will be listed with 3 items listed as such: 
 
-.. image:: ../ILC_Tutorial_Screenshots/custom_Cluster.jpg
-   :alt: Main Configuration File
+.. image:: ..source/_images/custom_Cluster.jpg
+   :alt: custom cluster
    
 
 At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag 
@@ -477,25 +450,25 @@ underneath the custom list, you should see a dropdown called: **Pairwise Criteri
 options as well. 
 
 
-.. image:: ../html/_images/zonetemperature_Setpoint.jpg
-   :alt: Main Configuration File
+.. image:: ../source/_images/zonetemperature_Setpoint.jpg
+   :alt: zone temperature setpoint
 
    
 inside of each of the options, there should be a power mode you can set.
 in a dropdown for each. 
 
-.. image:: ../html/_images/zonetemperature_Setpoint.jpg
+.. image:: ../source/_images/zonetemperature_Setpoint.jpg
    :alt: Main Configuration File
-.. image:: ../html/_images/stage.jpg
+.. image:: ../source/_images/stage.jpg
    :alt: Main Configuration File
-.. image:: ../html/_images/history_Zonetemperature.jpg
+.. image:: ../source/_images/history_Zonetemperature.jpg
    :alt: Main Configuration File
-.. image:: ../html/_images/rated_Power.jpg
+.. image:: ../source/_images/rated_Power.jpg
    :alt: Main Configuration File   
 
 
-Conrol configuration: Empty add here
-====================================
+Control configuration: Empty add here
+=====================================
 
 ILC Curtail Configuration Delete me
 -----------------------------------
@@ -505,18 +478,18 @@ what point on the device to command and the value to command
 that point to achieve the desired load reduction for the device.
 Figure 10 shows the curtail configuration parameters for HP1.
 The conditional_curtail parameters are optional (highlighted
-in grey), but the curtail parameters are required (highlighted
+in grey), but the curtail parameters are required.
 
 
-.. image:: ../html/_images/figure_10.jpg
+.. image:: ../source/_images/figure_10.jpg
    :alt: Main Configuration File
    
 
-in yellow).The curtail configuration information is essentially ifelse
+The curtail configuration information is essentially ifelse
 logic embedded in the Java Script Object Notation (JSON)1
 configuration file. The logic is executed as follows (Figure 11):
 
-.. image:: ../html/_images/figure_11.jpg
+.. image:: ../source/_images/figure_11.jpg
    :alt: Main Configuration File
    
 
@@ -529,25 +502,32 @@ are used to curtail the device.
 The following are required parameters for the conditional_curtail
 parameter:
 
-• condition – String representation of a mathematical conditional.
-This mathematical conditional is evaluated to return a Boolean.
-• conditional_args – List of point names from the device (HP1)
-used to evaluate the mathematical formula in the operation
-parameter. The values associated with each point are updated
-when new device data are published by the VOLTTRON
-platform.driver service.
-• point – The point on the device (i.e., HP1) that is commanded to
-achieve the load reduction.
-• value – The value the point is commanded to, in order to achieve
-the load reduction.
-• offset – If offset parameter is present, then the value parameter
-is ignored and the current value of the point on the device plus
-the offset is commanded to the point on the device to achieve
-the desired load reduction.
-• load – The estimated load reduction for the curtail action.
+-  condition : String representation of a mathematical conditional.
+   This mathematical conditional is evaluated to return a Boolean.
+
+- conditional_args – List of point names from the device (HP1)
+   used to evaluate the mathematical formula in the operation
+   parameter. The values associated with each point are updated
+   when new device data are published by the VOLTTRON
+   platform.driver service.
+
+-  point : The point on the device (i.e., HP1) that is commanded to
+   achieve the load reduction.
+
+- value : The value the point is commanded to, in order to achieve
+   the load reduction.
+
+-  offset : If offset parameter is present, then the value parameter
+   is ignored and the current value of the point on the device plus
+   the offset is commanded to the point on the device to achieve
+   the desired load reduction.
+
+- load : The estimated load reduction for the curtail action.
 The following are required parameters for the curtail parameter:
-• point – The point on the device (i.e., HP1) that is commanded to
-achieve the load reduction.
+
+- point : The point on the device (i.e., HP1) that is commanded to
+   achieve the load reduction.
+
 • value – The value the point is commanded to, in order to achieve
 the load reduction.
 • offset – If offset parameter is present, then the value parameter
@@ -570,7 +550,7 @@ criteria configuration). This information is configured in the criteria
 pairwise comparison configuration file. Figure 12 shows an example
 ILC criteria pairwise comparison configuration file:
 
-.. image:: ../html/_images/figure_12.jpg
+.. image:: ../source/_images/figure_12.jpg
    :alt: Main Configuration File
    
 
@@ -578,7 +558,7 @@ The names for the criteria must match the names of the criteria used
 in the device/criteria configuration file documented in Section 3.2.
 Take the first entry in the configuration file as an example (Figure 13):
 
-.. image:: ../html/_images/figure_13.jpg
+.. image:: ../source/_images/figure_13.jpg
    :alt: Main Configuration File
    
 
@@ -627,7 +607,7 @@ BUILDING8. PNNL BUILDING8 is a single-story building consisting
 of office spaces and a large shop for operations and maintenance
 work. Information for PNNL BUILDING8 is summarized in Table 3:
 
-.. image:: ../html/_images/table_3.jpg
+.. image:: ../source/_images/table_3.jpg
    :alt: Main Configuration File
    
 
@@ -651,14 +631,14 @@ system (BAS) controller and is configured to provide discrete
 command signals to the heat pump for staging of the indoor fan,
 compressors, auxiliary heat and economizer.
 
-.. image:: ../html/_images/table_4.jpg
+.. image:: ../source/_images/table_4.jpg
    :alt: Main Configuration File
    
 
 Each of these heat pumps has the following points (Table 5) that are
 trended by a dedicated VOLTTRON node at 1-minute intervals.
 
-.. image:: ../html/_images/table_5.jpg
+.. image:: ../source/_images/table_5.jpg
    :alt: Main Configuration File
    
 
@@ -683,7 +663,7 @@ was chosen to be 90% of the maximum predicted load (i.e., the
 maximum predicted load was 150 kW and the goal was 90% of this
 value – 135 kW).
 
-.. image:: ../html/_images/figure_14.jpg
+.. image:: ../source/_images/figure_14.jpg
    :alt: Main Configuration File
    
 
@@ -694,7 +674,7 @@ required parameters; one must only update the values associated
 with each entry to customize the ILC application. Figure 15 shows
 the configuration file used for the ILC test at PNNL BUILDING8.
 
-.. image:: ../html/_images/figure_15.jpg
+.. image:: ../source/_images/figure_15.jpg
    :alt: Main Configuration File
    
 
@@ -856,7 +836,7 @@ may indicate internal or external loads (solar gain, perimeter
 zones with poor envelope or high infiltration loads, conference
 rooms with high occupant densities, etc.).
 
-.. image:: ../html/_images/cooling_heating_mode.jpg
+.. image:: ../source/_images/cooling_heating_mode.jpg
    :alt: Main Configuration File
    
 
@@ -871,7 +851,7 @@ Equation 4 for the heating mode. When the value between Tzone
 and Tcsp (or Thsp) is higher than or equal to 0.1, ΔTzone-csp (ΔTzone-hsp)
 should be determined to be 10.
 
-.. image:: ../html/_images/cooling_heating_mode2.jpg
+.. image:: ../source/_images/cooling_heating_mode2.jpg
    :alt: Main Configuration File
    
 
@@ -885,7 +865,7 @@ of room types served (1: Most importance and 9: Least
 importance). Table 6 shows the heat pump priority based on
 room type for PNNL BUILDING8:
 
-.. image:: ../html/_images/table_6.jpg
+.. image:: ../source/_images/table_6.jpg
    :alt: Main Configuration File
    
 
@@ -904,7 +884,7 @@ cooling) and to FirstStageHeating and to SecondStageHeating
 (for heating) as shown in Table 7.
 
 
-.. image:: ../html/_images/table_7.jpg
+.. image:: ../source/_images/table_7.jpg
    :alt: Main Configuration File
    
 
@@ -920,241 +900,127 @@ comparison configuration file. Figure 16 shows the criteria pairwise
 comparison file used for deployment of ILC in PNNL BUILDING8:
 
 
-.. image:: ../html/_images/figure_16.jpg
+.. image:: ../source/_images/figure_16.jpg
    :alt: Main Configuration File
    
 
 
-.. image:: ../html/_images/figure_17.jpg
+.. image:: ../source/_images/figure_17.jpg
    :alt: Main Configuration File
    
 
 Take the first entry in the configuration file (Figure 13):
 This tells the ILC application that the:
 
-• zonetemperature-setpoint-deviation criterion is seven
-times more important than curtail_count criterion
+-  zonetemperature-setpoint-deviation criterion is seven
+   times more important than curtail_count criterion
 
-• zonetemperature-setpoint-deviation criterion is five
-times more important than historical-comparison criterion
+-  zonetemperature-setpoint-deviation criterion is five
+   times more important than historical-comparison criterion
 
-• zonetemperature-setpoint-deviation criterion is eight
-times more important than room-type criterion
+-  zonetemperature-setpoint-deviation criterion is eight
+   times more important than room-type criterion
 
-• zonetemperature-setpoint-deviation criterion is six times
-more important than rated-power criterion
+-  zonetemperature-setpoint-deviation criterion is six times
+   more important than rated-power criterion
 
-• zonetemperature-setpoint-deviation criterion is two
-times more important than stage criterion.
+-  zonetemperature-setpoint-deviation criterion is two
+   times more important than stage criterion.
 
 One may configure the criteria as being less important too. Take
 the first comparison as an example:
 
-• “curtail_count”: 7
-- The zonetemperature-setpoint-deviation criterion
-is seven times more important than the curtail_count
-criterion.
+- “curtail_count”: 7
+
+-  The zonetemperature-setpoint-deviation criterion
+   is seven times more important than the curtail_count
+   criterion.
 
 To configure the zonetemperature-setpoint-deviation
 criterion as seven time less important than curtail_count
 criterion the configuration file entry would be modified as follows:
 
-• “curtail_count”: 0.1429
-- The zonetemperature-setpoint-deviation criterion is
-seven times less important than curtail_count criterion
-(note that 0.1429 is 1/7).
+- “curtail_count”: 0.1429
+
+-  The zonetemperature-setpoint-deviation criterion is
+   seven times less important than curtail_count criterion
+
+.. note:: 0.1429 is 1/7
 Take the second entry in the configuration file (Figure 18):
 
-.. image:: ../html/_images/figure_18.jpg
+.. image:: ../source/_images/figure_18.jpg
    :alt: Main Configuration File
    
 
 This tells the ILC application that the:
 
-• stage criterion is five times more important than the curtail_
-count criterion
+-  stage criterion is five times more important than the curtail_
+   count criterion
 
-• stage criterion is three times more important than the
-historical-comparison criterion
+-  stage criterion is three times more important than the
+   historical-comparison criterion
 
-• stage criterion is six times more important than the room-type
-criterion
+-  stage criterion is six times more important than the room-type
+   criterion
 
-• stage criterion is four times more important than the ratedpower
-criterion.
+-  stage criterion is four times more important than the ratedpower
+   criterion.
 
-.. image:: ../html/_images/figure_19.jpg
+.. image:: ../source/_images/figure_19.jpg
    :alt: Main Configuration File
    
 
 Take the third entry in the configuration file (Figure 19); it tells the
 ILC application that the:
 
-• historical-comparison criterion is three times more
-important than the curtail_count criterion
+-  historical-comparison criterion is three times more
+   important than the curtail_count criterion
 
-• historical-comparison criterion is five times more important
-than room-type criterion
+-  historical-comparison criterion is five times more important
+   than room-type criterion
 
-• historical-comparison criterion is three times more
-important than rated-power criterion/
-Take the fourth entry in the configuration file (Figure 20):
+-  historical-comparison criterion is three times more
+   important than rated-power criterion/
+   Take the fourth entry in the configuration file (Figure 20):
 
-.. image:: ../html/_images/figure_20.jpg
+.. image:: ../source/_images/figure_20.jpg
    :alt: Main Configuration File
    
 
 This tells the ILC application that the:
 
-• curtail_count criterion is three times more important than
-the room-type criterion
+-  curtail_count criterion is three times more important than
+   the room-type criterion
 
-• curtail_count criterion is five times more important than the
-rated-power criterion
+-  curtail_count criterion is five times more important than the
+   rated-power criterion
+
 Take the fifth entry in the configuration file (Figure 21):
 
-.. image:: ../html/_images/figure_21.jpg
+.. image:: ../source/_images/figure_21.jpg
    :alt: Main Configuration File
    
 
 This tells the ILC application that the:
 
-• rated-power criterion is three times more important than the
-room-type criterion
+-  rated-power criterion is three times more important than the
+   room-type criterion
 
 Take the sixth entry in the configuration file (Figure 22):
 
-.. image:: ../html/_images/figure_22.jpg
+.. image:: ../source/_images/figure_22.jpg
    :alt: Main Configuration File
    
 
 This tells the ILC application:
-• The relative importance of the room-type criterion with respect
-to all other criteria has already been specified in the previous
-criteria configuration.
-• The parameter (with empty value) must be specified for the ILC
-application to use the criteria.
+-  The relative importance of the room-type criterion with respect
+   to all other criteria has already been specified in the previous
+   criteria configuration.
 
-ILC Device/ Criteria Configuration for Heat Pumps during Cooling Operations DELETE ME
-
-
-Heating and cooling in PNNL BUILDING8 is achieved by 10 heat
-pumps. Five of these heat pumps have two stages of cooling (i.e.,
-two compressors that are staged on and off based on the cooling
-demand). Figure 23 shows the device/criteria configuration entry
-for HP3 at PNNL BUILDING8. This heat pump serves a lobby and
-lunch room space (thus the room-type/map_key = Lobby). The
-device/criteria configuration was covered in detail in Section 3.2.
-The following information is useful in understanding the ILC test at
-PNNL BUILDING8:
-
-.. image:: ../html/_images/figure_23_pt1.jpg
-   :alt: Main Configuration File
-   
-
-.. image:: ../html/_images/figure_23_pt2.jpg
-   :alt: Main Configuration File
-   
-
-• The criteria for FirstStageCooling and
-SecondStageCooling are identical except for the stage
-criteria. The stage criterion value for SecondStageCooling
-is three times greater than the stage criterion value
-for FirstStageCooling. This ensures that if both
-FirstStageCooling and SecondStageCooling are “ON”
-then SecondStageCooling will always be curtailed before
-FirstStageCooling.
-
-• The conditional_curtail and curtail entries in the file control
-how the ILC application interacts with the heat pump.
-
-The curtail configuration parameters inform the ILC application
-what point on the device to command and the value to command
-that point to achieve the desired load reduction for the device.
-Figure 24 shows the curtail configuration parameters for HP3. The
-conditional_curtail parameters are optional (highlighted in grey),
-but the curtail parameters are required (highlighted in yellow).
-
-.. image:: ../html/_images/figure_24.jpg
-   :alt: Main Configuration File
-   
-
-The curtail configuration information is essentially if-else logic
-embedded in the JSON configuration file. The logic is executed as
-follows (Figure 25):
-
-.. image:: ../html/_images/figure_25.jpg
-   :alt: Main Configuration File
-   
-
-This allows the user to curtail the device differently based on
-conditions evaluated at the time of curtailment. If a user does not
-want to use conditional_curtail (this set of parameters is omitted)
-or none of the conditionals evaluate to True, the curtail parameters
-is used to curtail the device.
-The following are required parameters for a conditional_curtail:
-
-• condition – String representation of a mathematical conditional.
-This mathematical conditional is evaluated to return a Boolean.
-- The above configuration informs the ILC application to evaluate
-the point OccupancyMode on HP3.
-
-• conditional_args – List of point names from the device (HP3)
-used to evaluate the mathematical formula in the operation
-parameter. The values associated with each point are updated
-when new device data are published by the platform.driver.
-
-• point – The point on the device (i.e., HP1) commanded to
-achieve the load reduction.
-
-• value – The value the point is commanded to, in order to achieve
-the load reduction.
-
-• offset – If offset parameter is present then the value parameter
-is ignored and the current value of the point on the device plus
-the offset is commanded to the point on the device to achieve
-the desired load reduction.
-
-• load – The estimated load reduction for the curtail action.
-
-The above configuration tells the ILC application to evaluate the
-point OccupancyMode associated with HP3 (published by the
-VOLTTRON platform.driver). If OccupancyMode evaluates to
-True (the zone served by HP3 is in an occupied mode), then the
-ILC application modifies the CoolingTemperatureSetPoint.
-The ILC application adds the offset to the current value of the
-CoolingTemperatureSetPoint and then commands the
-CoolingTemperatureSetPoint to this new value.
-If the OccupancyMode point associated with HP3 is evaluated
-to False, then the ILC application uses the curtail configuration
-(i.e., executes curtail as “else” contingency) parameter. The
-ILC application adds the offset to the current value of the
-UnoccupiedCoolingTemperatureSetPoint and then
-commands the UnoccupiedCoolingTemperatureSetPoint to
-this new value.
-The offset parameter can be positive or negative. During cooling
-the offset is positive; during ILC actions the temperature set point
-
-for the zone served by the heat pump is increased and the zone
-becomes warmer prior to HP3 engaging mechanical cooling,
-thereby reducing power consumption by the heat pump. During
-heating the offset is configured as a negative value (i.e., the zone
-becomes cooler prior to the heat pump engaging mechanical
-heating). The set point affects occupant comfort. Unoccupied or
-low-occupancy zones can often have more aggressive modifications
-to set points because occupant comfort is not a significant issue.
-Upon completion of curtailment actions, the ILC application returns
-all devices to normal operations. The ILC application makes use of
-the VOLTTRON platform Actuator agent, which supports reversion
-to normal operations after control actions by an application.
-Currently, the ILC application releases all curtailed devices
-simultaneously, but a stagger release algorithm is in testing to
-alleviate the potential rebound effect caused by returning devices
-to normal operations.
-
+-  The parameter (with empty value) must be specified for the ILC
+   application to use the criteria.
 
 5.1 ILC Use Case: VAV Boxes and Lighting Control DELETE ME
-
 
 As discussed in the use case for heat pump cooling control, the
 main ILC configuration file contains building-level configuration
@@ -1170,78 +1036,96 @@ description of the main ILC configuration file, see Section 3.1.
 The following list describes each of the configuration parameters in
 the main ILC configuration file:
 
-• campus – The campus name as published by the VOLTTRON
+- campus : The campus name as published by the VOLTTRON
 platform.driver service.
-• building – The building name as published by the VOLTTRON
-platform.driver service.
-• power_meter – Dictionary containing information to identify the
-power meter data published by the platform.driver.
-- device – The device name for the building power meter as
-published by the platform.driver.
-- point – The point name on the power meter for whole
-building power as published by the platform.driver.
-• agent_id – The ILC instance (running application) name on the
-VOLTTRON platform.
-• demand_limit – The ILC application manages devices (curtail) in
-an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the average_
-building_power_window parameter.
-• curtailment_time – The amount of time (minutes) the ILC
-application holds curtailment of devices once the building goal
-is met. If during this period the average WholeBuildingPower
-increases above the goal the timer resets and the ILC application
-attempts to curtail additional available devices. If all devices
-have been curtailed and the WholeBuildingPower is still above
-the goal the timer is not reset.
-• curtailment_confirm – Delay time (minutes) after curtailment
-actions to confirm that building demand goal has been met.
-If the building goal has not been met, additional curtailment
-action(s) are taken, if possible.
-• curtailment_break – The time (minutes) after the completion
-of curtailment actions during which no further curtailment
-actions are taken. Completion of curtailment actions happens
-after the curtailment_time timer elapses (i.e., the average
-WholeBuildingPower goals were met and maintained for
-the curtailment_time or all devices were curtailed and the
-curtailment_time timer elapsed).
-• average_building_power_window – The average building
-power is calculated using a moving window. This parameter
-configures the length (minutes) of that window.
-• clusters – Array of dictionaries containing information about
-each cluster of devices (a cluster consists of a group of devices
-with the same criterion):
-- device_file_path – Full path to the device/criteria configuration
-file described in Section 3.2.
-- criteria_file_path – Full path to the pairwise comparison
-configuration file described in Section 3.2.
-- cluster_priority – Weighting factor assigned to this cluster.
-The sum of these weighting factors for all clusters should equal
-1.0. If the sum of the cluster weighting factors is not 1.0 the ILC
-application returns an error upon startup and shutdown.
-• mappers – A dictionary of dictionaries containing categorical
-assignment for use in the device/criteria configuration. This
-parameter is used for configuring the mapper criteria (Section
-3.2).
+
+-  building : The building name as published by the VOLTTRON
+   platform.driver service.
+
+-  power_meter : Dictionary containing information to identify the
+   power meter data published by the platform.driver.
+
+-  device : The device name for the building power meter as
+   published by the platform.driver.
+
+-  point : The point name on the power meter for whole
+   building power as published by the platform.driver.
+
+-  agent_id : The ILC instance (running application) name on the
+   VOLTTRON platform.
+
+-  demand_limit : The ILC application manages devices (curtail) in
+   an attempt to keep the average whole building power below this
+   kilowatt value. The average time is determined by the average_
+   building_power_window parameter.
+
+-  curtailment_time : The amount of time (minutes) the ILC
+   application holds curtailment of devices once the building goal
+   is met. If during this period the average WholeBuildingPower
+   increases above the goal the timer resets and the ILC application
+   attempts to curtail additional available devices. If all devices
+   have been curtailed and the WholeBuildingPower is still above
+   the goal the timer is not reset.
+
+-  curtailment_confirm : Delay time (minutes) after curtailment
+   actions to confirm that building demand goal has been met.
+   If the building goal has not been met, additional curtailment
+   action(s) are taken, if possible.
+
+-  curtailment_break : The time (minutes) after the completion
+   of curtailment actions during which no further curtailment
+   actions are taken. Completion of curtailment actions happens
+   after the curtailment_time timer elapses (i.e., the average
+   WholeBuildingPower goals were met and maintained for
+   the curtailment_time or all devices were curtailed and the
+   curtailment_time timer elapsed).
+
+-  average_building_power_window : The average building
+   power is calculated using a moving window. This parameter
+   configures the length (minutes) of that window.
+
+-  clusters : Array of dictionaries containing information about
+   each cluster of devices (a cluster consists of a group of devices
+   with the same criterion):
+
+-  device_file_path : Full path to the device/criteria configuration
+   file described in Section 3.2.
+
+-  criteria_file_path : Full path to the pairwise comparison
+   configuration file described in Section 3.2.
+
+-  cluster_priority : Weighting factor assigned to this cluster.
+   The sum of these weighting factors for all clusters should equal
+   1.0. If the sum of the cluster weighting factors is not 1.0 the ILC
+   application returns an error upon startup and shutdown.
+
+-  mappers : A dictionary of dictionaries containing categorical
+   assignment for use in the device/criteria configuration. This
+   parameter is used for configuring the mapper criteria (Section
+   3.2).
 
 Users configure the weighting factor (“cluster_priority”) that
 is applied to the raw score of the equipment in one (or more)
 cluster. When more than one cluster exists, the sum of all the
-cluster priorities should equal 1.0 (See Figure 27 for example). In
-this example, a weighting factor of 0.33 is applied to the lighting
+cluster priorities should equal 1.0 (See Figure 27 for example). 
+
+In this example, a weighting factor of 0.33 is applied to the lighting
 cluster. All devices in this cluster are previously assigned a raw
 score and the weighting factor is multiplied to provide a final
 number. This same approach is true for the VAV box devices (a
 weighting factor of 0.67 is applied to the VAV devices in the VAV
-cluster). This results in each device with its own score. That score
+cluster). 
+
+This results in each device with its own score. That score
 determines the device priority in the array of loads that could be
 curtailed during an ILC event.
 
 
-.. image:: ../html/_images/figure_27.jpg
+.. image:: ../source/_images/figure_27.jpg
    :alt: Main Configuration File
    
 
-
+ 
 5.2 ILC Criteria Configuration Delete me
 
 
@@ -1285,12 +1169,12 @@ to maintain the static pressure needed to achieve the desired
 VAV box airflow rates that are a result of the zone temperature
 deviation from the zone cooling setpoint.
 
-Note: A VAV terminal box configured with minimum airflow rate
+.. Note:: A VAV terminal box configured with minimum airflow rate
 values that are 50% or more of the maximum airflow rate values
 may affect the level of success for VAV zone cooling setpoint
 adjustments.
 
-.. image:: ../html/_images/figure_28.jpg
+.. image:: ../source/_images/figure_28.jpg
    :alt: Main Configuration File
    
 
@@ -1309,11 +1193,12 @@ not exist (dimmable ballasts versus non-dimmable ballasts). In
 addition, daylighting sensors, occupancy sensors, and other BAS
 strategies may already be optimizing lighting systems.
 
-.. image:: ../html/_images/figure_29.jpg
+.. image:: ../source/_images/figure_29.jpg
    :alt: Main Configuration File
-   
+..   
 
-5.4 ILC Device/Criteria Configuration for VAV Boxes and Lighting Delete me
+
+   5.4 ILC Device/Criteria Configuration for VAV Boxes and Lighting Delete me
 
 
 The default criteria implemented for ILC of VAV boxes are
@@ -1352,7 +1237,7 @@ different levels of zone cooling temperature setpoint increases
 to determine the optimum level of increase that also provides a
 commensurate power demand reduction value.
 
-.. image:: ../source/source/ILC_Tutorial_Screenshots/figure_30.jpg
+.. image:: ../source/_images/figure_30.jpg
    :alt: Main Configuration File
    
 
@@ -1381,10 +1266,10 @@ reduction in demand can be calculated by multiplying the
 number of lamps that can reduced (dimmed) by their wattage
 rating.
 
-.. image:: ../html/_images/figure_31.jpg
+.. image:: ../source/_images/figure_31.jpg
    :alt: Main Configuration File
    
-
+.. 
 Indices and tables
 ==================
 
