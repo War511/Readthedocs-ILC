@@ -19,16 +19,16 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Helvetica;
     font-size: 100%;
-    background-color: lightskyblue;
+    background-color: tan;
     color: #000;
     margin: 0;
     padding: 0;
 }
 
 div.document {
-    background-color: lightgrey;
+    background-color: whitesmoke;
 }
 
 div.documentwrapper {
@@ -41,7 +41,7 @@ div.bodywrapper {
 }
 
 div.body {
-    background-color: #ffffff;
+    background-color: white;
     color: #000000;
     padding: 0 20px 30px 20px;
 }
@@ -60,7 +60,7 @@ div.footer a {
 }
 
 div.related {
-    background-color: #133f52;
+    background-color: tan;
     line-height: 30px;
     color: #ffffff;
 }
@@ -90,7 +90,7 @@ div.documentwrapper {
 */
 
 div.sphinxsidebar h3 {
-    font-family: blue;
+    font-family: Arial;
     color: black;
     font-size: 1.4em;
     font-weight: normal;
@@ -103,7 +103,7 @@ div.sphinxsidebar h3 a {
 }
 
 div.sphinxsidebar h4 {
-    font-family: blue;
+    font-family: Arial;
     color: black;
     font-size: 1.3em;
     font-weight: normal;
@@ -126,11 +126,11 @@ div.sphinxsidebar ul {
 }
 
 div.sphinxsidebar a {
-    color: royalblue;
+    color: black;
 }
 
 div.sphinxsidebar input {
-    border: 1px solid royalblue;
+    border: 1px solid black;
     font-family: sans-serif;
     font-size: 1em;
 }
@@ -163,10 +163,10 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: blue;
-    background-color: #f2f2f2;
+    font-family: Arial;
+    background-color: maroon;
     font-weight: normal;
-    color: royalblue;
+    color: White;
     border-bottom: 1px solid #ccc;
     margin: 20px -20px 10px -20px;
     padding: 3px 0 3px 10px;
@@ -180,14 +180,14 @@ div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
 
 a.headerlink {
-    color: lightskyblue;
+    color: lightgray;
     font-size: 0.8em;
     padding: 0 4px 0 4px;
     text-decoration: none;
 }
 
 a.headerlink:hover {
-    background-color: lightskyblue;
+    background-color: lightgray;
     color: white;
 }
 
@@ -268,7 +268,7 @@ th, dl.field-list > dt {
 }
 
 .viewcode-back {
-    font-family: sans-serif;
+    font-family: Helvetica;
 }
 
 div.viewcode-block:target {

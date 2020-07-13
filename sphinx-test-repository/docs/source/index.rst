@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. toctree:: 
-    :depth: 2
+   :depth: 2
 
 ILC Web application: User guide
 *******************************
@@ -190,59 +190,9 @@ Once you click **Save New Cluster.**
    :alt: Main Configuration File
    :scale: 50
 
-ILC Device/Criteria Configuration and cluster options
-=====================================================
-The *ILC* application is used for management of peak demand for a
-building. Different types of devices are grouped into *clusters* (e.g.,
-heat pumps could be one cluster of devices while lighting fixtures
-could be another). Each device within a cluster must have the same
-criteria, but different clusters should have differing criteria because
-the data points and operations of differing devices are not the
-same (i.e., different criteria [conditions] need to be evaluated to
-effectively determine different devices priority for curtailment).
-The following conventions are used in this guide:
 
--  The text colored red in the configuration file indicates a point on
-   the device. This point is published by the VOLTTRON platform.
-   driver service. In the example shown in Figure 3, a total of 5
-   points on the device are used in the platform driver.
-
--  Text colored in green indicates the name of a criterion used for
-   prioritization of curtailable loads. In the example shown in Figure
-   3, a total of 5 criteria are used for prioritization of curtailable
-   loads in the platform driver.
-
-The outer dictionary key must be the name of the device of interest
-as published by the VOLTTRON platform.driver service (i.e., HP1
-– colored in purple in Figure 3) and the value associated with this
-key must be a point on the device. This point associated with the
-device must be binary data that indicate the operational status of
-the device. For this example, a heat pump in mechanical cooling mode 
-is only available to shed load if the unit is mechanically 
-cooling and this point (i.e., FirstStageCooling – colored in blue in
-Figure 4) indicates a value of “ON” when cooling is active (True).
-The inner dictionary (the value for the point FirstStageCooling)
-contains the criteria configuration for the device (i.e., HP1) as well
-as the curtail information (highlighted in grey in Figure 4). The
-curtail information tells the ILC agent what point on the device to
-command and the value to command that point to achieve the
-desired load reduction for the device.
-
-ILC Device/Criteria Configuration
----------------------------------
-
-The ILC application is used for management of peak demand for a
-building. Different types of devices are grouped into clusters (e.g.,
-heat pumps could be one cluster of devices while lighting fixtures
-could be another). Each device within a cluster must have the same
-criteria, but different clusters should have differing criteria because
-the data points and operations of differing devices are not the
-same (i.e., different criteria [conditions] need to be evaluated to
-effectively determine different devices priority for curtailment).
-
-The AHP is multi-criteria decision-making process used by the ILC
-application. The default criteria implemented for ILC of heat pumps
-are explained in this section.
+Device/Criteria Configuration
+=============================
 When you use the Criteria Configuration, you have the option to use items in the dropdown that were imported from your document that you uploaded at the start. This will be quite an array of options depending on what you have uploaded.
 
 Once you click an option, you should see another drop down underneath *Curtail*. 
@@ -438,7 +388,7 @@ Pairwise configuration
 In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
 The custom cluster will be listed with 3 items listed as such: 
 
-.. image:: ..source/_images/custom_Cluster.jpg
+.. image:: ../source/_images/cluster_Options.jpg
    :alt: custom cluster
    
 
@@ -446,25 +396,25 @@ At the top, you should see a criteria order. This will be completely customizabl
 each item in the order you prefer. There is also an additional option at the bottom to **+Add criteria** if you need
 to add more. 
 
-underneath the custom list, you should see a dropdown called: **Pairwise Criteria**. This will have various other customisation 
+underneath the custom list, you should see a dropdown called: **Pairwise Criteria**. This will have various other customization 
 options as well. 
 
 
-.. image:: ../source/_images/zonetemperature_Setpoint.jpg
-   :alt: zone temperature setpoint
+.. image:: ../source/_images/custom_Cluster.jpg
+   :alt: Custom Cluster
 
    
 inside of each of the options, there should be a power mode you can set.
 in a dropdown for each. 
 
 .. image:: ../source/_images/zonetemperature_Setpoint.jpg
-   :alt: Main Configuration File
+   :alt: zone temperature setpoint
 .. image:: ../source/_images/stage.jpg
-   :alt: Main Configuration File
+   :alt: Stage option
 .. image:: ../source/_images/history_Zonetemperature.jpg
-   :alt: Main Configuration File
+   :alt: history zone temperature
 .. image:: ../source/_images/rated_Power.jpg
-   :alt: Main Configuration File   
+   :alt: rated power  
 
 
 Control configuration: Empty add here
@@ -1122,151 +1072,6 @@ curtailed during an ILC event.
 
 
 .. image:: ../source/_images/figure_27.jpg
-   :alt: Main Configuration File
-   
-
- 
-5.2 ILC Criteria Configuration Delete me
-
-
-The criteria implemented for ILC configuration of VAV boxes
-and lighting systems are explained in this section. For a detailed
-description of each of ILC criterion, see Section 3.2.1. Only new
-criteria are described in this section.
-
-5.3 ILC Criteria Pairwise Comparison Configuration DELETE ME
-
-
-The AHP is multi-criteria decision-making process used by the ILC
-application and applied to different loads. In this case, we apply the
-AHP to VAV box loads with the following descriptions:
-
-
-1. Terminal box damper position (TerminalBox-Damper-
-Position): The VAV terminal box damper is designed to control
-the air flow into a zone. In a typical VAV box configuration (with
-a modulating damper and damper actuator arrangement), the
-zone temperature is continuously compared to the zone cooling
-setpoint. As the zone temperature rises above the zone cooling
-setpoint, the VAV box calculates a higher airflow setpoint that
-results in the VAV box damper command increasing in value
-to meet the newly calculated airflow setpoint. This new airflow
-setpoint causes the damper actuator to open further (from the
-minimum position up to 100% or as required) in order to attain
-the new airflow setpoint. In the cooling mode, the damper
-actuator opens the VAV box damper in response to zone
-temperatures that are above the zone cooling setpoint that
-cause the calculated airflow setpoint to also increase (increase
-flow of cool air to bring the zone temperature back to setpoint).
-Once the zone temperature drops below the zone cooling
-set point, the VAV box calculates a lower airflow setpoint and
-this causes the VAV damper to modulate to a lower value to
-reduce the airflow rates. Therefore, the VAV damper position
-has an impact on the thermal comfort conditions and indoor
-environmental quality. Ultimately, the VAV damper position
-directly correlates to the AHU fan power loading as the AHU tries
-to maintain the static pressure needed to achieve the desired
-VAV box airflow rates that are a result of the zone temperature
-deviation from the zone cooling setpoint.
-
-.. Note:: A VAV terminal box configured with minimum airflow rate
-values that are 50% or more of the maximum airflow rate values
-may affect the level of success for VAV zone cooling setpoint
-adjustments.
-
-.. image:: ../source/_images/figure_28.jpg
-   :alt: Main Configuration File
-   
-
-2. Lighting level (lightng_levels): The lighting levels can
-have an impact on the productivity, safety, and security of
-building occupants. Therefore, the lighting power capacity
-for selected areas should not be reduced to levels that could
-possibly affect the visual comfort, safety, and security of the
-occupants in the zone. When selecting which lights should
-be dimmed, the current light levels and how low they can be
-further reduced should be evaluated to mitigate negative
-impacts on the occupants. Dimming of lighting circuits as an ILC
-strategy is limited by the physical configuration of the lighting
-circuits and the dimming control capabilities that may or may
-not exist (dimmable ballasts versus non-dimmable ballasts). In
-addition, daylighting sensors, occupancy sensors, and other BAS
-strategies may already be optimizing lighting systems.
-
-.. image:: ../source/_images/figure_29.jpg
-   :alt: Main Configuration File
-..   
-
-
-   5.4 ILC Device/Criteria Configuration for VAV Boxes and Lighting Delete me
-
-
-The default criteria implemented for ILC of VAV boxes are
-explained in Figure 30. For a detailed description of ILC device/
-criteria configuration, see Section 3.2. Only new criteria are listed
-and described in this section.
-
-• VAV terminal box 102, served by AHU1 (“AHU1/VAV102”):
-Identify an equipment name for participating in ILC events.
-
-• Occupancy mode (“OccupancyMode”): Identify a status point
-for checking the equipment status before executing ILC. For
-example, if the occupancy mode is “0”, the ILC application
-excludes the equipment from participating in ILC events.
-
-• Cooling temperature setpoint offset (“offset”): Specify a value
-(in °F) for increasing the zone cooling temperature setpoint.
-ILC can effect a reduction of power as a result of zone cooling
-temperature setpoint changes. For example, if the zone cooling
-temperature setpoint is 74°F while an ILC event occurs, the ILC
-application will increase the zone cooling temperature setpoint
-from 74°F to 75°F (or higher). Increasing the zone cooling
-temperature setpoint can result in the reduction of conditioned
-air flowing to the space through the VAV terminal box. It may
-also reduce the chilled water flow requirements through the AHU
-cooling coil, serving the VAV terminal box.
-
-• Expected power demand reduction from VAV box (“load”):
-Specify a value for the expected power demand reduction (in
-kW) as a result of ILC actions. It may be difficult to calculate the
-expected power demand reduction from reduced airflow at a
-VAV box without actual field experiments or the use of building
-and energy simulation models to estimate the power demand
-reduction value(s). The user may need to experiment with
-different levels of zone cooling temperature setpoint increases
-to determine the optimum level of increase that also provides a
-commensurate power demand reduction value.
-
-.. image:: ../source/_images/figure_30.jpg
-   :alt: Main Configuration File
-   
-
-The default criteria implemented for ILC of lighting are explained in
-Figure 31.
-
-• Lighting in Room 102 (“AHU1/Light102”): Identify an equipment
-name for participating in ILC events.
-
-• Light mode (“LightMode”): Identify a status point for checking
-the equipment status before executing ILC. For example, if the
-light mode is “0”, the ILC application excludes the equipment
-from participating in ILC events (because the light fixture/circuit
-is assumed to already be off).
-
-• The relative lighting level (“offset”): Specify a value, (in % output
-as a number) for decreasing the relative lighting level output. For
-example, reduce the lighting level output signal 30% below the
-current lighting level output signal while an ILC event occurs.
-
-• Expected power demand reduction from lighting control
-(“load”): Specify a value for the expected power demand
-reduction (in kW) as a result of ILC actions that come from
-reduced lighting level output commands. For example, the
-reduction in demand can be calculated by multiplying the
-number of lamps that can reduced (dimmed) by their wattage
-rating.
-
-.. image:: ../source/_images/figure_31.jpg
    :alt: Main Configuration File
    
 .. 

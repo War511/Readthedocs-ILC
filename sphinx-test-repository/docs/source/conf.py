@@ -53,13 +53,18 @@ html_theme_options = {
     'stickysidebar': 'true',
     'rightsidebar' : 'false',
     'collapsiblesidebar' : 'false',
-    'sidebarlinkcolor' : 'royalblue',
-    'sidebarbgcolor' : 'lightgrey',
+    'sidebarlinkcolor' : 'black',
+    'sidebarbgcolor' : 'whitesmoke',
     'sidebartextcolor' : 'black',
-    'headfont' : 'blue',
-    'footerbgcolor' : 'lightskyblue',
-    'headlinkcolor' : 'lightskyblue',
-    'headtextcolor' : 'royalblue'
+    'headfont' : 'slategray',
+    'footerbgcolor' : 'tan',
+    'headlinkcolor' : 'lightgray',
+    'headtextcolor' : 'White',
+    'bgcolor' : 'white',
+    'relbarbgcolor' : 'tan',
+    'headbgcolor' : 'maroon',
+    'bodyfont' : 'Helvetica',
+    'headfont' : 'Arial'
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
