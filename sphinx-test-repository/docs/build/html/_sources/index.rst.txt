@@ -38,7 +38,11 @@ if you click on the import new master driver configuration file, it will give yo
 voltron application file. Once you do this, it will give you the option to choose from the uploaded settings. 
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/import_Master_driver.jpg
+=======
+.. image:: ../source/pics/import_Master_driver.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -46,7 +50,11 @@ ILC Main configuration File
 ===========================
 First lets take a look at the main configuration file. There is an option right at the start that allows you to upload a file. This file that you upload will more than likeley be important to understanding your building number, etc. The nice thing about this application is it will be able to automatically read everything you upload, and give you major ease of access in order to understand your inputs. 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/master_Driver.jpg
+=======
+.. image:: ../source/pics/master_Driver.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
   
  
@@ -79,7 +87,11 @@ the main ILC configuration file:
    There will also be a drop down within the power meter setting: once you click that 
    drop down a few options, including a calculator will appear: 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/power_Meter.jpg
+=======
+.. image:: ../source/pics/power_Meter.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    :scale: 50
 
@@ -146,7 +158,11 @@ the main ILC configuration file:
 
 Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:
 
+<<<<<<< HEAD
 .. image:: ../source/_images/stagger_Release.jpg
+=======
+.. image:: ../source/pics/stagger_Release.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    :scale: 100
 
@@ -182,11 +198,19 @@ On the left side of the screen under Device clusters, you should see an icon tha
 You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking.
 Once you click **Save New Cluster.**
 
+<<<<<<< HEAD
 .. image:: ../source/_images/Add_cluster.jpg
    :alt: Main Configuration File
    :scale: 50
 
 .. image:: ../source/_images/cluster_type.jpg
+=======
+.. image:: ../source/pics/Add_cluster.jpg
+   :alt: Main Configuration File
+   :scale: 50
+
+.. image:: ../source/pics/cluster_type.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    :scale: 50
 
@@ -256,7 +280,11 @@ The dropdown should be listed as such:
 - roomtype 
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/criteria_order.jpg
+=======
+.. image:: ../source/pics/criteria_order.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
 
 This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.
@@ -283,7 +311,11 @@ parameter for each criterion.
 formula criteria
 ++++++++++++++++
 
+<<<<<<< HEAD
 .. image:: ../source/_images/formula.jpg
+=======
+.. image:: ../source/pics/formula.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
 
 The formula criterion allows a user to declare mathematical
@@ -295,6 +327,7 @@ configuration parameters:
 -  operation : String representation of a mathematical formula.
    This mathematical formula is evaluated to return a numeric value.
 
+<<<<<<< HEAD
 -  operation_args : List of point names from the device (HP1)
    used to evaluate the mathematical formula in the operation
    parameter. The values associated with each point are updated
@@ -303,6 +336,9 @@ configuration parameters:
    formula criterion.
 
 .. image:: ../source/_images/math_Table.jpg
+=======
+.. image:: ../source/pics/math_Table.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -311,14 +347,25 @@ heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_5.jpg
+=======
+.. image:: ../source/pics/figure_5.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
 status criteria
 +++++++++++++++
 
+<<<<<<< HEAD
 The status criterion reads a point (Boolean or enumeration) on the
+=======
+.. image:: ../source/pics/status.jpg
+   :alt: Main Configuration File
+
+   The status criterion reads a point (Boolean or enumeration) on the
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
 device and returns either an on_value or an off_value depending
 on whether the current status of the point is True (enumeration
 value of 1) or False (enumeration value of 0), respectively. The
@@ -328,6 +375,7 @@ following list contains the status criterion configuration parameters:
    This device point should be a Boolean or an enumeration with a
    value of 0 or 1.
 
+<<<<<<< HEAD
 -  **on_value** : The numeric value returned by the criterion if the
    point on the device indicates a True or enumeration value of 1.
 
@@ -339,13 +387,20 @@ following list contains the status criterion configuration parameters:
    configuration file.
 
 .. image:: ../source/_images/figure_6.jpg
+=======
+.. image:: ../source/pics/figure_6.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
 mapper criteria
 +++++++++++++++
 
+<<<<<<< HEAD
 .. image:: ../source/_images/mapper.jpg
+=======
+.. image:: ../source/pics/mapper.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
 
 The mapper criterion allows a user to categorize loads and assign
@@ -358,7 +413,11 @@ values. Users set their own priority depending on the
 importance of the room (1: most important and 7: less important).
 Table 2 shows an example of AHP priority based on room type.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/table_2.jpg
+=======
+.. image:: ../source/pics/table_2.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -368,6 +427,7 @@ parameters:
    file that contains the key (category) and value assigned to that
    category.
 
+<<<<<<< HEAD
 -  map_key – The category assigned to the device.
    Figure 7 shows an example of a mapper criterion configured for
    a heat pump. The criterion name, room-type, should match the
@@ -375,13 +435,20 @@ parameters:
    configuration file.
 
 .. image:: ../source/_images/figure_7.jpg
+=======
+.. image:: ../source/pics/figure_7.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
 constant criteria
 +++++++++++++++++
 
+<<<<<<< HEAD
 .. image:: ../source/_images/constant.jpg
+=======
+.. image:: ../source/pics/constant.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
 
    
@@ -396,14 +463,22 @@ Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_8.jpg
+=======
+.. image:: ../source/pics/figure_8.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
 history criteria
 ++++++++++++++++
 
+<<<<<<< HEAD
 .. image:: ../source/_images/history.jpg
+=======
+.. image:: ../source/pics/history.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
 
    
@@ -429,7 +504,11 @@ a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_9.jpg
+=======
+.. image:: ../source/pics/figure_9.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -450,13 +529,19 @@ underneath the custom list, you should see a dropdown called: **Pairwise Criteri
 options as well. 
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/zonetemperature_Setpoint.jpg
    :alt: zone temperature setpoint
+=======
+.. image:: ../source/pics/zonetemperature_Setpoint.jpg
+   :alt: Main Configuration File
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
 
    
 inside of each of the options, there should be a power mode you can set.
 in a dropdown for each. 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/zonetemperature_Setpoint.jpg
    :alt: Main Configuration File
 .. image:: ../source/_images/stage.jpg
@@ -464,6 +549,15 @@ in a dropdown for each.
 .. image:: ../source/_images/history_Zonetemperature.jpg
    :alt: Main Configuration File
 .. image:: ../source/_images/rated_Power.jpg
+=======
+.. image:: ../source/pics/zonetemperature_Setpoint.jpg
+   :alt: Main Configuration File
+.. image:: ../source/pics/stage.jpg
+   :alt: Main Configuration File
+.. image:: ../source/pics/history_Zonetemperature.jpg
+   :alt: Main Configuration File
+.. image:: ../source/pics/rated_Power.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File   
 
 
@@ -481,7 +575,11 @@ The conditional_curtail parameters are optional (highlighted
 in grey), but the curtail parameters are required.
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_10.jpg
+=======
+.. image:: ../source/pics/figure_10.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -489,7 +587,11 @@ The curtail configuration information is essentially ifelse
 logic embedded in the Java Script Object Notation (JSON)1
 configuration file. The logic is executed as follows (Figure 11):
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_11.jpg
+=======
+.. image:: ../source/pics/figure_11.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -550,7 +652,11 @@ criteria configuration). This information is configured in the criteria
 pairwise comparison configuration file. Figure 12 shows an example
 ILC criteria pairwise comparison configuration file:
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_12.jpg
+=======
+.. image:: ../source/pics/figure_12.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -558,7 +664,11 @@ The names for the criteria must match the names of the criteria used
 in the device/criteria configuration file documented in Section 3.2.
 Take the first entry in the configuration file as an example (Figure 13):
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_13.jpg
+=======
+.. image:: ../source/pics/figure_13.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -607,7 +717,11 @@ BUILDING8. PNNL BUILDING8 is a single-story building consisting
 of office spaces and a large shop for operations and maintenance
 work. Information for PNNL BUILDING8 is summarized in Table 3:
 
+<<<<<<< HEAD
 .. image:: ../source/_images/table_3.jpg
+=======
+.. image:: ../source/pics/table_3.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -631,14 +745,22 @@ system (BAS) controller and is configured to provide discrete
 command signals to the heat pump for staging of the indoor fan,
 compressors, auxiliary heat and economizer.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/table_4.jpg
+=======
+.. image:: ../source/pics/table_4.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
 Each of these heat pumps has the following points (Table 5) that are
 trended by a dedicated VOLTTRON node at 1-minute intervals.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/table_5.jpg
+=======
+.. image:: ../source/pics/table_5.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -663,7 +785,11 @@ was chosen to be 90% of the maximum predicted load (i.e., the
 maximum predicted load was 150 kW and the goal was 90% of this
 value – 135 kW).
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_14.jpg
+=======
+.. image:: ../source/pics/figure_14.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -674,7 +800,11 @@ required parameters; one must only update the values associated
 with each entry to customize the ILC application. Figure 15 shows
 the configuration file used for the ILC test at PNNL BUILDING8.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_15.jpg
+=======
+.. image:: ../source/pics/figure_15.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -836,7 +966,11 @@ may indicate internal or external loads (solar gain, perimeter
 zones with poor envelope or high infiltration loads, conference
 rooms with high occupant densities, etc.).
 
+<<<<<<< HEAD
 .. image:: ../source/_images/cooling_heating_mode.jpg
+=======
+.. image:: ../source/pics/cooling_heating_mode.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -851,7 +985,11 @@ Equation 4 for the heating mode. When the value between Tzone
 and Tcsp (or Thsp) is higher than or equal to 0.1, ΔTzone-csp (ΔTzone-hsp)
 should be determined to be 10.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/cooling_heating_mode2.jpg
+=======
+.. image:: ../source/pics/cooling_heating_mode2.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -865,7 +1003,11 @@ of room types served (1: Most importance and 9: Least
 importance). Table 6 shows the heat pump priority based on
 room type for PNNL BUILDING8:
 
+<<<<<<< HEAD
 .. image:: ../source/_images/table_6.jpg
+=======
+.. image:: ../source/pics/table_6.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -884,7 +1026,11 @@ cooling) and to FirstStageHeating and to SecondStageHeating
 (for heating) as shown in Table 7.
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/table_7.jpg
+=======
+.. image:: ../source/pics/table_7.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -900,12 +1046,20 @@ comparison configuration file. Figure 16 shows the criteria pairwise
 comparison file used for deployment of ILC in PNNL BUILDING8:
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_16.jpg
+=======
+.. image:: ../source/pics/figure_16.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_17.jpg
+=======
+.. image:: ../source/pics/figure_17.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -948,7 +1102,11 @@ criterion the configuration file entry would be modified as follows:
 .. note:: 0.1429 is 1/7
 Take the second entry in the configuration file (Figure 18):
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_18.jpg
+=======
+.. image:: ../source/pics/figure_18.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -966,7 +1124,11 @@ This tells the ILC application that the:
 -  stage criterion is four times more important than the ratedpower
    criterion.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_19.jpg
+=======
+.. image:: ../source/pics/figure_19.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -983,7 +1145,11 @@ ILC application that the:
    important than rated-power criterion/
    Take the fourth entry in the configuration file (Figure 20):
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_20.jpg
+=======
+.. image:: ../source/pics/figure_20.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -997,7 +1163,11 @@ This tells the ILC application that the:
 
 Take the fifth entry in the configuration file (Figure 21):
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_21.jpg
+=======
+.. image:: ../source/pics/figure_21.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -1008,17 +1178,50 @@ This tells the ILC application that the:
 
 Take the sixth entry in the configuration file (Figure 22):
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_22.jpg
+=======
+.. image:: ../source/pics/figure_22.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
 This tells the ILC application:
+<<<<<<< HEAD
 -  The relative importance of the room-type criterion with respect
    to all other criteria has already been specified in the previous
    criteria configuration.
 
 -  The parameter (with empty value) must be specified for the ILC
    application to use the criteria.
+=======
+• The relative importance of the room-type criterion with respect
+to all other criteria has already been specified in the previous
+criteria configuration.
+• The parameter (with empty value) must be specified for the ILC
+application to use the criteria.
+
+ILC Device/ Criteria Configuration for Heat Pumps during Cooling Operations DELETE ME
+
+
+Heating and cooling in PNNL BUILDING8 is achieved by 10 heat
+pumps. Five of these heat pumps have two stages of cooling (i.e.,
+two compressors that are staged on and off based on the cooling
+demand). Figure 23 shows the device/criteria configuration entry
+for HP3 at PNNL BUILDING8. This heat pump serves a lobby and
+lunch room space (thus the room-type/map_key = Lobby). The
+device/criteria configuration was covered in detail in Section 3.2.
+The following information is useful in understanding the ILC test at
+PNNL BUILDING8:
+
+.. image:: ../source/pics/figure_23_pt1.jpg
+   :alt: Main Configuration File
+   
+
+.. image:: ../source/pics/figure_23_pt2.jpg
+   :alt: Main Configuration File
+   
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
 
 5.1 ILC Use Case: VAV Boxes and Lighting Control DELETE ME
 
@@ -1036,14 +1239,26 @@ description of the main ILC configuration file, see Section 3.1.
 The following list describes each of the configuration parameters in
 the main ILC configuration file:
 
+<<<<<<< HEAD
 - campus : The campus name as published by the VOLTTRON
 platform.driver service.
+=======
+.. image:: ../source/pics/figure_24.jpg
+   :alt: Main Configuration File
+   
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
 
 -  building : The building name as published by the VOLTTRON
    platform.driver service.
 
+<<<<<<< HEAD
 -  power_meter : Dictionary containing information to identify the
    power meter data published by the platform.driver.
+=======
+.. image:: ../source/pics/figure_25.jpg
+   :alt: Main Configuration File
+   
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
 
 -  device : The device name for the building power meter as
    published by the platform.driver.
@@ -1121,7 +1336,11 @@ determines the device priority in the array of loads that could be
 curtailed during an ILC event.
 
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_27.jpg
+=======
+.. image:: ../source/pics/figure_27.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -1174,7 +1393,11 @@ values that are 50% or more of the maximum airflow rate values
 may affect the level of success for VAV zone cooling setpoint
 adjustments.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_28.jpg
+=======
+.. image:: ../source/pics/figure_28.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 
@@ -1193,7 +1416,11 @@ not exist (dimmable ballasts versus non-dimmable ballasts). In
 addition, daylighting sensors, occupancy sensors, and other BAS
 strategies may already be optimizing lighting systems.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_29.jpg
+=======
+.. image:: ../source/pics/figure_29.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
 ..   
 
@@ -1266,7 +1493,11 @@ reduction in demand can be calculated by multiplying the
 number of lamps that can reduced (dimmed) by their wattage
 rating.
 
+<<<<<<< HEAD
 .. image:: ../source/_images/figure_31.jpg
+=======
+.. image:: ../source/pics/figure_31.jpg
+>>>>>>> 148866a12d4fd47f22eff9b455b44c994f0b55da
    :alt: Main Configuration File
    
 .. 
