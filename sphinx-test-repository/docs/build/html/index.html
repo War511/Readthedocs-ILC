@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ILC Web application: User guide &#8212; Intelligent Load Control Application 06/17/2020 documentation</title>
+    <title>ILC Web application: User guide &#8212; Intelligent Load Control Application 2020 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -24,7 +24,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="#">Intelligent Load Control Application 06/17/2020 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="#">Intelligent Load Control Application 2020 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ILC Web application: User guide</a></li> 
       </ul>
     </div>  
@@ -34,153 +34,275 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ilc-web-application-user-guide">
+  <div class="toctree-wrapper compound">
+</div>
+<div class="section" id="ilc-web-application-user-guide">
 <h1>ILC Web application: User guide<a class="headerlink" href="#ilc-web-application-user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The intelligent load application is a tool to use. // insert more here:</p>
+</div>
 <div class="section" id="ilc-application-configuration">
 <h2>ILC APPLICATION CONFIGURATION<a class="headerlink" href="#ilc-application-configuration" title="Permalink to this headline">¶</a></h2>
 <p><strong>!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!</strong></p>
 <p>The ILC application behavior is controlled through three
 configuration files:</p>
 <ol class="arabic simple">
-<li><p>the main ILC configuration file</p></li>
-<li><p>the device/criteria configuration file</p></li>
-<li><p>the criteria pairwise comparison configuration file.</p></li>
+<li><p>the main configuration file</p></li>
+<li><p>the device/criteria configuration page</p></li>
+<li><p>the criteria pairwise comparison configuration page</p></li>
 </ol>
 <p>The following sections describe what each configuration file
 controls and the parameters defined within these configuration
 files.</p>
 <div class="section" id="importing-master-driver-configuration-store">
 <h3>Importing master driver configuration store<a class="headerlink" href="#importing-master-driver-configuration-store" title="Permalink to this headline">¶</a></h3>
-<p>If you want to import a new master driver, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 things:</p>
+<p>This is the main configuration tool. There is an option right at the start that allows you to upload a file. This will allow you to import
+your master configuration file.</p>
+<img alt="Main Configuration File" src="_images/master_Driver.jpg" />
+<p>To import a configuration file, or choose a seperate file, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 options:</p>
 <ol class="arabic simple">
 <li><p>Save configuration file</p></li>
 <li><p>Import New Master driver Configuration file.</p></li>
 </ol>
-<p>if you click on the import new master driver configuration file, it will give you an option to import your
-voltron application file. Once you do this, it will give you the option to choose from the uploaded settings.</p>
+<p>choosing the import new master driver configuration file will give you an option to import your
+master configuration file. Once the file is uploaded, it will give you the option to choose from the uploaded settings.</p>
 <img alt="Main Configuration File" src="_images/import_Master_driver.jpg" />
 </div>
-<div class="section" id="ilc-main-configuration-file">
-<h3>ILC Main configuration File<a class="headerlink" href="#ilc-main-configuration-file" title="Permalink to this headline">¶</a></h3>
-<p>First lets take a look at the main configuration file. There is an option right at the start that allows you to upload a file. This file that you upload will more than likeley be important to understanding your building number, etc. The nice thing about this application is it will be able to automatically read everything you upload, and give you major ease of access in order to understand your inputs.</p>
-<img alt="Main Configuration File" src="_images/master_Driver.jpg" />
-<p>The ILC application behavior is controlled through three
-configuration files:
-- the main ILC configuration file,
-- the device/criteria configuration file, and
-- the criteria pairwise comparison configuration file.
-The following sections describe what each configuration file
+<div class="section" id="calculator">
+<h3>calculator<a class="headerlink" href="#calculator" title="Permalink to this headline">¶</a></h3>
+<p>The calculator is a tool that you will see throughout the configuration tool.</p>
+<img alt="calculator clear formula" src="_images/calculator.jpg" />
+<p>The <strong>Clear formula</strong> icon on the calculator will clear the formula currently in use.</p>
+<img alt="save config" src="_images/calculator_Clear.jpg" />
+<p>the <strong>Save configuration</strong> icon will allow you to save the forula that is currently being used.</p>
+</div>
+<div class="section" id="main-configuration-file">
+<h3>Main configuration File<a class="headerlink" href="#main-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>The ILC configuration tool behavior is controlled through three
+configuration files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the main ILC configuration file</p></li>
+<li><p>the device/criteria configuration page</p></li>
+<li><p>the criteria pairwise comparison configuration page.</p></li>
+</ul>
+</div></blockquote>
+<p>The following sections describe what each configuration page
 controls and the parameters defined within these configuration
 files.</p>
 <p>The main ILC configuration file contains building-level configuration
-parameters. Figure 2 shows an example of an ILC main
-configuration file.</p>
+parameters.</p>
 <p>The following list describes each of the configuration parameters in
 the main ILC configuration file:</p>
-<dl class="simple">
-<dt><strong>campus</strong>:</dt><dd><p>The campus name as published by the VOLTTRON
+<div class="section" id="campus">
+<h4>campus<a class="headerlink" href="#campus" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The campus name as published by the VOLTTRON
 platform.driver service.</p>
-</dd>
-<dt><strong>building</strong>:</dt><dd><p>The building name as published by the VOLTTRON
-platform.driver service.</p>
-</dd>
-<dt><strong>power_meter</strong> :</dt><dd><p>Dictionary containing information to identify the
-power meter data published by the platform.driver.
-There will also be a drop down within the power meter setting: once you click that
-drop down a few options, including a calculator will appear:</p>
+<p>on the right side of the program, the json code will be shown. While you are on the main configuration file
+page, underneath config, you will see your inputs in code change.</p>
+<p>campus will be shown as the first instance:</p>
+<img alt="_images/campus.jpg" src="_images/campus.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>campus JSON code</p>
 </dd>
 </dl>
-<a class="reference internal image-reference" href="_images/power_Meter.jpg"><img alt="Main Configuration File" src="_images/power_Meter.jpg" style="width: 395.5px; height: 387.5px;" /></a>
-<dl class="simple">
-<dt><strong>device</strong> :</dt><dd><p>The device name for the building power meter as
+<p>The campus filled in is <strong>PNNL</strong>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="building">
+<h4>building:<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The building name as published by the VOLTTRON
+platform.driver service.</p>
+<p>the JSON code on the right side of the program will be shown in the section of <strong>config</strong>. The input
+listed inside of the program will show inside the code for <em>building</em> as such:</p>
+<img alt="_images/building_Json.jpg" src="_images/building_Json.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Building Json code</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="power-meter">
+<h4>power_meter:<a class="headerlink" href="#power-meter" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>contains information to identify the
+power meter data published by the platform.driver.
+Expand the Power Meter dropdown to select the device,
+point, and define the Demand Formula using the calculator interface</p>
+<img alt="_images/power_Meter.jpg" src="_images/power_Meter.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Power meter</p>
+</dd>
+</dl>
+<p>Inside power meter, there are the options: <strong>Device</strong>, <strong>Point</strong>, <strong>Operation</strong>, and <strong>Operation argument</strong>.</p>
+<p>At the bottom of these options, there is a calculator used to fill in <em>operation</em> with a formula. Refer to the <em>Calculator</em> section
+of this userguide to familiarize usage of the calculator.</p>
+<img alt="_images/power_Meter_Ex.jpg" src="_images/power_Meter_Ex.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Power meter Example filled.</p>
+</dd>
+</dl>
+<p>When you choose an <em>operation argument</em> you will see on the right side there is an option to * +add*. This will enable the operation argument
+to the <em>operation</em> formula chosen from the calculator.</p>
+<p>On the right side of the application, in the JSON code, you will see your options inputed automatically:</p>
+<img alt="_images/power_Meter_Json.jpg" src="_images/power_Meter_Json.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Power meter Json code example</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="device">
+<h4>device<a class="headerlink" href="#device" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The device name for the building power meter as
 published by the platform.driver.</p>
+<p>The device will be shown inside of power_Meter.</p>
+<p>When device is filled, inside of JSON code there will be 2 areas where device will be shown:
+<strong>device_topic</strong> and <em>device_name*</em></p>
+<img alt="_images/device.jpg" src="_images/device.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Device JSON code</p>
 </dd>
-<dt><strong>point</strong> :</dt><dd><p>The point name on the power meter for whole building
+</dl>
+<p>The device topic will take in info from the campus and building.</p>
+</div></blockquote>
+</div>
+<div class="section" id="point">
+<h4>point<a class="headerlink" href="#point" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The point name on the power meter for whole building
 power as published by the platform.driver.</p>
+<p>In the JSON code on the right side of the screen, point will be shown inside of the <strong>power_meter</strong> section.</p>
+<img alt="_images/point_Json.jpg" src="_images/point_Json.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>point JSON code</p>
 </dd>
-<dt><strong>agent_id</strong> :</dt><dd><p>The ILC instance (running application) name on the
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="agent-id">
+<h4>agent_id<a class="headerlink" href="#agent-id" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The ILC instance (running application) name on the
 VOLTTRON platform.</p>
+<p>Agent ID will be underneath the <em>power_meter</em> section of the application.</p>
+<img alt="_images/Agent_Id.jpg" src="_images/Agent_Id.jpg" />
+<dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>Agent Id</p>
 </dd>
-<dt><strong>demand_limit</strong> :</dt><dd><p>The ILC application manages devices (curtail) in
+</dl>
+</div></blockquote>
+<p>you will see the JSON code input on the right side:</p>
+<img alt="Agent Id JSON code" src="_images/agent_Id_Json.jpg" />
+</div>
+<div class="section" id="demand-limit">
+<h4>demand_limit<a class="headerlink" href="#demand-limit" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
 kilowatt value. The average time is determined by the <a href="#id2"><span class="problematic" id="id3">average_</span></a>
 building_power_window parameter.</p>
-</dd>
-<dt><strong>curtailment_time</strong> :</dt><dd><p>The amount of time (minutes) the ILC
+<p>Demand limit will take an input in minutes.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ILC will manage controllable loads to maintain building demand at this value.</p>
+</div>
+<p><strong>demand_limit</strong> will show underneath <em>Agent Id</em>:</p>
+<img alt="demand_limit" src="_images/demand_Limit.jpg" />
+<p>the Json code will be populated as such:</p>
+<img alt="Demand_limit JSON" src="_images/demand_Limit_Json.jpg" />
+</div>
+<div class="section" id="control-time">
+<h4>control_time<a class="headerlink" href="#control-time" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The amount of time (minutes) the ILC
 application holds curtailment of devices once the building goal is
 met. During this period if the average WholeBuildingPower value
 increases above the goal the timer resets and the ILC application
 will attempt to curtail additional available devices. If all devices
 have been curtailed and the WholeBuildingPower is still above
 the goal the timer is not reset.</p>
-</dd>
-<dt><strong>curtailment_confirm</strong>:</dt><dd><p>Delay time (minutes) after curtailment
+</div></blockquote>
+</div>
+<div class="section" id="curtailment-confirm">
+<h4>curtailment_confirm<a class="headerlink" href="#curtailment-confirm" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>Delay time (minutes) after curtailment
 actions to confirm that building demand goal has been met.
 If the building goal has not been met, additional curtailment
 action(s) will be taken if possible.</p>
-</dd>
-<dt><strong>curtailment_break</strong>:</dt><dd><p>The time (minutes) after the completion
+</div></blockquote>
+</div>
+<div class="section" id="curtailment-break">
+<h4>curtailment_break<a class="headerlink" href="#curtailment-break" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The time (minutes) after the completion
 of curtailment actions where no further curtailment actions
 are taken. Completion of curtailment actions happens
 after the curtailment_time timer elapses (i.e., the average
 WholeBuildingPower goals was met and maintained for
 the curtailment_time or all devices were curtailed and the
 curtailment_time timer elapsed).</p>
-</dd>
-<dt><strong>average_building_power_window</strong> :</dt><dd><p>The average building
+</div></blockquote>
+</div>
+<div class="section" id="average-building-power-window">
+<h4>average_building_power_window<a class="headerlink" href="#average-building-power-window" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The average building
 power is calculated using a moving window. This parameter
 configures the length (minutes) of that window.</p>
-</dd>
-<dt><strong>clusters</strong>:</dt><dd><p>Array of dictionaries containing information on each
+</div></blockquote>
+</div>
+<div class="section" id="clusters">
+<h4>clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>Array of dictionaries containing information on each
 cluster of devices (a cluster consists of a group of devices with
 the same criterion):</p>
-</dd>
-<dt><strong>device_file_path</strong> :</dt><dd><p>The full path to the device/criteria
-configuration file described in Section 3.2.</p>
-</dd>
-<dt><strong>criteria_file_path</strong> :</dt><dd><p>The full path to the pairwise comparison
-configuration file described in Section 3.2.</p>
-</dd>
-<dt><strong>cluster_priority</strong> :</dt><dd><p>Weighting factor assigned to this cluster.
+</div></blockquote>
+</div>
+<div class="section" id="cluster-priority">
+<h4>cluster_priority<a class="headerlink" href="#cluster-priority" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>Weighting factor assigned to this cluster.
 The sum of these weighting factors for all clusters should
 equal 1.0. If the sum of the cluster weighting factors is not
 1.0, the ILC application returns an error upon startup and
 shutdown.</p>
-</dd>
-<dt><strong>mappers</strong>:</dt><dd><p>A dictionary of dictionaries containing categorical
-assignment for use in the device/criteria configuration. This
-parameter is used for configuring the mapper criteria (Section
-3.2).</p>
-</dd>
-</dl>
+</div></blockquote>
 <p>Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:</p>
-<a class="reference internal image-reference" href="_images/stagger_Release.jpg"><img alt="Main Configuration File" src="_images/stagger_Release.jpg" style="width: 475.0px; height: 55.0px;" /></a>
+<img alt="Main Configuration File" src="_images/stagger_Release.jpg" />
+</div>
 </div>
 <div class="section" id="adding-a-cluster">
 <h3>Adding a cluster<a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h3>
-<p>There are a list of items that you will see in the Main configuration of this application. Once you upload your file, there should be a drop down menu on each option you see. The options you should see are:
-Main configuration:</p>
-<ul class="simple">
-<li><p>Campus</p></li>
-<li><p>Building</p></li>
-<li><dl class="simple">
-<dt>Power meter</dt><dd><ul>
-<li><p>devices</p></li>
-<li><p>Point</p></li>
-<li><p>demand formula (optional)</p></li>
-<li><p>operational Argument</p></li>
-<li><p>Calculator</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Agent ID</p></li>
-<li><p>Demand limit</p></li>
-<li><p>Control time(minutes)</p></li>
-<li><p>Curtailment Confirm</p></li>
-<li><p>Curtailment Break (minutes)</p></li>
-<li><p>Average Building Power Window (minutes)</p></li>
-</ul>
+<p>There is a drop down menu on the bottom of the sidebar labeled as <strong>+Add cluster</strong>.</p>
+<blockquote>
+<div><img alt="Add cluster" src="_images/add_Cluster.jpg" />
+</div></blockquote>
+<p>in the cluster option, make sure to set your cluster to priority 1 if there is only one cluster.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Weighting factor assigned to this cluster.
+The sum of these weighting factors for all clusters should
+equal 1.0. If the sum of the cluster weighting factors is not
+1.0, the ILC application returns an error upon startup and
+shutdown.</p>
+</div>
+<img alt="Add cluster" src="_images/Cluster_1.jpg" />
 <p><strong>Clusters:</strong>
 On the left side of the screen under Device clusters, you should see an icon that says <em>+Add cluster</em>. when you click on this item, there is an entire new list of items that it lets you choose from on the right side:
 - Cluster name
@@ -197,7 +319,7 @@ On the left side of the screen under Device clusters, you should see an icon tha
 </ul>
 <p>You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking.
 Once you click <strong>Save New Cluster.</strong></p>
-<a class="reference internal image-reference" href="_images/Add_cluster.jpg"><img alt="Main Configuration File" src="_images/Add_cluster.jpg" style="width: 850.5px; height: 453.5px;" /></a>
+<a class="reference internal image-reference" href="_images/Add_cluster.jpg"><img alt="Main Configuration File" src="_images/Add_cluster.jpg" style="width: 135.5px; height: 253.5px;" /></a>
 <a class="reference internal image-reference" href="_images/cluster_type.jpg"><img alt="Main Configuration File" src="_images/cluster_type.jpg" style="width: 418.5px; height: 169.5px;" /></a>
 </div>
 <div class="section" id="device-criteria-configuration">
@@ -367,267 +489,6 @@ in a dropdown for each.</p>
 </div>
 <div class="section" id="control-configuration-empty-add-here">
 <h3>Control configuration: Empty add here<a class="headerlink" href="#control-configuration-empty-add-here" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="ilc-curtail-configuration-delete-me">
-<h4>ILC Curtail Configuration Delete me<a class="headerlink" href="#ilc-curtail-configuration-delete-me" title="Permalink to this headline">¶</a></h4>
-<p>The curtail configuration parameters inform the ILC application
-what point on the device to command and the value to command
-that point to achieve the desired load reduction for the device.
-Figure 10 shows the curtail configuration parameters for HP1.
-The conditional_curtail parameters are optional (highlighted
-in grey), but the curtail parameters are required.</p>
-<img alt="Main Configuration File" src="_images/figure_10.jpg" />
-<p>The curtail configuration information is essentially ifelse
-logic embedded in the Java Script Object Notation (JSON)1
-configuration file. The logic is executed as follows (Figure 11):</p>
-<img alt="Main Configuration File" src="_images/figure_11.jpg" />
-<p>This allows the user to curtail the device differently based on
-conditions evaluated at the time of curtailment. If a user does not
-want to use conditional_curtail (this set of parameters is omitted)
-or none of the conditionals evaluate to True, the curtail parameters
-are used to curtail the device.</p>
-<p>The following are required parameters for the conditional_curtail
-parameter:</p>
-<ul class="simple">
-<li><p>condition : String representation of a mathematical conditional.
-This mathematical conditional is evaluated to return a Boolean.</p></li>
-<li><dl class="simple">
-<dt>conditional_args – List of point names from the device (HP1)</dt><dd><p>used to evaluate the mathematical formula in the operation
-parameter. The values associated with each point are updated
-when new device data are published by the VOLTTRON
-platform.driver service.</p>
-</dd>
-</dl>
-</li>
-<li><p>point : The point on the device (i.e., HP1) that is commanded to
-achieve the load reduction.</p></li>
-<li><dl class="simple">
-<dt>value<span class="classifier">The value the point is commanded to, in order to achieve</span></dt><dd><p>the load reduction.</p>
-</dd>
-</dl>
-</li>
-<li><p>offset : If offset parameter is present, then the value parameter
-is ignored and the current value of the point on the device plus
-the offset is commanded to the point on the device to achieve
-the desired load reduction.</p></li>
-<li><p>load : The estimated load reduction for the curtail action.</p></li>
-</ul>
-<p>The following are required parameters for the curtail parameter:</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>point<span class="classifier">The point on the device (i.e., HP1) that is commanded to</span></dt><dd><p>achieve the load reduction.</p>
-</dd>
-</dl>
-</li>
-</ul>
-<ul class="simple">
-<li><p>value – The value the point is commanded to, in order to achieve</p></li>
-</ul>
-<p>the load reduction.
-• offset – If offset parameter is present, then the value parameter
-is ignored and the current value of the point on the device plus
-the offset is commanded to the point on the device to achieve
-the desired load reduction.
-• load – The estimated load reduction for the curtail action. This
-parameter should be consistent with the measurement from the building
-power meter (i.e., if the building power is measured in
-kilowatts then this value should also use kilowatts).</p>
-<p>ILC Criteria Pairwise Comparison Configuration DELETE ME</p>
-<p>The ILC application uses the AHP to prioritize loads available for
-curtailment. To implement the AHP the ILC application must be
-provided the relative importance of each individual criterion with
-respect to all other criteria (criteria that are used for that device/
-criteria configuration). This information is configured in the criteria
-pairwise comparison configuration file. Figure 12 shows an example
-ILC criteria pairwise comparison configuration file:</p>
-<img alt="Main Configuration File" src="_images/figure_12.jpg" />
-<p>The names for the criteria must match the names of the criteria used
-in the device/criteria configuration file documented in Section 3.2.
-Take the first entry in the configuration file as an example (Figure 13):</p>
-<img alt="Main Configuration File" src="_images/figure_13.jpg" />
-<p>This tells the ILC application that the:
-• zonetemperature-setpoint-deviation criterion is seven times
-more important than the curtail_count criterion
-• zonetemperature-setpoint-deviation criterion is five times more
-important than the historical-comparison criterion
-• zonetemperature-setpoint-deviation criterion is eight times more
-important than the room-type criterion
-• zonetemperature-setpoint-deviation criterion is six times more
-important than the rated-power criterion
-• zonetemperature-setpoint-deviation criterion is two times more
-important than the pairwise comparison stage criterion
-One may configure the criteria as less important too. Take the first
-comparison as an example:
-• “curtail_count”: 7
-- The zonetemperature-setpoint-deviation criterion is seven times
-more important than the curtail_count criterion
-To configure the zonetemperature-setpoint-deviation criterion
-as seven times less important than curtail_count criterion the
-configuration file entry would be modified as follows:
-• “curtail_count”: 0.1429
-- The zonetemperature-setpoint-deviation criterion is seven times
-less important than curtail_count criterion (note that 0.1429 is
-1/7).</p>
-<p>ILC provides an examination of consistency on criteria pairwise
-comparison by measuring the Consistency Ratio (C.R).2
-• If C.R ≤ 0.2: The pairwise comparison is consistent.
-• If C.R &gt; 0.2: The operation staff need to revise the pairwise
-comparisons to meet the desired consistency. When C.R is
-greater than 0.2, the ILC application provides the “inconsistent
-pairwise comparison” error message.</p>
-<p>ILC USE CASE: HEAT PUMP COOLING CONTROLS ‘delete me</p>
-<p>// potentially not important.</p>
-<p>A demonstration project deployed the ILC application on heat
-pumps during the 2016 summer cooling season. The following
-section describes this use case.
-The test described in this use case was conducted at PNNL
-BUILDING8. PNNL BUILDING8 is a single-story building consisting
-of office spaces and a large shop for operations and maintenance
-work. Information for PNNL BUILDING8 is summarized in Table 3:</p>
-<img alt="Main Configuration File" src="_images/table_3.jpg" />
-<p>Heating and cooling at PNNL BUILDING8 is accomplished by 10
-heat pumps that serve the building. The specifications for the
-heat pumps in PNNL BUILDING8 are given in Table 4. Three heat
-pumps, named 1A, 1B, and 2, have one refrigerant circuit with a
-nominal cooling capacity of 3 tons and electric heater capacity of
-7.5 kW. Three heat pumps, named HP3, HP4, and HP7, each has
-two compressors with a nominal cooling capacity of 7.5 tons and
-electric heater capacity of 14 kW. Two heat pumps, named HP6
-and HP8, have a nominal cooling capacity of 25 tons each. HP6
-has electric heater capacity of 72 kW, and HP8 has electric heater
-capacity of 54 kW. Both HP6 and HP8 use two refrigerant circuits
-that have two compressors and two condenser fans. Two heat
-pumps named HP5 and HP14 have a nominal capacity of 4 tons and
-electric heater capacity of 13 kW, and 3 tons without an electric
-heater.
-Each heat pump has its own advanced building automation
-system (BAS) controller and is configured to provide discrete
-command signals to the heat pump for staging of the indoor fan,
-compressors, auxiliary heat and economizer.</p>
-<img alt="Main Configuration File" src="_images/table_4.jpg" />
-<p>Each of these heat pumps has the following points (Table 5) that are
-trended by a dedicated VOLTTRON node at 1-minute intervals.</p>
-<img alt="Main Configuration File" src="_images/table_5.jpg" />
-<p>ILC Use Case: Heat Pump Cooling Control DELETE ME</p>
-<p>The goal of the ILC application is to intelligently limit peak demand
-within a building, thereby eliminating or reducing demand charges
-from local electric utilities. To achieve this peak reduction, the
-ILC application must be configured with a building demand
-goal. ILC will work to keep the actual average whole building
-power at or below this value. Knowledge of the utility demand
-charge rate structure and/or use of forecasting tools (Whole
-Building Electricity Diagnostician3) can be used to determine
-an appropriate building goal. The target peak demand can vary
-hourly, daily, monthly, or seasonally. For efficient operation of ILC,
-it is necessary to accurately model the expected behavior of the
-curtailable loads. The target peak demand level can be adjusted
-using the forecasting tools. Figure 14 shows the load prediction for
-PNNL BUILDING8 on July 11, 2016. The demand goal for this test
-was chosen to be 90% of the maximum predicted load (i.e., the
-maximum predicted load was 150 kW and the goal was 90% of this
-value – 135 kW).</p>
-<img alt="Main Configuration File" src="_images/figure_14.jpg" />
-<p>Once a demand goal has been determined the ILC main
-configuration file can be updated. The example ILC configuration
-file provided with the ILC source code on GitHub4 contains all the
-required parameters; one must only update the values associated
-with each entry to customize the ILC application. Figure 15 shows
-the configuration file used for the ILC test at PNNL BUILDING8.</p>
-<img alt="Main Configuration File" src="_images/figure_15.jpg" />
-<p>The following list describes each parameter and the significance of
-the value configured for that parameter:</p>
-<p><em>campus</em> : The campus name as published by the VOLTTRON
-platform.driver.</p>
-<p><em>The VOLTTRON platform.driver service</em>: publishes data for the
-PNNL campus. If the VOLTTON driver does not publish device
-data with a campus specified, this parameter should be left
-blank (with empty quotes).</p>
-<p><em>building</em> : The building name as published by the VOLTTRON
-platform.driver.</p>
-<p><em>The VOLTTRON platform.driver</em>: service publishes data for
-the building named BUILDING8 on the PNNL campus. If the
-VOLTTON driver does not publish device data with a building
-specified, this parameter should be left blank (with empty
-quotes).</p>
-<p><em>power_meter</em> : Dictionary containing information to identify the
-power meter data published by the platform.driver.</p>
-<p><em>device</em> : The device name for building power meter as published
-by the platform.driver.</p>
-<p><em>The VOLTTRON platform.driver</em>: service publishes data for the
-device named METERS in BUILDING8 on the PNNL campus.
-This parameter must be specified. The format for topic
-published by the VOLTTRON platform.driver associated with
-these data is : PNNL/BUILDING8/METERS.</p>
-<p><em>point</em> : The point name on the power meter for whole building
-power as published by the platform.driver.</p>
-<p><em>The VOLTTRON platform.driver</em> : service publishes data for the
-device named METERS in BUILDING8 on the PNNL campus.
-This device has a data point called WholeBuildingPower. This
-parameter must be specified.</p>
-<p><em>agent_id</em> : The ILC instance (running application) name on the
-VOLTTRON platform.</p>
-<p><em>demand_limit</em> : The ILC application manages devices (curtail) in
-an attempt to keep the average whole building power below this
-kilowatt value.</p>
-<p>Knowledge of the utility demand charge rate structure and/or
-use of forecasting tools can be used to determine this value for
-a building.</p>
-<p><em>curtailment_time</em> : The amount of time (minutes) the ILC
-application will hold curtailment of devices once the building
-goal is met. If during this period the average value for the
-WholeBuildingPower increases above the goal, the timer
-resets and the ILC application attempts to curtail additional
-available devices. If all devices have been curtailed and the
-WholeBuildingPower is still above the goal, the timer is not reset.</p>
-<p>The ILC application holds all devices curtailed for 20 minutes
-after the average WholeBuildingPower falls below (and remains
-below) the demand_limit.</p>
-<p><em>curtailment_confirm</em> : Delay time (minutes) after curtailment
-actions to confirm that the building demand goal has been met.
-If the building goal has not been met, additional curtailment
-action is taken if possible.</p>
-<p>The ILC application waits 5 minutes after curtailment actions
-to verify whether the curtailment actions achieved the desired
-load reduction (reduced the average building power below
-the demand_limit). If the desired load reduction is not
-attained, the ILC application takes further curtailment actions (if
-additional devices are available for curtailment).</p>
-<p><em>curtailment_break</em> : The time (minutes) after the completion
-of curtailment actions during which no further curtailment
-actions are taken. Completion of curtailment actions happens
-after the curtailment_time timer elapses (i.e., the average
-WholeBuildingPower goals are met and maintained for
-the curtailment_time or all devices are curtailed and the
-curtailment_time timer elapsed).</p>
-<p><em>average_building_power_window</em> : The average building
-power is calculated using a moving window. This parameter
-controls the length (minutes) of that window.</p>
-<p>Utility demand charges are typically based on a 15- or
-30-minute average power reading.</p>
-<p><em>clusters</em> : Array of dictionaries containing information about
-each cluster of devices (a cluster consists of a group of devices
-with the same criterion):</p>
-<p><em>device_file_path</em> : Full path to the device/criteria configuration
-file described in Section 3.2.</p>
-<p><em>criteria_file_path</em> : Full path to the pairwise comparison
-configuration file described in Section 3.2.</p>
-<p><em>cluster_priority</em> : Weighting factor assigned to this cluster. The
-sum of these weighting factors for all clusters should equal 1.0.</p>
-<p>For one device cluster (heat pumps) this value should be set
-to 1.0.</p>
-<p><em>mappers</em> : A sub-dictionary of dictionaries containing
-categorical assignment for use in the device/criteria
-configuration. This parameter is used for configuring the mapper
-criteria (Section 3.2).</p>
-<p>This allows categorical assignment. The zone type served
-by each heat pump can be specified as well as a numerical
-(importance of the category decreases as the value increases
-numerically) indication of the importance of that category.
-For example, for our use case a Director’s Office is the most
-important category, while a Mechanical Room and Lobby are
-the least important categories. When a heat pump serves more
-than one zone, the most important zone type served is used for
-categorical assignment.</p>
-</div>
 </div>
 <div class="section" id="id1">
 <h3>ILC Criteria Configuration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
@@ -900,9 +761,26 @@ curtailed during an ILC event.</p>
   <h3><a href="#">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">ILC Web application: User guide</a><ul>
+<li><a class="reference internal" href="#introduction">introduction</a></li>
 <li><a class="reference internal" href="#ilc-application-configuration">ILC APPLICATION CONFIGURATION</a><ul>
 <li><a class="reference internal" href="#importing-master-driver-configuration-store">Importing master driver configuration store</a></li>
-<li><a class="reference internal" href="#ilc-main-configuration-file">ILC Main configuration File</a></li>
+<li><a class="reference internal" href="#calculator">calculator</a></li>
+<li><a class="reference internal" href="#main-configuration-file">Main configuration File</a><ul>
+<li><a class="reference internal" href="#campus">campus</a></li>
+<li><a class="reference internal" href="#building">building:</a></li>
+<li><a class="reference internal" href="#power-meter">power_meter:</a></li>
+<li><a class="reference internal" href="#device">device</a></li>
+<li><a class="reference internal" href="#point">point</a></li>
+<li><a class="reference internal" href="#agent-id">agent_id</a></li>
+<li><a class="reference internal" href="#demand-limit">demand_limit</a></li>
+<li><a class="reference internal" href="#control-time">control_time</a></li>
+<li><a class="reference internal" href="#curtailment-confirm">curtailment_confirm</a></li>
+<li><a class="reference internal" href="#curtailment-break">curtailment_break</a></li>
+<li><a class="reference internal" href="#average-building-power-window">average_building_power_window</a></li>
+<li><a class="reference internal" href="#clusters">clusters</a></li>
+<li><a class="reference internal" href="#cluster-priority">cluster_priority</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#adding-a-cluster">Adding a cluster</a></li>
 <li><a class="reference internal" href="#device-criteria-configuration">Device/Criteria Configuration</a><ul>
 <li><a class="reference internal" href="#ilc-criteria-configuration">ILC Criteria Configuration</a><ul>
@@ -916,10 +794,7 @@ curtailed during an ILC event.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#pairwise-configuration">Pairwise configuration</a></li>
-<li><a class="reference internal" href="#control-configuration-empty-add-here">Control configuration: Empty add here</a><ul>
-<li><a class="reference internal" href="#ilc-curtail-configuration-delete-me">ILC Curtail Configuration Delete me</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#control-configuration-empty-add-here">Control configuration: Empty add here</a></li>
 <li><a class="reference internal" href="#id1">ILC Criteria Configuration</a></li>
 <li><a class="reference internal" href="#ilc-criteria-pairwise-comparison-configuration">ILC Criteria Pairwise Comparison Configuration</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
@@ -956,7 +831,7 @@ curtailed during an ILC event.</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="nav-item nav-item-0"><a href="#">Intelligent Load Control Application 06/17/2020 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="#">Intelligent Load Control Application 2020 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ILC Web application: User guide</a></li> 
       </ul>
     </div>

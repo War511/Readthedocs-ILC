@@ -22,7 +22,7 @@ copyright = '2020, cw'
 author = 'Caleb Warwick'
 
 # The full version, including alpha/beta/rc tags
-release = '06/17/2020'
+release = '2020'
 
 
 # -- General configuration ---------------------------------------------------
@@ -64,7 +64,9 @@ html_theme_options = {
     'relbarbgcolor' : 'tan',
     'headbgcolor' : 'maroon',
     'bodyfont' : 'Helvetica',
-    'headfont' : 'Arial'
+    'headfont' : 'Arial',
+    'content_fixed': True,
+  'content_width': '700px',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
