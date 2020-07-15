@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. toctree:: 
-   :maxdepth: 2
+   :maxdepth: 3
 
 ILC Web application: User guide
 *******************************
@@ -71,10 +71,6 @@ configuration files:
    - the main ILC configuration file
    - the device/criteria configuration page
    - the criteria pairwise comparison configuration page.
-
-The following sections describe what each configuration page
-controls and the parameters defined within these configuration
-files.
 
 The main ILC configuration file contains building-level configuration
 parameters.
@@ -202,12 +198,36 @@ control_time
    will attempt to curtail additional available devices. If all devices
    have been curtailed and the WholeBuildingPower is still above
    the goal the timer is not reset.
+
+   control_time asks for your input in minutes. 
+   Once input is complete, the number will be seen on the right side in the 
+   JSON code inside of *control_time*. 
+
+   .. Note:: After ILC control brings the building demand to the demand
+      target, I:C will hold control of devices for this amount of time, then the ILC will begin 
+      to release devices. 
+
+   *control_time* in JSON will show on the right side of the screen. : 
+
+   .. image:: ../source/_images/control_Time_Json.jpg
+      :alt: control_time JSON
+
 curtailment_confirm
 -------------------
    Delay time (minutes) after curtailment
    actions to confirm that building demand goal has been met.
    If the building goal has not been met, additional curtailment
    action(s) will be taken if possible.
+
+   Curtailment Confirm will be located right below control time on 
+   the *main Configuration* page. 
+
+   The input information will be shown as such in JSON code located 
+   on the right side of the screen: 
+
+    .. image:: ../source/_images/curtailment_Confirm.jpg
+         :alt: curtailment confirm 
+
 curtailment_break
 -----------------
    The time (minutes) after the completion
@@ -218,75 +238,169 @@ curtailment_break
    the curtailment_time or all devices were curtailed and the
    curtailment_time timer elapsed).
 
-average_building_power_window 
+   Curtailment Break will be shown inside the *Main Configuration* page. 
+   This will take input in minutes. The JSON code will look as such: 
+
+   .. image:: ../source/_images/curtailment_Break.jpg
+         :alt: curtailment confirm 
+
+   .. Note:: ILC will release devices in a staggered manner over 
+      ammount of time. 
+
+Average building power window 
 -----------------------------
    The average building
    power is calculated using a moving window. This parameter
    configures the length (minutes) of that window.
-clusters
---------
-   Array of dictionaries containing information on each
+
+   The *Average building power window* is located at the bottom of the 
+   **Main Configuration* Page. This will take an input in minutes. 
+
+   located on the right side of the application inside of the JSON code
+   the changes made will appear: 
+
+   .. image:: ../source/_images/average_Bpw_Json.jpg
+         :alt: Average Building Power Window JSON 
+
+Stagger realease/ Off Time
+--------------------------
+The stagger release algorithm is in testing to
+alleviate the potential rebound effect caused by returning devices
+to normal operations.
+
+The Stagger release and stagger Off time icons will be located 
+towards the bottom of the *Main Configuraion* Page. Both icons 
+can be checked or unchecked: 
+
+.. image:: ../source/_images/stagger_Release.jpg
+   :alt: Stagger release / Stagger Offtime 
+
+.. Note:: These will be automaticallt set as Boolean values. 
+      When checked, both items will be set inside of JSON code to : *True*.
+      When unchecked, they will default to false. 
+
+
+.. image:: ../source/_images/stagger_Release_Json.jpg
+      :alt: Stagger release / Stagger Offtime JSON Code 
+
+
+Clusters
+========
+   Array containing information on each
    cluster of devices (a cluster consists of a group of devices with
    the same criterion):
 
-cluster_priority
+.. image:: ../source/_images/cluster_Example.jpg
+      :alt: Cluster Example
+
+Creating a cluster will grant access to  **Pairwise Configuration**, **Criteria Configuration**,
+**Control configuration**. 
+
+Cluster priority
 ----------------
    Weighting factor assigned to this cluster.
    The sum of these weighting factors for all clusters should
    equal 1.0. If the sum of the cluster weighting factors is not
    1.0, the ILC application returns an error upon startup and
-   shutdown. 
+   shutdown.
 
+   .. Note:: The cluster priority section should be set to 1 if only one cluster
+      is present. 
 
-Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:
+The cluster priority will be shown at the bottom of the **Add cluster** Page. 
 
-.. image:: ../source/_images/stagger_Release.jpg
-   :alt: Main Configuration File
+.. image:: ../source/_images/cluster_priority.jpg
+      :alt: Cluster Priority 
+
+changes made will be shown in here: 
+
+.. image:: ../source/_images/cluster_priority_Json.jpg
+      :alt: Cluster Priority Json
+      
+
 
 Adding a cluster
-================
+----------------
 There is a drop down menu on the bottom of the sidebar labeled as **+Add cluster**. 
 
    .. image:: ../source/_images/add_Cluster.jpg
       :alt: Add cluster
 
-in the cluster option, make sure to set your cluster to priority 1 if there is only one cluster. 
-
-.. Note:: Weighting factor assigned to this cluster.
-      The sum of these weighting factors for all clusters should
-      equal 1.0. If the sum of the cluster weighting factors is not
-      1.0, the ILC application returns an error upon startup and
-      shutdown. 
-
+set your cluster to priority 1 if there is only one cluster. 
 
 .. image:: ../source/_images/Cluster_1.jpg
-      :alt: Add cluster
+   :alt: Add cluster
 
-You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking.
-Once you click **Save New Cluster.**
+You have the option to insert from the following list: *RTU*, *AHU* and *Light* into each of the options. 
+Once *Save new cluster* is chosen, a new dropdown is avaliable with *Pairwise Configuration*, *Criteria configuration*
+and *Control Configuration*.
 
 .. image:: ../source/_images/Add_cluster.jpg
    :alt: Main Configuration File
-   :scale: 50
+   :scale: 
 
 .. image:: ../source/_images/cluster_type.jpg
    :alt: Main Configuration File
-   :scale: 50
+   :scale: 
+
+.. Note:: For multiple clusters, the cluster priority MUST be equal to 1. 
+   if *Cluster 1* has a priority of 1, then *Cluster 2* must have a priority 
+   of 0.
+
+Pairwise configuration
+======================
+In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
+The custom cluster will be listed with 3 items listed as such: 
+
+.. image:: ../source/_images/cluster_Options.jpg
+   :alt: custom cluster
+   
+
+At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag 
+each item in the order you prefer. There is also an additional option at the bottom to **+Add criteria** if you need
+to add more. 
+
+underneath the custom list, you should see a dropdown called: **Pairwise Criteria**. This will have various other customization 
+options as well. 
 
 
-Device/Criteria Configuration
-=============================
-When you use the Criteria Configuration, you have the option to use items in the dropdown that were imported from your document that you uploaded at the start. This will be quite an array of options depending on what you have uploaded.
+.. image:: ../source/_images/custom_Cluster.jpg
+   :alt: Custom Cluster
 
-Once you click an option, you should see another drop down underneath *Curtail*. 
-The dropdown should be listed as such: 
+   
+inside of each of the options, there should be a power mode you can set.
+in a dropdown for each. 
 
+.. image:: ../source/_images/zonetemperature_Setpoint.jpg
+   :alt: zone temperature setpoint
+.. image:: ../source/_images/stage.jpg
+   :alt: Stage option
+.. image:: ../source/_images/history_Zonetemperature.jpg
+   :alt: history zone temperature
+.. image:: ../source/_images/rated_Power.jpg
+   :alt: rated power  
 
-- zonetemperature_setpoint
-- stage
-- history_zonetemperature 
-- rated_power 
-- roomtype 
+ILC Criteria Configuration
+==========================
+
+Criteria configuraion is the second dropdown inside the created curtail options. It will be listed as shown: 
+
+.. image:: ../source/_images/criteria_Configuration_Sidebar.jpg
+   :alt: Criteria Configuration
+
+once this option is selected, you will see an icon appear in the center of the application: 
+
+.. image:: ../source/_images/criteria_Configuration_Nodrop.jpg
+   :alt: Criteria Configuration
+
+when an option is selected, a dropdown will appear: 
+
+.. image:: ../source/_images/criteria_Configuration_Ex.jpg
+      :alt: Criteria Config dropdown
+
+once an option within the drop down is chosen, there will be an option to 
+*choose operation type*. Within each operation type, the functionallity differs. 
+*formula*, *
 
 
 .. image:: ../source/_images/criteria_order.jpg
@@ -294,8 +408,14 @@ The dropdown should be listed as such:
 
 This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.
 
-ILC Criteria Configuration
---------------------------
+
+
+
+
+
+
+
+
 
 Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
@@ -465,40 +585,6 @@ comparison configuration file.
 .. image:: ../source/_images/figure_9.jpg
    :alt: Main Configuration File
    
-
-Pairwise configuration
-======================
-In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
-The custom cluster will be listed with 3 items listed as such: 
-
-.. image:: ../source/_images/cluster_Options.jpg
-   :alt: custom cluster
-   
-
-At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag 
-each item in the order you prefer. There is also an additional option at the bottom to **+Add criteria** if you need
-to add more. 
-
-underneath the custom list, you should see a dropdown called: **Pairwise Criteria**. This will have various other customization 
-options as well. 
-
-
-.. image:: ../source/_images/custom_Cluster.jpg
-   :alt: Custom Cluster
-
-   
-inside of each of the options, there should be a power mode you can set.
-in a dropdown for each. 
-
-.. image:: ../source/_images/zonetemperature_Setpoint.jpg
-   :alt: zone temperature setpoint
-.. image:: ../source/_images/stage.jpg
-   :alt: Stage option
-.. image:: ../source/_images/history_Zonetemperature.jpg
-   :alt: history zone temperature
-.. image:: ../source/_images/rated_Power.jpg
-   :alt: rated power  
-
 
 Control configuration: Empty add here
 =====================================

@@ -88,9 +88,6 @@ configuration files:</p>
 <li><p>the criteria pairwise comparison configuration page.</p></li>
 </ul>
 </div></blockquote>
-<p>The following sections describe what each configuration page
-controls and the parameters defined within these configuration
-files.</p>
 <p>The main ILC configuration file contains building-level configuration
 parameters.</p>
 <p>The following list describes each of the configuration parameters in
@@ -212,7 +209,7 @@ VOLTTRON platform.</p>
 <blockquote>
 <div><p>The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the <a href="#id2"><span class="problematic" id="id3">average_</span></a>
+kilowatt value. The average time is determined by the <a href="#id4"><span class="problematic" id="id5">average_</span></a>
 building_power_window parameter.</p>
 <p>Demand limit will take an input in minutes.</p>
 </div></blockquote>
@@ -235,6 +232,17 @@ increases above the goal the timer resets and the ILC application
 will attempt to curtail additional available devices. If all devices
 have been curtailed and the WholeBuildingPower is still above
 the goal the timer is not reset.</p>
+<p>control_time asks for your input in minutes.
+Once input is complete, the number will be seen on the right side in the
+JSON code inside of <em>control_time</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After ILC control brings the building demand to the demand
+target, I:C will hold control of devices for this amount of time, then the ILC will begin
+to release devices.</p>
+</div>
+<p><em>control_time</em> in JSON will show on the right side of the screen. :</p>
+<img alt="control_time JSON" src="_images/control_Time_Json.jpg" />
 </div></blockquote>
 </div>
 <div class="section" id="curtailment-confirm">
@@ -244,6 +252,13 @@ the goal the timer is not reset.</p>
 actions to confirm that building demand goal has been met.
 If the building goal has not been met, additional curtailment
 action(s) will be taken if possible.</p>
+<p>Curtailment Confirm will be located right below control time on
+the <em>main Configuration</em> page.</p>
+<p>The input information will be shown as such in JSON code located
+on the right side of the screen:</p>
+<blockquote>
+<div><img alt="curtailment confirm" src="_images/curtailment_Confirm.jpg" />
+</div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="curtailment-break">
@@ -256,88 +271,126 @@ after the curtailment_time timer elapses (i.e., the average
 WholeBuildingPower goals was met and maintained for
 the curtailment_time or all devices were curtailed and the
 curtailment_time timer elapsed).</p>
+<p>Curtailment Break will be shown inside the <em>Main Configuration</em> page.
+This will take input in minutes. The JSON code will look as such:</p>
+<img alt="curtailment confirm" src="_images/curtailment_Break.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ILC will release devices in a staggered manner over
+ammount of time.</p>
+</div>
 </div></blockquote>
 </div>
 <div class="section" id="average-building-power-window">
-<h4>average_building_power_window<a class="headerlink" href="#average-building-power-window" title="Permalink to this headline">¶</a></h4>
+<h4>Average building power window<a class="headerlink" href="#average-building-power-window" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>The average building
 power is calculated using a moving window. This parameter
 configures the length (minutes) of that window.</p>
+<p>The <em>Average building power window</em> is located at the bottom of the
+<a href="#id1"><span class="problematic" id="id2">**</span></a>Main Configuration* Page. This will take an input in minutes.</p>
+<p>located on the right side of the application inside of the JSON code
+the changes made will appear:</p>
+<img alt="Average Building Power Window JSON" src="_images/average_Bpw_Json.jpg" />
 </div></blockquote>
 </div>
+<div class="section" id="stagger-realease-off-time">
+<h4>Stagger realease/ Off Time<a class="headerlink" href="#stagger-realease-off-time" title="Permalink to this headline">¶</a></h4>
+<p>The stagger release algorithm is in testing to
+alleviate the potential rebound effect caused by returning devices
+to normal operations.</p>
+<p>The Stagger release and stagger Off time icons will be located
+towards the bottom of the <em>Main Configuraion</em> Page. Both icons
+can be checked or unchecked:</p>
+<img alt="Stagger release / Stagger Offtime" src="_images/stagger_Release.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These will be automaticallt set as Boolean values.
+When checked, both items will be set inside of JSON code to : <em>True</em>.
+When unchecked, they will default to false.</p>
+</div>
+<img alt="Stagger release / Stagger Offtime JSON Code" src="_images/stagger_Release_Json.jpg" />
+</div>
+</div>
 <div class="section" id="clusters">
-<h4>clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h4>
+<h3>Clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Array of dictionaries containing information on each
+<div><p>Array containing information on each
 cluster of devices (a cluster consists of a group of devices with
 the same criterion):</p>
 </div></blockquote>
-</div>
+<img alt="Cluster Example" src="_images/cluster_Example.jpg" />
+<p>Creating a cluster will grant access to  <strong>Pairwise Configuration</strong>, <strong>Criteria Configuration</strong>,
+<strong>Control configuration</strong>.</p>
 <div class="section" id="cluster-priority">
-<h4>cluster_priority<a class="headerlink" href="#cluster-priority" title="Permalink to this headline">¶</a></h4>
+<h4>Cluster priority<a class="headerlink" href="#cluster-priority" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Weighting factor assigned to this cluster.
 The sum of these weighting factors for all clusters should
 equal 1.0. If the sum of the cluster weighting factors is not
 1.0, the ILC application returns an error upon startup and
 shutdown.</p>
-</div></blockquote>
-<p>Towards the bottom of the screen in the main congfiguration file, you should also see 2 check mark boxes:</p>
-<img alt="Main Configuration File" src="_images/stagger_Release.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The cluster priority section should be set to 1 if only one cluster
+is present.</p>
 </div>
+</div></blockquote>
+<p>The cluster priority will be shown at the bottom of the <strong>Add cluster</strong> Page.</p>
+<img alt="Cluster Priority" src="_images/cluster_priority.jpg" />
+<p>changes made will be shown in here:</p>
+<img alt="Cluster Priority Json" src="_images/cluster_priority_Json.jpg" />
 </div>
 <div class="section" id="adding-a-cluster">
-<h3>Adding a cluster<a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h3>
+<h4>Adding a cluster<a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h4>
 <p>There is a drop down menu on the bottom of the sidebar labeled as <strong>+Add cluster</strong>.</p>
 <blockquote>
 <div><img alt="Add cluster" src="_images/add_Cluster.jpg" />
 </div></blockquote>
-<p>in the cluster option, make sure to set your cluster to priority 1 if there is only one cluster.</p>
+<p>set your cluster to priority 1 if there is only one cluster.</p>
+<img alt="Add cluster" src="_images/Cluster_1.jpg" />
+<p>You have the option to insert from the following list: <em>RTU</em>, <em>AHU</em> and <em>Light</em> into each of the options.
+Once <em>Save new cluster</em> is chosen, a new dropdown is avaliable with <em>Pairwise Configuration</em>, <em>Criteria configuration</em>
+and <em>Control Configuration</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Weighting factor assigned to this cluster.
-The sum of these weighting factors for all clusters should
-equal 1.0. If the sum of the cluster weighting factors is not
-1.0, the ILC application returns an error upon startup and
-shutdown.</p>
+<p>For multiple clusters, the cluster priority MUST be equal to 1.
+if <em>Cluster 1</em> has a priority of 1, then <em>Cluster 2</em> must have a priority
+of 0.</p>
 </div>
-<img alt="Add cluster" src="_images/Cluster_1.jpg" />
-<p><strong>Clusters:</strong>
-On the left side of the screen under Device clusters, you should see an icon that says <em>+Add cluster</em>. when you click on this item, there is an entire new list of items that it lets you choose from on the right side:
-- Cluster name
-- Cluster type</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>RTU</p></li>
-<li><p>AHU</p></li>
-<li><p>LIGHT</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Cluster priority</p></li>
-</ul>
-<p>You have the option to insert anything into each of the options. With this, you can customize this cluster to your own liking.
-Once you click <strong>Save New Cluster.</strong></p>
-<a class="reference internal image-reference" href="_images/Add_cluster.jpg"><img alt="Main Configuration File" src="_images/Add_cluster.jpg" style="width: 135.5px; height: 253.5px;" /></a>
-<a class="reference internal image-reference" href="_images/cluster_type.jpg"><img alt="Main Configuration File" src="_images/cluster_type.jpg" style="width: 418.5px; height: 169.5px;" /></a>
 </div>
-<div class="section" id="device-criteria-configuration">
-<h3>Device/Criteria Configuration<a class="headerlink" href="#device-criteria-configuration" title="Permalink to this headline">¶</a></h3>
-<p>When you use the Criteria Configuration, you have the option to use items in the dropdown that were imported from your document that you uploaded at the start. This will be quite an array of options depending on what you have uploaded.</p>
-<p>Once you click an option, you should see another drop down underneath <em>Curtail</em>.
-The dropdown should be listed as such:</p>
-<ul class="simple">
-<li><p>zonetemperature_setpoint</p></li>
-<li><p>stage</p></li>
-<li><p>history_zonetemperature</p></li>
-<li><p>rated_power</p></li>
-<li><p>roomtype</p></li>
-</ul>
+</div>
+<div class="section" id="pairwise-configuration">
+<h3>Pairwise configuration<a class="headerlink" href="#pairwise-configuration" title="Permalink to this headline">¶</a></h3>
+<p>In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
+The custom cluster will be listed with 3 items listed as such:</p>
+<img alt="custom cluster" src="_images/cluster_Options.jpg" />
+<p>At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag
+each item in the order you prefer. There is also an additional option at the bottom to <strong>+Add criteria</strong> if you need
+to add more.</p>
+<p>underneath the custom list, you should see a dropdown called: <strong>Pairwise Criteria</strong>. This will have various other customization
+options as well.</p>
+<img alt="Custom Cluster" src="_images/custom_Cluster.jpg" />
+<p>inside of each of the options, there should be a power mode you can set.
+in a dropdown for each.</p>
+<img alt="zone temperature setpoint" src="_images/zonetemperature_Setpoint.jpg" />
+<img alt="Stage option" src="_images/stage.jpg" />
+<img alt="history zone temperature" src="_images/history_Zonetemperature.jpg" />
+<img alt="rated power" src="_images/rated_Power.jpg" />
+</div>
+<div class="section" id="ilc-criteria-configuration">
+<h3>ILC Criteria Configuration<a class="headerlink" href="#ilc-criteria-configuration" title="Permalink to this headline">¶</a></h3>
+<p>Criteria configuraion is the second dropdown inside the created curtail options. It will be listed as shown:</p>
+<img alt="Criteria Configuration" src="_images/criteria_Configuration_Sidebar.jpg" />
+<p>once this option is selected, you will see an icon appear in the center of the application:</p>
+<img alt="Criteria Configuration" src="_images/criteria_Configuration_Nodrop.jpg" />
+<p>when an option is selected, a dropdown will appear:</p>
+<img alt="Criteria Config dropdown" src="_images/criteria_Configuration_Ex.jpg" />
+<p>once an option within the drop down is chosen, there will be an option to
+<em>choose operation type</em>. Within each operation type, the functionallity differs.
+<em>formula</em>, *</p>
 <img alt="Main Configuration File" src="_images/criteria_order.jpg" />
 <p>This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.</p>
-<div class="section" id="ilc-criteria-configuration">
-<h4>ILC Criteria Configuration<a class="headerlink" href="#ilc-criteria-configuration" title="Permalink to this headline">¶</a></h4>
 <p>Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
@@ -352,8 +405,6 @@ which include the following:</p>
 <p>these options will be avaliable in the dropdown of whichever option you choose.</p>
 <p>The criteria type is controlled by setting the operation_type
 parameter for each criterion.</p>
-<div class="section" id="formula-criteria">
-<h5>formula criteria<a class="headerlink" href="#formula-criteria" title="Permalink to this headline">¶</a></h5>
 <img alt="Main Configuration File" src="_images/formula.jpg" />
 <p>The formula criterion allows a user to declare mathematical
 formulas that are evaluated using current device measurements
@@ -376,9 +427,6 @@ heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.</p>
 <img alt="Main Configuration File" src="_images/figure_5.jpg" />
-</div>
-<div class="section" id="status-criteria">
-<h5>status criteria<a class="headerlink" href="#status-criteria" title="Permalink to this headline">¶</a></h5>
 <p>The status criterion reads a point (Boolean or enumeration) on the
 device and returns either an on_value or an off_value depending
 on whether the current status of the point is True (enumeration
@@ -398,9 +446,6 @@ the name for the same criterion used in the pairwise comparison
 configuration file.</p></li>
 </ul>
 <img alt="Main Configuration File" src="_images/figure_6.jpg" />
-</div>
-<div class="section" id="mapper-criteria">
-<h5>mapper criteria<a class="headerlink" href="#mapper-criteria" title="Permalink to this headline">¶</a></h5>
 <img alt="Main Configuration File" src="_images/mapper.jpg" />
 <p>The mapper criterion allows a user to categorize loads and assign
 values to the categories. For example, room type can be used to
@@ -427,9 +472,6 @@ name for the same criterion used in the pairwise comparison
 configuration file.</p></li>
 </ul>
 <img alt="Main Configuration File" src="_images/figure_7.jpg" />
-</div>
-<div class="section" id="constant-criteria">
-<h5>constant criteria<a class="headerlink" href="#constant-criteria" title="Permalink to this headline">¶</a></h5>
 <img alt="Main Configuration File" src="_images/constant.jpg" />
 <p>The constant criterion returns a constant value for inclusion in the
 AHP. The following list contains the status criterion configuration
@@ -442,9 +484,6 @@ AHP.</p></li>
 pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.</p>
 <img alt="Main Configuration File" src="_images/figure_8.jpg" />
-</div>
-<div class="section" id="history-criteria">
-<h5>history criteria<a class="headerlink" href="#history-criteria" title="Permalink to this headline">¶</a></h5>
 <img alt="Main Configuration File" src="_images/history.jpg" />
 <p>The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
@@ -467,31 +506,11 @@ should match the name for the same criterion used in the pairwise
 comparison configuration file.</p>
 <img alt="Main Configuration File" src="_images/figure_9.jpg" />
 </div>
-</div>
-</div>
-<div class="section" id="pairwise-configuration">
-<h3>Pairwise configuration<a class="headerlink" href="#pairwise-configuration" title="Permalink to this headline">¶</a></h3>
-<p>In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
-The custom cluster will be listed with 3 items listed as such:</p>
-<img alt="custom cluster" src="_images/cluster_Options.jpg" />
-<p>At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag
-each item in the order you prefer. There is also an additional option at the bottom to <strong>+Add criteria</strong> if you need
-to add more.</p>
-<p>underneath the custom list, you should see a dropdown called: <strong>Pairwise Criteria</strong>. This will have various other customization
-options as well.</p>
-<img alt="Custom Cluster" src="_images/custom_Cluster.jpg" />
-<p>inside of each of the options, there should be a power mode you can set.
-in a dropdown for each.</p>
-<img alt="zone temperature setpoint" src="_images/zonetemperature_Setpoint.jpg" />
-<img alt="Stage option" src="_images/stage.jpg" />
-<img alt="history zone temperature" src="_images/history_Zonetemperature.jpg" />
-<img alt="rated power" src="_images/rated_Power.jpg" />
-</div>
 <div class="section" id="control-configuration-empty-add-here">
 <h3>Control configuration: Empty add here<a class="headerlink" href="#control-configuration-empty-add-here" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="id1">
-<h3>ILC Criteria Configuration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>ILC Criteria Configuration<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>The AHP is multi-criteria decision-making process used by the ILC
 application. The default criteria implemented for ILC of heat pumps
 are explained in this section.</p>
@@ -608,7 +627,7 @@ seven times less important than curtail_count criterion</p></li>
 <img alt="Main Configuration File" src="_images/figure_18.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
-<li><p>stage criterion is five times more important than the <a href="#id4"><span class="problematic" id="id5">curtail_</span></a>
+<li><p>stage criterion is five times more important than the <a href="#id6"><span class="problematic" id="id7">curtail_</span></a>
 count criterion</p></li>
 <li><p>stage criterion is three times more important than the
 historical-comparison criterion</p></li>
@@ -686,7 +705,7 @@ building power as published by the platform.driver.</p></li>
 VOLTTRON platform.</p></li>
 <li><p>demand_limit : The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the <a href="#id6"><span class="problematic" id="id7">average_</span></a>
+kilowatt value. The average time is determined by the <a href="#id8"><span class="problematic" id="id9">average_</span></a>
 building_power_window parameter.</p></li>
 <li><p>curtailment_time : The amount of time (minutes) the ILC
 application holds curtailment of devices once the building goal
@@ -776,26 +795,19 @@ curtailed during an ILC event.</p>
 <li><a class="reference internal" href="#control-time">control_time</a></li>
 <li><a class="reference internal" href="#curtailment-confirm">curtailment_confirm</a></li>
 <li><a class="reference internal" href="#curtailment-break">curtailment_break</a></li>
-<li><a class="reference internal" href="#average-building-power-window">average_building_power_window</a></li>
-<li><a class="reference internal" href="#clusters">clusters</a></li>
-<li><a class="reference internal" href="#cluster-priority">cluster_priority</a></li>
+<li><a class="reference internal" href="#average-building-power-window">Average building power window</a></li>
+<li><a class="reference internal" href="#stagger-realease-off-time">Stagger realease/ Off Time</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#clusters">Clusters</a><ul>
+<li><a class="reference internal" href="#cluster-priority">Cluster priority</a></li>
 <li><a class="reference internal" href="#adding-a-cluster">Adding a cluster</a></li>
-<li><a class="reference internal" href="#device-criteria-configuration">Device/Criteria Configuration</a><ul>
-<li><a class="reference internal" href="#ilc-criteria-configuration">ILC Criteria Configuration</a><ul>
-<li><a class="reference internal" href="#formula-criteria">formula criteria</a></li>
-<li><a class="reference internal" href="#status-criteria">status criteria</a></li>
-<li><a class="reference internal" href="#mapper-criteria">mapper criteria</a></li>
-<li><a class="reference internal" href="#constant-criteria">constant criteria</a></li>
-<li><a class="reference internal" href="#history-criteria">history criteria</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pairwise-configuration">Pairwise configuration</a></li>
+<li><a class="reference internal" href="#ilc-criteria-configuration">ILC Criteria Configuration</a></li>
 <li><a class="reference internal" href="#control-configuration-empty-add-here">Control configuration: Empty add here</a></li>
-<li><a class="reference internal" href="#id1">ILC Criteria Configuration</a></li>
+<li><a class="reference internal" href="#id3">ILC Criteria Configuration</a></li>
 <li><a class="reference internal" href="#ilc-criteria-pairwise-comparison-configuration">ILC Criteria Pairwise Comparison Configuration</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
