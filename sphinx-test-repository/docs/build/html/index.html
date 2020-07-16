@@ -209,7 +209,7 @@ VOLTTRON platform.</p>
 <blockquote>
 <div><p>The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the <a href="#id4"><span class="problematic" id="id5">average_</span></a>
+kilowatt value. The average time is determined by the <a href="#id3"><span class="problematic" id="id4">average_</span></a>
 building_power_window parameter.</p>
 <p>Demand limit will take an input in minutes.</p>
 </div></blockquote>
@@ -352,12 +352,16 @@ is present.</p>
 <p>You have the option to insert from the following list: <em>RTU</em>, <em>AHU</em> and <em>Light</em> into each of the options.
 Once <em>Save new cluster</em> is chosen, a new dropdown is avaliable with <em>Pairwise Configuration</em>, <em>Criteria configuration</em>
 and <em>Control Configuration</em>.</p>
+<img alt="Main Configuration File" src="../source/_images/cluster_Dropdown.jpg" />
+<img alt="Main Configuration File" src="_images/cluster_type.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For multiple clusters, the cluster priority MUST be equal to 1.
 if <em>Cluster 1</em> has a priority of 1, then <em>Cluster 2</em> must have a priority
 of 0.</p>
 </div>
+<p>Once the cluster is set, the input info will appear in the JSON code on the right side of the screen:</p>
+<img alt="Main Configuration File" src="_images/cluster_Type_Json.jpg" />
 </div>
 </div>
 <div class="section" id="pairwise-configuration">
@@ -378,8 +382,8 @@ in a dropdown for each.</p>
 <img alt="history zone temperature" src="_images/history_Zonetemperature.jpg" />
 <img alt="rated power" src="_images/rated_Power.jpg" />
 </div>
-<div class="section" id="ilc-criteria-configuration">
-<h3>ILC Criteria Configuration<a class="headerlink" href="#ilc-criteria-configuration" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="criteria-configuration">
+<h3>Criteria Configuration<a class="headerlink" href="#criteria-configuration" title="Permalink to this headline">¶</a></h3>
 <p>Criteria configuraion is the second dropdown inside the created curtail options. It will be listed as shown:</p>
 <img alt="Criteria Configuration" src="_images/criteria_Configuration_Sidebar.jpg" />
 <p>once this option is selected, you will see an icon appear in the center of the application:</p>
@@ -388,25 +392,20 @@ in a dropdown for each.</p>
 <img alt="Criteria Config dropdown" src="_images/criteria_Configuration_Ex.jpg" />
 <p>once an option within the drop down is chosen, there will be an option to
 <em>choose operation type</em>. Within each operation type, the functionallity differs.
-<em>formula</em>, *</p>
+<em>formula</em>, <em>status</em>, <em>mapper</em>, <em>constant</em>, and <em>history</em>.</p>
 <img alt="Main Configuration File" src="_images/criteria_order.jpg" />
-<p>This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.</p>
 <p>Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
 which include the following:</p>
-<ul class="simple">
-<li><p>formula criterion</p></li>
-<li><p>status criterion</p></li>
-<li><p>mapper criterion</p></li>
-<li><p>constant criterion</p></li>
-<li><p>history criterion.</p></li>
-</ul>
-<p>these options will be avaliable in the dropdown of whichever option you choose.</p>
+<img alt="Operation type" src="_images/operation_Type.jpg" />
 <p>The criteria type is controlled by setting the operation_type
-parameter for each criterion.</p>
+parameter for each criterion. Once a criteria is selected, there will be a difference
+in what eatch operation does. They will be described in the sections below:</p>
+<div class="section" id="formula-criteria">
+<h4>formula criteria<a class="headerlink" href="#formula-criteria" title="Permalink to this headline">¶</a></h4>
 <img alt="Main Configuration File" src="_images/formula.jpg" />
-<p>The formula criterion allows a user to declare mathematical
+<p>formula allows a user to declare mathematical
 formulas that are evaluated using current device measurements
 (data from the device are published by the VOLTTRON platform.
 driver service). The following list contains the formula criterion
@@ -417,16 +416,17 @@ This mathematical formula is evaluated to return a numeric value.</p></li>
 <li><p>operation_args : List of point names from the device (HP1)
 used to evaluate the mathematical formula in the operation
 parameter. The values associated with each point are updated
-when new device data are published by the platform.driver.
-Table 1 lists the supported mathematical operators for the
-formula criterion.</p></li>
+when new device data are published by the platform.driver.</p></li>
 </ul>
 <img alt="Main Configuration File" src="_images/math_Table.jpg" />
-<p>Figure 5 shows an example of a formula criterion configured for a
+<p>The math table shows an example of a formula criterion configured for a
 heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.</p>
 <img alt="Main Configuration File" src="_images/figure_5.jpg" />
+</div>
+<div class="section" id="status-criteria">
+<h4>status criteria<a class="headerlink" href="#status-criteria" title="Permalink to this headline">¶</a></h4>
 <p>The status criterion reads a point (Boolean or enumeration) on the
 device and returns either an on_value or an off_value depending
 on whether the current status of the point is True (enumeration
@@ -446,6 +446,9 @@ the name for the same criterion used in the pairwise comparison
 configuration file.</p></li>
 </ul>
 <img alt="Main Configuration File" src="_images/figure_6.jpg" />
+</div>
+<div class="section" id="mapper-criteria">
+<h4>mapper criteria<a class="headerlink" href="#mapper-criteria" title="Permalink to this headline">¶</a></h4>
 <img alt="Main Configuration File" src="_images/mapper.jpg" />
 <p>The mapper criterion allows a user to categorize loads and assign
 values to the categories. For example, room type can be used to
@@ -472,6 +475,9 @@ name for the same criterion used in the pairwise comparison
 configuration file.</p></li>
 </ul>
 <img alt="Main Configuration File" src="_images/figure_7.jpg" />
+</div>
+<div class="section" id="constant-criteria">
+<h4>constant criteria<a class="headerlink" href="#constant-criteria" title="Permalink to this headline">¶</a></h4>
 <img alt="Main Configuration File" src="_images/constant.jpg" />
 <p>The constant criterion returns a constant value for inclusion in the
 AHP. The following list contains the status criterion configuration
@@ -484,6 +490,9 @@ AHP.</p></li>
 pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.</p>
 <img alt="Main Configuration File" src="_images/figure_8.jpg" />
+</div>
+<div class="section" id="history-criteria">
+<h4>history criteria<a class="headerlink" href="#history-criteria" title="Permalink to this headline">¶</a></h4>
 <img alt="Main Configuration File" src="_images/history.jpg" />
 <p>The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
@@ -506,77 +515,36 @@ should match the name for the same criterion used in the pairwise
 comparison configuration file.</p>
 <img alt="Main Configuration File" src="_images/figure_9.jpg" />
 </div>
+</div>
 <div class="section" id="control-configuration-empty-add-here">
 <h3>Control configuration: Empty add here<a class="headerlink" href="#control-configuration-empty-add-here" title="Permalink to this headline">¶</a></h3>
+<p>Inside of the sidebar on the left side of the screen inside of <em>Device clusters</em>, there will be the
+option <strong>Control configuration</strong>.</p>
+<img alt="Control config Sidebar" src="_images/control_Config_Sidebar.jpg" />
+<p>once <em>control configuration</em> is chosen, there will be an icon in the center of the screen that will appear:</p>
+<img alt="control configuration dropdown unexpanded" src="_images/control_Configuration_Nodrop.jpg" />
+<p>first, when a device is selected, it will auto fill the campus and building number
+previously seleted. it will look like <em>Campus/building/device</em>. When a device is selected,
+there will be more options that appear.</p>
+<img alt="control configuration dropdown unexpanded" src="_images/control_Config_Drop.jpg" />
+<p>At the top there will be an option called: <em>Operation</em>. Input can be inserted by using the calculator
+and its functions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using the calculator can be reffered to the <em>Calculator</em> Section of this userguide.</p>
 </div>
-<div class="section" id="id3">
-<h3>ILC Criteria Configuration<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>The AHP is multi-criteria decision-making process used by the ILC
-application. The default criteria implemented for ILC of heat pumps
-are explained in this section.</p>
-<p>1. Heat pump power (rated-power): Heat pump power
-measurement is generally a fixed (static) data value that is taken
-36
-from the heat pump nameplate data because the likelihood of
-obtaining individual power measurements per heat pump is
-limited in real-life applications.</p>
-<p>2. Curtailment count for heat pump compressor (curtail_count
-- ncurt): The maximum number of heat pump compressor
-curtailments (ncurt) represents the total number of heat pump
-compressor curtailments allowed during a fixed time period (24-
-hour period). The ncurt provides the information about how each
-heat pump is used. Heat pumps that approach their maximum
-number of compressor curtailments in the fixed time period
-(adjustable) are pushed to the low end of the priority table for
-available loads in the AHP.</p>
-<p>3. Change of zone temperature (historical-comparison -
-ΔTzone_δ): Zone temperature changes represent the temperature
-condition of the zones served by heat pumps. A zone
-temperature that has large changes (ΔTzone_δ) indicates an
-excessive cooling (heating) capacity for a specific time period.
-ΔTzone_δ can be calculated as shown in Equation 1 for the cooling
-mode and Equation 2 for the heating mode. When ΔTzone_δ is less
-than or equal to zero, the cooling or heating load requirement
-does not exist (e.g., heat pump compressor turns off) and the
-ΔTzone_δ is set to zero. Significant changes in zone temperature
-may indicate internal or external loads (solar gain, perimeter
-zones with poor envelope or high infiltration loads, conference
-rooms with high occupant densities, etc.).</p>
-<img alt="Main Configuration File" src="_images/cooling_heating_mode.jpg" />
-<p>4. Temperature difference between zone and set point
-(zonetemperature-setpoint-deviation - ΔTzone-csp or ΔTzonehsp
-): The temperature difference between zone and set point
-(ΔTzone-csp or ΔTzone-hsp) may reflect the occupant’s comfort status in
-the zone corresponding to each heat pump. The measurement is
-real-time data. The input of the AHP is the inverse value of ΔTzonecsp
-and ΔTzone-hsp as shown in Equation 3 for cooling mode and
-Equation 4 for the heating mode. When the value between Tzone
-and Tcsp (or Thsp) is higher than or equal to 0.1, ΔTzone-csp (ΔTzone-hsp)
-should be determined to be 10.</p>
-<img alt="Main Configuration File" src="_images/cooling_heating_mode2.jpg" />
-<p>5. Heat pump room type (room-type): Heat pump room type
-provides the means to prioritize each heat pump. The room
-with the higher assigned numerical value is regarded as less
-important than rooms with lower numerical values. In the ILC
-configuration, the building operations staff could set their own
-heat pump prioritization strategy depending on the importance
-of room types served (1: Most importance and 9: Least
-importance). Table 6 shows the heat pump priority based on
-room type for PNNL BUILDING8:</p>
-<img alt="Main Configuration File" src="_images/table_6.jpg" />
-<p>6. Heat pump stages (stage): Second stage cooling results in peak
-power consumption but for shorter operating periods, whereas
-first stage cooling operates longer with a lower peak power.
-Second stage heating (electric) also leads to higher peak power
-consumption with shorter operating periods than first stage
-heating (heat pump).</p>
-<p>For advanced heat pump controllers, the ILC application
-attempts to turn off the second stage for load curtailment. The
-stage prioritization can be determined by assigning numerical
-values to FirstStageCooling and to SecondStageCooling (for
-cooling) and to FirstStageHeating and to SecondStageHeating
-(for heating) as shown in Table 7.</p>
-<img alt="Main Configuration File" src="_images/table_7.jpg" />
+<p>When an operation is inserted, an operation argument may be inserted as well:</p>
+<img alt="control configuration Calc" src="_images/control_Config_Calc.jpg" />
+<p>After an operation and operation argument is chosen, choose the <em>+Add</em> next to the operation
+argument selection and that will be shown inside of operation:</p>
+<img alt="control configuration Calc" src="_images/control_Config_Arg.jpg" />
+<p>Once there is a set operation and operation argument, there will be a <em>curtailent Setting</em> below the calculator.
+The first icon that is accessable is <em>Point</em>. There will be a dropdown list that will show as you select point.</p>
+<img alt="Curtailment Setting Point" src="_images/curtail_Setting_Pnt.jpg" />
+<p>Once a selection is chosen, the next option on the list will be the <em>Control Method</em>.</p>
+<img alt="Control Method" src="_images/control_Method.jpg" />
+<p>The first of the list chosen will be <strong>offset</strong>.</p>
+<img alt="Offset" src="../source/_images/control_Method_Offset.jpg" />
 </div>
 <div class="section" id="ilc-criteria-pairwise-comparison-configuration">
 <h3>ILC Criteria Pairwise Comparison Configuration<a class="headerlink" href="#ilc-criteria-pairwise-comparison-configuration" title="Permalink to this headline">¶</a></h3>
@@ -627,7 +595,7 @@ seven times less important than curtail_count criterion</p></li>
 <img alt="Main Configuration File" src="_images/figure_18.jpg" />
 <p>This tells the ILC application that the:</p>
 <ul class="simple">
-<li><p>stage criterion is five times more important than the <a href="#id6"><span class="problematic" id="id7">curtail_</span></a>
+<li><p>stage criterion is five times more important than the <a href="#id5"><span class="problematic" id="id6">curtail_</span></a>
 count criterion</p></li>
 <li><p>stage criterion is three times more important than the
 historical-comparison criterion</p></li>
@@ -705,7 +673,7 @@ building power as published by the platform.driver.</p></li>
 VOLTTRON platform.</p></li>
 <li><p>demand_limit : The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the <a href="#id8"><span class="problematic" id="id9">average_</span></a>
+kilowatt value. The average time is determined by the <a href="#id7"><span class="problematic" id="id8">average_</span></a>
 building_power_window parameter.</p></li>
 <li><p>curtailment_time : The amount of time (minutes) the ILC
 application holds curtailment of devices once the building goal
@@ -805,9 +773,15 @@ curtailed during an ILC event.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#pairwise-configuration">Pairwise configuration</a></li>
-<li><a class="reference internal" href="#ilc-criteria-configuration">ILC Criteria Configuration</a></li>
+<li><a class="reference internal" href="#criteria-configuration">Criteria Configuration</a><ul>
+<li><a class="reference internal" href="#formula-criteria">formula criteria</a></li>
+<li><a class="reference internal" href="#status-criteria">status criteria</a></li>
+<li><a class="reference internal" href="#mapper-criteria">mapper criteria</a></li>
+<li><a class="reference internal" href="#constant-criteria">constant criteria</a></li>
+<li><a class="reference internal" href="#history-criteria">history criteria</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#control-configuration-empty-add-here">Control configuration: Empty add here</a></li>
-<li><a class="reference internal" href="#id3">ILC Criteria Configuration</a></li>
 <li><a class="reference internal" href="#ilc-criteria-pairwise-comparison-configuration">ILC Criteria Pairwise Comparison Configuration</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>

@@ -335,17 +335,23 @@ You have the option to insert from the following list: *RTU*, *AHU* and *Light* 
 Once *Save new cluster* is chosen, a new dropdown is avaliable with *Pairwise Configuration*, *Criteria configuration*
 and *Control Configuration*.
 
-.. image:: ../source/_images/Add_cluster.jpg
+.. image:: ../source/_images/cluster_Dropdown.jpg
    :alt: Main Configuration File
-   :scale: 
+   
 
 .. image:: ../source/_images/cluster_type.jpg
    :alt: Main Configuration File
-   :scale: 
+   
 
 .. Note:: For multiple clusters, the cluster priority MUST be equal to 1. 
    if *Cluster 1* has a priority of 1, then *Cluster 2* must have a priority 
    of 0.
+
+Once the cluster is set, the input info will appear in the JSON code on the right side of the screen: 
+
+.. image:: ../source/_images/cluster_Type_Json.jpg
+   :alt: Main Configuration File
+ 
 
 Pairwise configuration
 ======================
@@ -380,8 +386,8 @@ in a dropdown for each.
 .. image:: ../source/_images/rated_Power.jpg
    :alt: rated power  
 
-ILC Criteria Configuration
-==========================
+Criteria Configuration
+======================
 
 Criteria configuraion is the second dropdown inside the created curtail options. It will be listed as shown: 
 
@@ -400,46 +406,31 @@ when an option is selected, a dropdown will appear:
 
 once an option within the drop down is chosen, there will be an option to 
 *choose operation type*. Within each operation type, the functionallity differs. 
-*formula*, *
-
+*formula*, *status*, *mapper*, *constant*, and *history*. 
 
 .. image:: ../source/_images/criteria_order.jpg
    :alt: Main Configuration File
-
-This should be helpful for adding items into the list that do not appear, and being able to list them in the order that you prefer.
-
-
-
-
-
-
-
-
-
 
 Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
 which include the following:
 
-- formula criterion
-- status criterion
-- mapper criterion
-- constant criterion
-- history criterion.
+.. image:: ../source/_images/operation_Type.jpg
+   :alt: Operation type
 
-these options will be avaliable in the dropdown of whichever option you choose. 
 
 The criteria type is controlled by setting the operation_type
-parameter for each criterion. 
+parameter for each criterion. Once a criteria is selected, there will be a difference 
+in what eatch operation does. They will be described in the sections below: 
 
 formula criteria
-++++++++++++++++
+----------------
 
 .. image:: ../source/_images/formula.jpg
    :alt: Main Configuration File
 
-The formula criterion allows a user to declare mathematical
+formula allows a user to declare mathematical
 formulas that are evaluated using current device measurements
 (data from the device are published by the VOLTTRON platform.
 driver service). The following list contains the formula criterion
@@ -452,14 +443,13 @@ configuration parameters:
    used to evaluate the mathematical formula in the operation
    parameter. The values associated with each point are updated
    when new device data are published by the platform.driver.
-   Table 1 lists the supported mathematical operators for the
-   formula criterion.
+   
 
 .. image:: ../source/_images/math_Table.jpg
    :alt: Main Configuration File
    
 
-Figure 5 shows an example of a formula criterion configured for a
+The math table shows an example of a formula criterion configured for a
 heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.
@@ -469,7 +459,7 @@ the pairwise comparison configuration file.
    
 
 status criteria
-+++++++++++++++
+---------------
 
 The status criterion reads a point (Boolean or enumeration) on the
 device and returns either an on_value or an off_value depending
@@ -496,7 +486,7 @@ following list contains the status criterion configuration parameters:
    
 
 mapper criteria
-+++++++++++++++
+---------------
 
 .. image:: ../source/_images/mapper.jpg
    :alt: Main Configuration File
@@ -532,7 +522,7 @@ parameters:
    
 
 constant criteria
-+++++++++++++++++
+-----------------
 
 .. image:: ../source/_images/constant.jpg
    :alt: Main Configuration File
@@ -554,7 +544,7 @@ same criterion used in the pairwise comparison configuration file.
    
 
 history criteria
-++++++++++++++++
+----------------
 
 .. image:: ../source/_images/history.jpg
    :alt: Main Configuration File
@@ -588,100 +578,55 @@ comparison configuration file.
 
 Control configuration: Empty add here
 =====================================
+Inside of the sidebar on the left side of the screen inside of *Device clusters*, there will be the 
+option **Control configuration**. 
 
-
-
-
-
-
-ILC Criteria Configuration
-==========================
-The AHP is multi-criteria decision-making process used by the ILC
-application. The default criteria implemented for ILC of heat pumps
-are explained in this section.
-
-1. Heat pump power (rated-power): Heat pump power
-measurement is generally a fixed (static) data value that is taken
-36
-from the heat pump nameplate data because the likelihood of
-obtaining individual power measurements per heat pump is
-limited in real-life applications.
-
-2. Curtailment count for heat pump compressor (curtail_count
-- ncurt): The maximum number of heat pump compressor
-curtailments (ncurt) represents the total number of heat pump
-compressor curtailments allowed during a fixed time period (24-
-hour period). The ncurt provides the information about how each
-heat pump is used. Heat pumps that approach their maximum
-number of compressor curtailments in the fixed time period
-(adjustable) are pushed to the low end of the priority table for
-available loads in the AHP.
-
-3. Change of zone temperature (historical-comparison -
-ΔTzone_δ): Zone temperature changes represent the temperature
-condition of the zones served by heat pumps. A zone
-temperature that has large changes (ΔTzone_δ) indicates an
-excessive cooling (heating) capacity for a specific time period.
-ΔTzone_δ can be calculated as shown in Equation 1 for the cooling
-mode and Equation 2 for the heating mode. When ΔTzone_δ is less
-than or equal to zero, the cooling or heating load requirement
-does not exist (e.g., heat pump compressor turns off) and the
-ΔTzone_δ is set to zero. Significant changes in zone temperature
-may indicate internal or external loads (solar gain, perimeter
-zones with poor envelope or high infiltration loads, conference
-rooms with high occupant densities, etc.).
-
-.. image:: ../source/_images/cooling_heating_mode.jpg
-   :alt: Main Configuration File
+.. image:: ../source/_images/control_Config_Sidebar.jpg
+   :alt: Control config Sidebar
    
+once *control configuration* is chosen, there will be an icon in the center of the screen that will appear: 
 
-4. Temperature difference between zone and set point
-(zonetemperature-setpoint-deviation - ΔTzone-csp or ΔTzonehsp
-): The temperature difference between zone and set point
-(ΔTzone-csp or ΔTzone-hsp) may reflect the occupant’s comfort status in
-the zone corresponding to each heat pump. The measurement is
-real-time data. The input of the AHP is the inverse value of ΔTzonecsp
-and ΔTzone-hsp as shown in Equation 3 for cooling mode and
-Equation 4 for the heating mode. When the value between Tzone
-and Tcsp (or Thsp) is higher than or equal to 0.1, ΔTzone-csp (ΔTzone-hsp)
-should be determined to be 10.
-
-.. image:: ../source/_images/cooling_heating_mode2.jpg
-   :alt: Main Configuration File
+.. image:: ../source/_images/control_Configuration_Nodrop.jpg
+   :alt: control configuration dropdown unexpanded
    
+first, when a device is selected, it will auto fill the campus and building number 
+previously seleted. it will look like *Campus/building/device*. When a device is selected, 
+there will be more options that appear. 
 
-5. Heat pump room type (room-type): Heat pump room type
-provides the means to prioritize each heat pump. The room
-with the higher assigned numerical value is regarded as less
-important than rooms with lower numerical values. In the ILC
-configuration, the building operations staff could set their own
-heat pump prioritization strategy depending on the importance
-of room types served (1: Most importance and 9: Least
-importance). Table 6 shows the heat pump priority based on
-room type for PNNL BUILDING8:
+.. image:: ../source/_images/control_Config_Drop.jpg
+   :alt: control configuration dropdown unexpanded
 
-.. image:: ../source/_images/table_6.jpg
-   :alt: Main Configuration File
-   
+At the top there will be an option called: *Operation*. Input can be inserted by using the calculator 
+and its functions. 
 
-6. Heat pump stages (stage): Second stage cooling results in peak
-power consumption but for shorter operating periods, whereas
-first stage cooling operates longer with a lower peak power.
-Second stage heating (electric) also leads to higher peak power
-consumption with shorter operating periods than first stage
-heating (heat pump).
+.. Note:: Using the calculator can be reffered to the *Calculator* Section of this userguide. 
 
-For advanced heat pump controllers, the ILC application
-attempts to turn off the second stage for load curtailment. The
-stage prioritization can be determined by assigning numerical
-values to FirstStageCooling and to SecondStageCooling (for
-cooling) and to FirstStageHeating and to SecondStageHeating
-(for heating) as shown in Table 7.
+When an operation is inserted, an operation argument may be inserted as well: 
 
+.. image:: ../source/_images/control_Config_Calc.jpg
+   :alt: control configuration Calc
 
-.. image:: ../source/_images/table_7.jpg
-   :alt: Main Configuration File
-   
+After an operation and operation argument is chosen, choose the *+Add* next to the operation 
+argument selection and that will be shown inside of operation: 
+
+.. image:: ../source/_images/control_Config_Arg.jpg
+   :alt: control configuration Calc
+
+Once there is a set operation and operation argument, there will be a *curtailent Setting* below the calculator.
+The first icon that is accessable is *Point*. There will be a dropdown list that will show as you select point. 
+
+.. image:: ../source/_images/curtail_Setting_Pnt.jpg
+   :alt: Curtailment Setting Point
+
+Once a selection is chosen, the next option on the list will be the *Control Method*. 
+
+.. image:: ../source/_images/control_Method.jpg
+   :alt: Control Method
+
+The first of the list chosen will be **offset**.
+
+.. image:: ../source/_images/control_Method_Offset.jpg
+   :alt: Offset
 
 ILC Criteria Pairwise Comparison Configuration
 ==============================================
@@ -698,7 +643,6 @@ comparison file used for deployment of ILC in PNNL BUILDING8:
 .. image:: ../source/_images/figure_16.jpg
    :alt: Main Configuration File
    
-
 
 .. image:: ../source/_images/figure_17.jpg
    :alt: Main Configuration File
