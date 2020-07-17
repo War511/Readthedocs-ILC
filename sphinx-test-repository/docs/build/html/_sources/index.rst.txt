@@ -11,7 +11,7 @@ ILC Web application: User guide
 ============
 introduction
 ============
-The intelligent load application is a tool to use. // insert more here: 
+
 
 
 =============================
@@ -19,17 +19,23 @@ ILC APPLICATION CONFIGURATION
 =============================
 
 **!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!**
-
 The ILC application behavior is controlled through three
-configuration files:
+configuration Pages:
 
-1. the main configuration file
-2. the device/criteria configuration page
-3. the criteria pairwise comparison configuration page
+1. The main configuration file page
+2. The device/criteria configuration page
+3. The criteria pairwise comparison configuration page
 
 The following sections describe what each configuration file
 controls and the parameters defined within these configuration
 files.
+
+.. Note:: There is an option for this document to be used in dark mode. 
+
+Click the *Sun* icon on the top right corner of the page. 
+
+.. image:: ../source/_images/dark_Mode.jpg
+      :alt: Darkmode
 
 Importing master driver configuration store
 ===========================================
@@ -42,14 +48,15 @@ your master configuration file.
 To import a configuration file, or choose a seperate file, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 options: 
 
 1. Save configuration file 
-2. Import New Master driver Configuration file. 
+2. Import New Master Driver Configuration File. 
 
-choosing the import new master driver configuration file will give you an option to import your
+Choosing the import new master driver configuration file will give you an option to import your
 master configuration file. Once the file is uploaded, it will give you the option to choose from the uploaded settings. 
-
 
 .. image:: ../source/_images/import_Master_driver.jpg
    :alt: Main Configuration File
+
+After uploading a *file*, pages can now be filled out based upon the file youve uploaded to the application. 
 
 calculator
 ==========
@@ -61,23 +68,21 @@ The **Clear formula** icon on the calculator will clear the formula currently in
 
 .. image:: ../source/_images/calculator_Clear.jpg
    :alt: save config
-the **Save configuration** icon will allow you to save the forula that is currently being used.
+the **Save configuration** icon will allow you to save the formula that is currently being used.
 
-Main configuration File
-=======================  
+Main configuration Store
+========================  
 
-The ILC configuration tool behavior is controlled through three
-configuration files:
-   - the main ILC configuration file
-   - the device/criteria configuration page
-   - the criteria pairwise comparison configuration page.
-
-The main ILC configuration file contains building-level configuration
+The main configuration store contains building-level configuration
 parameters.
 
 The following list describes each of the configuration parameters in
-the main ILC configuration file:
+the main configuration store. 
 
+ .. image:: ../source/_images/main_Config_Master.jpg
+   :alt: main configuration page
+
+This list will go over each of the input options located in the main configuraion page:
 
 campus
 ------
@@ -124,6 +129,8 @@ power_meter:
    When you choose an *operation argument* you will see on the right side there is an option to * +add*. This will enable the operation argument
    to the *operation* formula chosen from the calculator. 
 
+   **Operation arguments** are "points". as you populate the demand formula within them it will populate an array and string.
+
    On the right side of the application, in the JSON code, you will see your options inputed automatically: 
 
    .. image:: ../source/_images/power_Meter_Json.jpg
@@ -137,7 +144,7 @@ device
    The device will be shown inside of power_Meter. 
 
    When device is filled, inside of JSON code there will be 2 areas where device will be shown: 
-   **device_topic** and *device_name** 
+   **device_topic** and **device_name** 
 
    .. image:: ../source/_images/device.jpg
    :alt: Device JSON code
@@ -286,8 +293,7 @@ can be checked or unchecked:
 
 Clusters
 ========
-   Array containing information on each
-   cluster of devices (a cluster consists of a group of devices with
+   Array containing information on each cluster of devices (a cluster consists of a group of devices with
    the same criterion):
 
 .. image:: ../source/_images/cluster_Example.jpg
@@ -304,7 +310,7 @@ Cluster priority
    1.0, the ILC application returns an error upon startup and
    shutdown.
 
-   .. Note:: The cluster priority section should be set to 1 if only one cluster
+   .. Note:: The cluster priority section needs to be set to 1 if only one cluster
       is present. 
 
 The cluster priority will be shown at the bottom of the **Add cluster** Page. 
@@ -361,21 +367,23 @@ The custom cluster will be listed with 3 items listed as such:
 .. image:: ../source/_images/cluster_Options.jpg
    :alt: custom cluster
    
-
-At the top, you should see a criteria order. This will be completely customizable as well. You can click and drag 
-each item in the order you prefer. There is also an additional option at the bottom to **+Add criteria** if you need
-to add more. 
-
-underneath the custom list, you should see a dropdown called: **Pairwise Criteria**. This will have various other customization 
-options as well. 
+Underneath the custom list, you will see a dropdown called: **Pairwise Criteria**. This is a customizable drag 
+and drop list. Whichever order this list is placed in, the list for the settings below will follow. 
 
 
 .. image:: ../source/_images/custom_Cluster.jpg
    :alt: Custom Cluster
 
    
-inside of each of the options, there should be a power mode you can set.
-in a dropdown for each. 
+inside of each of the options, there will be a power mode you can set.
+in a dropdown for each. inside each dropdown there is an option to set a number on 
+both sides of a horizontal numberline. The **Red** line indicates the reciprocal to the said number.
+i.e. 2 being 1/2 and 3 being 1/3. The **Blue** line indicates an integer represented as the number shown. 
+
+in the drag and drop section, there is also an option to add another item to the list with the *add criteria* icon.
+
+.. Warning:: If you have set numbers in the graphs below and need to change the drag and drop lists, those 
+      numbers will reset back to their default state. 
 
 .. image:: ../source/_images/zonetemperature_Setpoint.jpg
    :alt: zone temperature setpoint
@@ -386,6 +394,11 @@ in a dropdown for each.
 .. image:: ../source/_images/rated_Power.jpg
    :alt: rated power  
 
+Depending on the order of the list is what will be shown inside the JSON code for the list: 
+
+.. image:: ../source/_images/pairwise_Criteria_Json.jpg
+   :alt: Pairwise config Json code 
+
 Criteria Configuration
 ======================
 
@@ -394,6 +407,8 @@ Criteria configuraion is the second dropdown inside the created curtail options.
 .. image:: ../source/_images/criteria_Configuration_Sidebar.jpg
    :alt: Criteria Configuration
 
+*Criteria configuration* takes in stored values from *pairwise configuration* and lists them as they are 
+in that page. 
 once this option is selected, you will see an icon appear in the center of the application: 
 
 .. image:: ../source/_images/criteria_Configuration_Nodrop.jpg
@@ -404,7 +419,7 @@ when an option is selected, a dropdown will appear:
 .. image:: ../source/_images/criteria_Configuration_Ex.jpg
       :alt: Criteria Config dropdown
 
-once an option within the drop down is chosen, there will be an option to 
+Once an option within the drop down is chosen, there will be an icon to 
 *choose operation type*. Within each operation type, the functionallity differs. 
 *formula*, *status*, *mapper*, *constant*, and *history*. 
 
@@ -424,8 +439,8 @@ The criteria type is controlled by setting the operation_type
 parameter for each criterion. Once a criteria is selected, there will be a difference 
 in what eatch operation does. They will be described in the sections below: 
 
-formula criteria
-----------------
+formula
+-------
 
 .. image:: ../source/_images/formula.jpg
    :alt: Main Configuration File
@@ -458,8 +473,8 @@ the pairwise comparison configuration file.
    :alt: Main Configuration File
    
 
-status criteria
----------------
+Status
+------
 
 The status criterion reads a point (Boolean or enumeration) on the
 device and returns either an on_value or an off_value depending
@@ -485,8 +500,8 @@ following list contains the status criterion configuration parameters:
    :alt: Main Configuration File
    
 
-mapper criteria
----------------
+mapper
+------
 
 .. image:: ../source/_images/mapper.jpg
    :alt: Main Configuration File
@@ -521,8 +536,8 @@ parameters:
    :alt: Main Configuration File
    
 
-constant criteria
------------------
+constant
+--------
 
 .. image:: ../source/_images/constant.jpg
    :alt: Main Configuration File
@@ -543,8 +558,8 @@ same criterion used in the pairwise comparison configuration file.
    :alt: Main Configuration File
    
 
-history criteria
-----------------
+history
+-------
 
 .. image:: ../source/_images/history.jpg
    :alt: Main Configuration File
@@ -567,7 +582,7 @@ history criterion configuration parameters:
 -  previous_time : Time in minutes in the past to compare to
    current value of the point on the device.
    
-Figure 9 shows an example of a history criterion configured for
+The figure below shows an example of a history criterion configured for
 a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.
@@ -576,8 +591,8 @@ comparison configuration file.
    :alt: Main Configuration File
    
 
-Control configuration: Empty add here
-=====================================
+Control configuration
+=====================
 Inside of the sidebar on the left side of the screen inside of *Device clusters*, there will be the 
 option **Control configuration**. 
 
@@ -613,257 +628,84 @@ argument selection and that will be shown inside of operation:
    :alt: control configuration Calc
 
 Once there is a set operation and operation argument, there will be a *curtailent Setting* below the calculator.
-The first icon that is accessable is *Point*. There will be a dropdown list that will show as you select point. 
+The first icon that is accessable is *Point*. 
+
+   .. Note:: The point on the device (i.e., HP1) that is commanded to
+      achieve the load reduction.
+
+There will be a dropdown list that will show as you select point. 
 
 .. image:: ../source/_images/curtail_Setting_Pnt.jpg
    :alt: Curtailment Setting Point
 
 Once a selection is chosen, the next option on the list will be the *Control Method*. 
 
+Towards the bottom of the Control configuration, there is an option to *+Add augment*. This will 
+create a seperate new configuration for items to be added to. 
+
+offset
+------
+The first of the list chosen will be **offset**.
+Once offset is chosen, a list of new configurations will appear. 
+
 .. image:: ../source/_images/control_Method.jpg
    :alt: Control Method
 
-The first of the list chosen will be **offset**.
+**Offset:** *If offset parameter is present, then the value parameter
+is ignored and the current value of the point on the device plus
+the offset is commanded to the point on the device to achieve
+the desired load reduction.*
 
-.. image:: ../source/_images/control_Method_Offset.jpg
-   :alt: Offset
+once *offset* is chosen, there will be 2 items to configure. 
+The first one is the *offset* input, and the *load* input. 
 
-ILC Criteria Pairwise Comparison Configuration
-==============================================
+.. image:: ../source/_images/offset.jpg
+   :alt: offset option 
 
-The ILC application uses the AHP to prioritize loads available for
-curtailment. To implement the AHP the ILC application must be
-provided the relative importance of each criterion with respect
-to all other criteria (criteria that are used for the device/criteria
-configuration). This information is configured in the criteria pairwise
-comparison configuration file. Figure 16 shows the criteria pairwise
-comparison file used for deployment of ILC in PNNL BUILDING8:
+once an input is selected for both options, it will show inside 
+the JSON code on the right side. 
 
+.. image:: ../source/_images/curtail_Setting_Json.jpg
+   :alt: offset curtail Json
 
-.. image:: ../source/_images/figure_16.jpg
-   :alt: Main Configuration File
-   
+value
+-----
+Value will be the next item on the dropdown list inside *control method*.
 
-.. image:: ../source/_images/figure_17.jpg
-   :alt: Main Configuration File
-   
+Value will work similarly to *offset* in terms of layout. There will be
+an input for *Value* and there will be an input for *load*. 
 
-Take the first entry in the configuration file (Figure 13):
-This tells the ILC application that the:
+**Value**: *The value the point is commanded to, in order to achieve
+the load reduction.*
 
--  zonetemperature-setpoint-deviation criterion is seven
-   times more important than curtail_count criterion
+.. image:: ../source/_images/value_Config.jpg
+   :alt: value option
 
--  zonetemperature-setpoint-deviation criterion is five
-   times more important than historical-comparison criterion
+once the inputs are set, inside the JSON code to the right will be the 
+input selected: 
 
--  zonetemperature-setpoint-deviation criterion is eight
-   times more important than room-type criterion
+.. image:: ../source/_images/value.jpg
+   :alt: value option
 
--  zonetemperature-setpoint-deviation criterion is six times
-   more important than rated-power criterion
+The selected inputs will be shown inside of the *curtail_settings* inside of the
+JSON code. 
 
--  zonetemperature-setpoint-deviation criterion is two
-   times more important than stage criterion.
+equation
+--------
+equation will be the final item on the dropdown list inside of *control method*.
 
-One may configure the criteria as being less important too. Take
-the first comparison as an example:
+equqtion allows an equation input from the calculator. Once an operation is 
+set, then an operation argument can be set as well. Equation also has a *load* 
+option. 
 
-- “curtail_count”: 7
+.. image:: ../source/_images/equation.jpg
+      :alt: equation option
 
--  The zonetemperature-setpoint-deviation criterion
-   is seven times more important than the curtail_count
-   criterion.
+The JSON code will show the inputs on the right side of the screen: 
 
-To configure the zonetemperature-setpoint-deviation
-criterion as seven time less important than curtail_count
-criterion the configuration file entry would be modified as follows:
-
-- “curtail_count”: 0.1429
-
--  The zonetemperature-setpoint-deviation criterion is
-   seven times less important than curtail_count criterion
-
-.. note:: 0.1429 is 1/7
-Take the second entry in the configuration file (Figure 18):
-
-.. image:: ../source/_images/figure_18.jpg
-   :alt: Main Configuration File
-   
-
-This tells the ILC application that the:
-
--  stage criterion is five times more important than the curtail_
-   count criterion
-
--  stage criterion is three times more important than the
-   historical-comparison criterion
-
--  stage criterion is six times more important than the room-type
-   criterion
-
--  stage criterion is four times more important than the ratedpower
-   criterion.
-
-.. image:: ../source/_images/figure_19.jpg
-   :alt: Main Configuration File
-   
-
-Take the third entry in the configuration file (Figure 19); it tells the
-ILC application that the:
-
--  historical-comparison criterion is three times more
-   important than the curtail_count criterion
-
--  historical-comparison criterion is five times more important
-   than room-type criterion
-
--  historical-comparison criterion is three times more
-   important than rated-power criterion/
-   Take the fourth entry in the configuration file (Figure 20):
-
-.. image:: ../source/_images/figure_20.jpg
-   :alt: Main Configuration File
-   
-
-This tells the ILC application that the:
-
--  curtail_count criterion is three times more important than
-   the room-type criterion
-
--  curtail_count criterion is five times more important than the
-   rated-power criterion
-
-Take the fifth entry in the configuration file (Figure 21):
-
-.. image:: ../source/_images/figure_21.jpg
-   :alt: Main Configuration File
-   
-
-This tells the ILC application that the:
-
--  rated-power criterion is three times more important than the
-   room-type criterion
-
-Take the sixth entry in the configuration file (Figure 22):
-
-.. image:: ../source/_images/figure_22.jpg
-   :alt: Main Configuration File
-   
-
-This tells the ILC application:
--  The relative importance of the room-type criterion with respect
-   to all other criteria has already been specified in the previous
-   criteria configuration.
-
--  The parameter (with empty value) must be specified for the ILC
-   application to use the criteria.
-
-5.1 ILC Use Case: VAV Boxes and Lighting Control DELETE ME
-
-As discussed in the use case for heat pump cooling control, the
-main ILC configuration file contains building-level configuration
-parameters. Figure 27 shows an example of an ILC main
-configuration file for managing VAV boxes and dimmable lighting
-systems. By implementing a combination of dimmable lighting and
-VAV boxes, ILC can manage load curtailment reductions from both
-VAV boxes and dimmable lighting systems to achieve a greater
-load reduction than either system (VAV boxes or dimmable lighting
-systems) could independently achieve on their own. For a detailed
-description of the main ILC configuration file, see Section 3.1.
-
-The following list describes each of the configuration parameters in
-the main ILC configuration file:
-
-- campus : The campus name as published by the VOLTTRON
-platform.driver service.
-
--  building : The building name as published by the VOLTTRON
-   platform.driver service.
-
--  power_meter : Dictionary containing information to identify the
-   power meter data published by the platform.driver.
-
--  device : The device name for the building power meter as
-   published by the platform.driver.
-
--  point : The point name on the power meter for whole
-   building power as published by the platform.driver.
-
--  agent_id : The ILC instance (running application) name on the
-   VOLTTRON platform.
-
--  demand_limit : The ILC application manages devices (curtail) in
-   an attempt to keep the average whole building power below this
-   kilowatt value. The average time is determined by the average_
-   building_power_window parameter.
-
--  curtailment_time : The amount of time (minutes) the ILC
-   application holds curtailment of devices once the building goal
-   is met. If during this period the average WholeBuildingPower
-   increases above the goal the timer resets and the ILC application
-   attempts to curtail additional available devices. If all devices
-   have been curtailed and the WholeBuildingPower is still above
-   the goal the timer is not reset.
-
--  curtailment_confirm : Delay time (minutes) after curtailment
-   actions to confirm that building demand goal has been met.
-   If the building goal has not been met, additional curtailment
-   action(s) are taken, if possible.
-
--  curtailment_break : The time (minutes) after the completion
-   of curtailment actions during which no further curtailment
-   actions are taken. Completion of curtailment actions happens
-   after the curtailment_time timer elapses (i.e., the average
-   WholeBuildingPower goals were met and maintained for
-   the curtailment_time or all devices were curtailed and the
-   curtailment_time timer elapsed).
-
--  average_building_power_window : The average building
-   power is calculated using a moving window. This parameter
-   configures the length (minutes) of that window.
-
--  clusters : Array of dictionaries containing information about
-   each cluster of devices (a cluster consists of a group of devices
-   with the same criterion):
-
--  device_file_path : Full path to the device/criteria configuration
-   file described in Section 3.2.
-
--  criteria_file_path : Full path to the pairwise comparison
-   configuration file described in Section 3.2.
-
--  cluster_priority : Weighting factor assigned to this cluster.
-   The sum of these weighting factors for all clusters should equal
-   1.0. If the sum of the cluster weighting factors is not 1.0 the ILC
-   application returns an error upon startup and shutdown.
-
--  mappers : A dictionary of dictionaries containing categorical
-   assignment for use in the device/criteria configuration. This
-   parameter is used for configuring the mapper criteria (Section
-   3.2).
-
-Users configure the weighting factor (“cluster_priority”) that
-is applied to the raw score of the equipment in one (or more)
-cluster. When more than one cluster exists, the sum of all the
-cluster priorities should equal 1.0 (See Figure 27 for example). 
-
-In this example, a weighting factor of 0.33 is applied to the lighting
-cluster. All devices in this cluster are previously assigned a raw
-score and the weighting factor is multiplied to provide a final
-number. This same approach is true for the VAV box devices (a
-weighting factor of 0.67 is applied to the VAV devices in the VAV
-cluster). 
-
-This results in each device with its own score. That score
-determines the device priority in the array of loads that could be
-curtailed during an ILC event.
-
-
-.. image:: ../source/_images/figure_27.jpg
-   :alt: Main Configuration File
-   
-.. 
+.. image:: ../source/_images/equation_Json.jpg
+      :alt: equation option
+ 
 Indices and tables
 ==================
 
