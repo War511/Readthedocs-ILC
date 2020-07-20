@@ -9,7 +9,7 @@
 ILC Web application: User guide
 *******************************
 ============
-introduction
+Introduction
 ============
 
 
@@ -32,10 +32,10 @@ files.
 
 .. Note:: There is an option for this document to be used in dark mode. 
 
-Click the *Sun* icon on the top right corner of the page. 
+Click the *Sun* button on the top right corner of the page. 
 
 .. image:: ../source/_images/dark_Mode.jpg
-      :alt: Darkmode
+      
 
 Importing master driver configuration store
 ===========================================
@@ -43,7 +43,7 @@ This is the main configuration tool. There is an option right at the start that 
 your master configuration file. 
 
 .. image:: ../source/_images/master_Driver.jpg
-   :alt: Main Configuration File
+
 
 To import a configuration file, or choose a seperate file, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 options: 
 
@@ -54,21 +54,40 @@ Choosing the import new master driver configuration file will give you an option
 master configuration file. Once the file is uploaded, it will give you the option to choose from the uploaded settings. 
 
 .. image:: ../source/_images/import_Master_driver.jpg
-   :alt: Main Configuration File
+
 
 After uploading a *file*, pages can now be filled out based upon the file youve uploaded to the application. 
 
-calculator
+Calculator
 ==========
 The calculator is a tool that you will see throughout the configuration tool. 
 
 .. image:: ../source/_images/calculator.jpg
-   :alt: calculator clear formula
-The **Clear formula** icon on the calculator will clear the formula currently in use.
+   
+The **Clear formula** button on the calculator will clear the formula currently in use.
 
 .. image:: ../source/_images/calculator_Clear.jpg
-   :alt: save config
-the **Save configuration** icon will allow you to save the formula that is currently being used.
+
+the **Save configuration** button will allow you to save the formula that is currently being used.
+
+// Config calculator section to make sure that it handles AL details of the calculator. 
+
+
+.. image:: ../source/_images/power_Meter.jpg
+
+   Inside power meter, there are the options: **Device**, **Point**, **Operation**, and **Operation argument**. 
+
+   At the bottom of these options, there is a calculator used to fill in *operation* with a formula. Refer to the *Calculator* section 
+   of this userguide to familiarize usage of the calculator. 
+
+   .. image:: ../source/_images/power_Meter_Ex.jpg
+   
+   
+   When you choose an *operation argument* you will see on the right side there is an option to * +add*. This will enable the operation argument
+   to the *operation* formula chosen from the calculator. 
+
+   **Operation arguments** are "points". as you populate the demand formula within them it will populate an array and string.
+
 
 Main configuration Store
 ========================  
@@ -80,43 +99,32 @@ The following list describes each of the configuration parameters in
 the main configuration store. 
 
  .. image:: ../source/_images/main_Config_Master.jpg
-   :alt: main configuration page
 
-This list will go over each of the input options located in the main configuraion page:
 
-campus
+This list will go over each of the input options located in the main configuration page:
+
+Campus
 ------
    The campus name as published by the VOLTTRON
    platform.driver service.
    
-   on the right side of the program, the json code will be shown. While you are on the main configuration file 
-   page, underneath config, you will see your inputs in code change. 
-
-   campus will be shown as the first instance: 
-
-   .. image:: ../source/_images/campus.jpg
-   :alt: campus JSON code 
    The campus filled in is **PNNL**.
-building: 
----------
+Building
+--------
    The building name as published by the VOLTTRON
    platform.driver service.
 
-   the JSON code on the right side of the program will be shown in the section of **config**. The input 
-   listed inside of the program will show inside the code for *building* as such:
-   
-   .. image:: ../source/_images/building_Json.jpg
-   :alt: Building Json code
+  
 
-power_meter: 
-------------
+Power_meter 
+-----------
    contains information to identify the
    power meter data published by the platform.driver.
    Expand the Power Meter dropdown to select the device,
    point, and define the Demand Formula using the calculator interface
 
    .. image:: ../source/_images/power_Meter.jpg
-   :alt: Power meter
+  
 
    Inside power meter, there are the options: **Device**, **Point**, **Operation**, and **Operation argument**. 
 
@@ -124,42 +132,31 @@ power_meter:
    of this userguide to familiarize usage of the calculator. 
 
    .. image:: ../source/_images/power_Meter_Ex.jpg
-   :alt: Power meter Example filled. 
+   
    
    When you choose an *operation argument* you will see on the right side there is an option to * +add*. This will enable the operation argument
    to the *operation* formula chosen from the calculator. 
 
    **Operation arguments** are "points". as you populate the demand formula within them it will populate an array and string.
 
-   On the right side of the application, in the JSON code, you will see your options inputed automatically: 
+    
 
-   .. image:: ../source/_images/power_Meter_Json.jpg
-   :alt: Power meter Json code example
-
-device
+Device
 ------ 
    The device name for the building power meter as
    published by the platform.driver.
 
    The device will be shown inside of power_Meter. 
-
-   When device is filled, inside of JSON code there will be 2 areas where device will be shown: 
-   **device_topic** and **device_name** 
-
-   .. image:: ../source/_images/device.jpg
-   :alt: Device JSON code
+ 
 
    The device topic will take in info from the campus and building. 
-point
+Point
 ----- 
    The point name on the power meter for whole building
    power as published by the platform.driver.
 
-   In the JSON code on the right side of the screen, point will be shown inside of the **power_meter** section.
-
-   .. image:: ../source/_images/point_Json.jpg
-   :alt: point JSON code
-
+  
+  
 agent_id
 --------
    The ILC instance (running application) name on the
@@ -168,35 +165,27 @@ agent_id
    Agent ID will be underneath the *power_meter* section of the application. 
 
    .. image:: ../source/_images/Agent_Id.jpg
-   :alt: Agent Id
+   
 
-you will see the JSON code input on the right side: 
 
-.. image:: ../source/_images/agent_Id_Json.jpg
-   :alt: Agent Id JSON code
+  
 
-demand_limit
+Demand_limit
 ------------
    The ILC application manages devices (curtail) in
    an attempt to keep the average whole building power below this
    kilowatt value. The average time is determined by the average_
    building_power_window parameter.
 
-   Demand limit will take an input in minutes.
+   Demand limit will take an input as a float.
 
 .. Note:: ILC will manage controllable loads to maintain building demand at this value. 
 
 **demand_limit** will show underneath *Agent Id*:
 
 .. image:: ../source/_images/demand_Limit.jpg
-   :alt: demand_limit
 
-the Json code will be populated as such: 
-
-.. image:: ../source/_images/demand_Limit_Json.jpg
-   :alt: Demand_limit JSON
-
-control_time 
+Control_time 
 ------------
    The amount of time (minutes) the ILC
    application holds curtailment of devices once the building goal is
@@ -214,12 +203,10 @@ control_time
       target, I:C will hold control of devices for this amount of time, then the ILC will begin 
       to release devices. 
 
-   *control_time* in JSON will show on the right side of the screen. : 
+   
+     
 
-   .. image:: ../source/_images/control_Time_Json.jpg
-      :alt: control_time JSON
-
-curtailment_confirm
+Curtailment_confirm
 -------------------
    Delay time (minutes) after curtailment
    actions to confirm that building demand goal has been met.
@@ -229,13 +216,9 @@ curtailment_confirm
    Curtailment Confirm will be located right below control time on 
    the *main Configuration* page. 
 
-   The input information will be shown as such in JSON code located 
-   on the right side of the screen: 
+  
 
-    .. image:: ../source/_images/curtailment_Confirm.jpg
-         :alt: curtailment confirm 
-
-curtailment_break
+Curtailment_break
 -----------------
    The time (minutes) after the completion
    of curtailment actions where no further curtailment actions
@@ -246,13 +229,9 @@ curtailment_break
    curtailment_time timer elapsed).
 
    Curtailment Break will be shown inside the *Main Configuration* page. 
-   This will take input in minutes. The JSON code will look as such: 
-
-   .. image:: ../source/_images/curtailment_Break.jpg
-         :alt: curtailment confirm 
 
    .. Note:: ILC will release devices in a staggered manner over 
-      ammount of time. 
+      amount of time. 
 
 Average building power window 
 -----------------------------
@@ -263,32 +242,23 @@ Average building power window
    The *Average building power window* is located at the bottom of the 
    **Main Configuration* Page. This will take an input in minutes. 
 
-   located on the right side of the application inside of the JSON code
-   the changes made will appear: 
+    
 
-   .. image:: ../source/_images/average_Bpw_Json.jpg
-         :alt: Average Building Power Window JSON 
-
-Stagger realease/ Off Time
---------------------------
+Stagger release/ Off Time
+-------------------------
 The stagger release algorithm is in testing to
 alleviate the potential rebound effect caused by returning devices
 to normal operations.
 
-The Stagger release and stagger Off time icons will be located 
-towards the bottom of the *Main Configuraion* Page. Both icons 
+The Stagger release and stagger Off time buttons will be located 
+towards the bottom of the *Main Configuration* Page. Both buttons 
 can be checked or unchecked: 
 
 .. image:: ../source/_images/stagger_Release.jpg
-   :alt: Stagger release / Stagger Offtime 
-
-.. Note:: These will be automaticallt set as Boolean values. 
-      When checked, both items will be set inside of JSON code to : *True*.
+   
+.. Note:: These will be automatically set as Boolean values. 
+      When checked, either items will be set inside of JSON code to : *True*.
       When unchecked, they will default to false. 
-
-
-.. image:: ../source/_images/stagger_Release_Json.jpg
-      :alt: Stagger release / Stagger Offtime JSON Code 
 
 
 Clusters
@@ -297,7 +267,7 @@ Clusters
    the same criterion):
 
 .. image:: ../source/_images/cluster_Example.jpg
-      :alt: Cluster Example
+
 
 Creating a cluster will grant access to  **Pairwise Configuration**, **Criteria Configuration**,
 **Control configuration**. 
@@ -316,48 +286,36 @@ Cluster priority
 The cluster priority will be shown at the bottom of the **Add cluster** Page. 
 
 .. image:: ../source/_images/cluster_priority.jpg
-      :alt: Cluster Priority 
-
-changes made will be shown in here: 
-
-.. image:: ../source/_images/cluster_priority_Json.jpg
-      :alt: Cluster Priority Json
-      
-
+   
 
 Adding a cluster
 ----------------
 There is a drop down menu on the bottom of the sidebar labeled as **+Add cluster**. 
 
    .. image:: ../source/_images/add_Cluster.jpg
-      :alt: Add cluster
+  
 
 set your cluster to priority 1 if there is only one cluster. 
 
 .. image:: ../source/_images/Cluster_1.jpg
-   :alt: Add cluster
+
 
 You have the option to insert from the following list: *RTU*, *AHU* and *Light* into each of the options. 
-Once *Save new cluster* is chosen, a new dropdown is avaliable with *Pairwise Configuration*, *Criteria configuration*
+Once *Save new cluster* is chosen, a new dropdown is available with *Pairwise Configuration*, *Criteria configuration*
 and *Control Configuration*.
 
 .. image:: ../source/_images/cluster_Dropdown.jpg
-   :alt: Main Configuration File
+
    
 
 .. image:: ../source/_images/cluster_type.jpg
-   :alt: Main Configuration File
+  
    
 
 .. Note:: For multiple clusters, the cluster priority MUST be equal to 1. 
    if *Cluster 1* has a priority of 1, then *Cluster 2* must have a priority 
    of 0.
 
-Once the cluster is set, the input info will appear in the JSON code on the right side of the screen: 
-
-.. image:: ../source/_images/cluster_Type_Json.jpg
-   :alt: Main Configuration File
- 
 
 Pairwise configuration
 ======================
@@ -365,66 +323,60 @@ In the dropdown menu on the left, there will be an additional dropdown when you 
 The custom cluster will be listed with 3 items listed as such: 
 
 .. image:: ../source/_images/cluster_Options.jpg
-   :alt: custom cluster
-   
+
 Underneath the custom list, you will see a dropdown called: **Pairwise Criteria**. This is a customizable drag 
 and drop list. Whichever order this list is placed in, the list for the settings below will follow. 
 
 
 .. image:: ../source/_images/custom_Cluster.jpg
-   :alt: Custom Cluster
+   
 
    
 inside of each of the options, there will be a power mode you can set.
 in a dropdown for each. inside each dropdown there is an option to set a number on 
-both sides of a horizontal numberline. The **Red** line indicates the reciprocal to the said number.
+both sides of a horizontal number line. The **Red** line indicates the reciprocal to the said number.
 i.e. 2 being 1/2 and 3 being 1/3. The **Blue** line indicates an integer represented as the number shown. 
 
-in the drag and drop section, there is also an option to add another item to the list with the *add criteria* icon.
+in the drag and drop section, there is also an option to add another item to the list with the *add criteria* button.
 
 .. Warning:: If you have set numbers in the graphs below and need to change the drag and drop lists, those 
       numbers will reset back to their default state. 
 
 .. image:: ../source/_images/zonetemperature_Setpoint.jpg
-   :alt: zone temperature setpoint
+ 
 .. image:: ../source/_images/stage.jpg
-   :alt: Stage option
+
 .. image:: ../source/_images/history_Zonetemperature.jpg
-   :alt: history zone temperature
+
 .. image:: ../source/_images/rated_Power.jpg
-   :alt: rated power  
 
-Depending on the order of the list is what will be shown inside the JSON code for the list: 
-
-.. image:: ../source/_images/pairwise_Criteria_Json.jpg
-   :alt: Pairwise config Json code 
 
 Criteria Configuration
 ======================
 
-Criteria configuraion is the second dropdown inside the created curtail options. It will be listed as shown: 
+Criteria configuration is the second dropdown inside the created curtail options. It will be listed as shown: 
 
 .. image:: ../source/_images/criteria_Configuration_Sidebar.jpg
-   :alt: Criteria Configuration
+  
 
 *Criteria configuration* takes in stored values from *pairwise configuration* and lists them as they are 
 in that page. 
-once this option is selected, you will see an icon appear in the center of the application: 
+once this option is selected, you will see an button appear in the center of the application: 
 
 .. image:: ../source/_images/criteria_Configuration_Nodrop.jpg
-   :alt: Criteria Configuration
+ 
 
 when an option is selected, a dropdown will appear: 
 
 .. image:: ../source/_images/criteria_Configuration_Ex.jpg
-      :alt: Criteria Config dropdown
+     
 
-Once an option within the drop down is chosen, there will be an icon to 
+Once an option within the drop down is chosen, there will be an button to 
 *choose operation type*. Within each operation type, the functionallity differs. 
 *formula*, *status*, *mapper*, *constant*, and *history*. 
 
 .. image:: ../source/_images/criteria_order.jpg
-   :alt: Main Configuration File
+
 
 Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
@@ -432,18 +384,18 @@ The ILC application supports five types of configurable criteria
 which include the following:
 
 .. image:: ../source/_images/operation_Type.jpg
-   :alt: Operation type
+
 
 
 The criteria type is controlled by setting the operation_type
 parameter for each criterion. Once a criteria is selected, there will be a difference 
-in what eatch operation does. They will be described in the sections below: 
+in what each operation does. They will be described in the sections below: 
 
-formula
+Formula
 -------
 
 .. image:: ../source/_images/formula.jpg
-   :alt: Main Configuration File
+    
 
 formula allows a user to declare mathematical
 formulas that are evaluated using current device measurements
@@ -461,7 +413,7 @@ configuration parameters:
    
 
 .. image:: ../source/_images/math_Table.jpg
-   :alt: Main Configuration File
+   
    
 
 The math table shows an example of a formula criterion configured for a
@@ -470,7 +422,7 @@ should match the name for the same criterion used in
 the pairwise comparison configuration file.
 
 .. image:: ../source/_images/figure_5.jpg
-   :alt: Main Configuration File
+
    
 
 Status
@@ -497,14 +449,14 @@ following list contains the status criterion configuration parameters:
    configuration file.
 
 .. image:: ../source/_images/figure_6.jpg
-   :alt: Main Configuration File
+  
    
 
-mapper
+Mapper
 ------
 
 .. image:: ../source/_images/mapper.jpg
-   :alt: Main Configuration File
+  
 
 The mapper criterion allows a user to categorize loads and assign
 values to the categories. For example, room type can be used to
@@ -517,7 +469,7 @@ importance of the room (1: most important and 7: less important).
 Table 2 shows an example of AHP priority based on room type.
 
 .. image:: ../source/_images/table_2.jpg
-   :alt: Main Configuration File
+  
    
 
 The following list contains the mapper criterion configuration
@@ -533,14 +485,13 @@ parameters:
    configuration file.
 
 .. image:: ../source/_images/figure_7.jpg
-   :alt: Main Configuration File
-   
+ 
 
-constant
+Constant
 --------
 
 .. image:: ../source/_images/constant.jpg
-   :alt: Main Configuration File
+   
 
    
 The constant criterion returns a constant value for inclusion in the
@@ -555,15 +506,14 @@ pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.
 
 .. image:: ../source/_images/figure_8.jpg
-   :alt: Main Configuration File
+    
    
 
-history
+History
 -------
 
 .. image:: ../source/_images/history.jpg
-   :alt: Main Configuration File
-
+  
    
 The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
@@ -588,7 +538,7 @@ should match the name for the same criterion used in the pairwise
 comparison configuration file.
 
 .. image:: ../source/_images/figure_9.jpg
-   :alt: Main Configuration File
+   
    
 
 Control configuration
@@ -597,38 +547,38 @@ Inside of the sidebar on the left side of the screen inside of *Device clusters*
 option **Control configuration**. 
 
 .. image:: ../source/_images/control_Config_Sidebar.jpg
-   :alt: Control config Sidebar
    
-once *control configuration* is chosen, there will be an icon in the center of the screen that will appear: 
+   
+once *control configuration* is chosen, there will be an button in the center of the screen that will appear: 
 
 .. image:: ../source/_images/control_Configuration_Nodrop.jpg
-   :alt: control configuration dropdown unexpanded
+   
    
 first, when a device is selected, it will auto fill the campus and building number 
-previously seleted. it will look like *Campus/building/device*. When a device is selected, 
+previously selected. it will look like *Campus/building/device*. When a device is selected, 
 there will be more options that appear. 
 
 .. image:: ../source/_images/control_Config_Drop.jpg
-   :alt: control configuration dropdown unexpanded
+   
 
 At the top there will be an option called: *Operation*. Input can be inserted by using the calculator 
 and its functions. 
 
-.. Note:: Using the calculator can be reffered to the *Calculator* Section of this userguide. 
+.. Note:: Using the calculator can be referred to the *Calculator* Section of this userguide. 
 
 When an operation is inserted, an operation argument may be inserted as well: 
 
 .. image:: ../source/_images/control_Config_Calc.jpg
-   :alt: control configuration Calc
+
 
 After an operation and operation argument is chosen, choose the *+Add* next to the operation 
 argument selection and that will be shown inside of operation: 
 
 .. image:: ../source/_images/control_Config_Arg.jpg
-   :alt: control configuration Calc
+   
 
-Once there is a set operation and operation argument, there will be a *curtailent Setting* below the calculator.
-The first icon that is accessable is *Point*. 
+Once there is a set operation and operation argument, there will be a *curtailment Setting* below the calculator.
+The first button that is accessible is *Point*. 
 
    .. Note:: The point on the device (i.e., HP1) that is commanded to
       achieve the load reduction.
@@ -636,20 +586,20 @@ The first icon that is accessable is *Point*.
 There will be a dropdown list that will show as you select point. 
 
 .. image:: ../source/_images/curtail_Setting_Pnt.jpg
-   :alt: Curtailment Setting Point
+ 
 
 Once a selection is chosen, the next option on the list will be the *Control Method*. 
 
 Towards the bottom of the Control configuration, there is an option to *+Add augment*. This will 
-create a seperate new configuration for items to be added to. 
+create a separate new configuration for items to be added to. 
 
-offset
+Offset
 ------
 The first of the list chosen will be **offset**.
 Once offset is chosen, a list of new configurations will appear. 
 
 .. image:: ../source/_images/control_Method.jpg
-   :alt: Control Method
+  
 
 **Offset:** *If offset parameter is present, then the value parameter
 is ignored and the current value of the point on the device plus
@@ -660,15 +610,9 @@ once *offset* is chosen, there will be 2 items to configure.
 The first one is the *offset* input, and the *load* input. 
 
 .. image:: ../source/_images/offset.jpg
-   :alt: offset option 
+ 
 
-once an input is selected for both options, it will show inside 
-the JSON code on the right side. 
-
-.. image:: ../source/_images/curtail_Setting_Json.jpg
-   :alt: offset curtail Json
-
-value
+Value
 -----
 Value will be the next item on the dropdown list inside *control method*.
 
@@ -679,38 +623,24 @@ an input for *Value* and there will be an input for *load*.
 the load reduction.*
 
 .. image:: ../source/_images/value_Config.jpg
-   :alt: value option
-
-once the inputs are set, inside the JSON code to the right will be the 
-input selected: 
-
-.. image:: ../source/_images/value.jpg
-   :alt: value option
+  
 
 The selected inputs will be shown inside of the *curtail_settings* inside of the
 JSON code. 
 
-equation
+Equation
 --------
 equation will be the final item on the dropdown list inside of *control method*.
 
-equqtion allows an equation input from the calculator. Once an operation is 
+equation allows an equation input from the calculator. Once an operation is 
 set, then an operation argument can be set as well. Equation also has a *load* 
 option. 
 
 .. image:: ../source/_images/equation.jpg
-      :alt: equation option
-
-The JSON code will show the inputs on the right side of the screen: 
-
-.. image:: ../source/_images/equation_Json.jpg
-      :alt: equation option
+     
  
 Indices and tables
 ==================
-
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
 

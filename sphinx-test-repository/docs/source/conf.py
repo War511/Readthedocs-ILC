@@ -65,8 +65,7 @@ html_theme_options = {
     'headbgcolor' : 'maroon',
     'bodyfont' : 'Helvetica',
     'headfont' : 'Arial',
-    'content_fixed': True,
-  'content_width': '700px',
+    'body_max_width' : 'none'
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
