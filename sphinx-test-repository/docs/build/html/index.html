@@ -43,13 +43,15 @@
 </div>
 <div class="section" id="ilc-application-configuration">
 <h2>ILC APPLICATION CONFIGURATION<a class="headerlink" href="#ilc-application-configuration" title="Permalink to this headline">¶</a></h2>
-<p><strong>!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!</strong>
-The ILC application behavior is controlled through three
+<p><strong>!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!</strong></p>
+<p>The ILC application behavior is controlled through these
 configuration Pages:</p>
 <ol class="arabic simple">
 <li><p>The main configuration file page</p></li>
 <li><p>The device/criteria configuration page</p></li>
-<li><p>The criteria pairwise comparison configuration page</p></li>
+<li><p>The pairwise configuration page</p></li>
+<li><p>The Criteria configuration page</p></li>
+<li><p>The control configuration page</p></li>
 </ol>
 <p>The following sections describe what each configuration file
 controls and the parameters defined within these configuration
@@ -61,11 +63,11 @@ files.</p>
 <p>Click the <em>Sun</em> button on the top right corner of the page.</p>
 <img alt="_images/dark_Mode.jpg" src="_images/dark_Mode.jpg" />
 <div class="section" id="importing-master-driver-configuration-store">
-<h3>Importing master driver configuration store<a class="headerlink" href="#importing-master-driver-configuration-store" title="Permalink to this headline">¶</a></h3>
+<h3>Importing Master Driver Configuration Store<a class="headerlink" href="#importing-master-driver-configuration-store" title="Permalink to this headline">¶</a></h3>
 <p>This is the main configuration tool. There is an option right at the start that allows you to upload a file. This will allow you to import
-your master configuration file.</p>
+your <strong>Master Configuration File</strong>.</p>
 <img alt="_images/master_Driver.jpg" src="_images/master_Driver.jpg" />
-<p>To import a configuration file, or choose a seperate file, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 options:</p>
+<p>To import a configuration file, or choose a separate file, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 options:</p>
 <ol class="arabic simple">
 <li><p>Save configuration file</p></li>
 <li><p>Import New Master Driver Configuration File.</p></li>
@@ -73,27 +75,101 @@ your master configuration file.</p>
 <p>Choosing the import new master driver configuration file will give you an option to import your
 master configuration file. Once the file is uploaded, it will give you the option to choose from the uploaded settings.</p>
 <img alt="_images/import_Master_driver.jpg" src="_images/import_Master_driver.jpg" />
-<p>After uploading a <em>file</em>, pages can now be filled out based upon the file youve uploaded to the application.</p>
+<p>After uploading a <em>file</em>, pages can now be filled out based upon the file you have uploaded to the application.</p>
+<p>Example: There is a dropdown for the option inside <em>Building</em> in the <em>Main Configuration</em> page. Before inserting the <em>Configuration File</em>,
+there is an option to click the dropdown. Once this Dropdown is chosen, nothing will appear. After inserting the chosen <em>Master Configuration File</em>, choosing
+the dropdown will insert a <em>string</em> from the File inserted into the application.</p>
+<img alt="_images/string_Capture.jpg" src="_images/string_Capture.jpg" />
+<p>This example image shows the string selected in the dropdown of <em>Building</em>.</p>
 </div>
 <div class="section" id="calculator">
 <h3>Calculator<a class="headerlink" href="#calculator" title="Permalink to this headline">¶</a></h3>
 <p>The calculator is a tool that you will see throughout the configuration tool.</p>
 <img alt="_images/calculator.jpg" src="_images/calculator.jpg" />
+<p>The calculator has a variety of different options to utilize within it. There is <strong>Operation</strong>, and
+<strong>Operation argument</strong>. These parts of the calculator will be explained within subsections of this category.</p>
+<div class="section" id="operation">
+<h4>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h4>
+<p><em>Operation</em> is the first Calculator option.</p>
+<p>An <em>operation</em> in this application is a string representation of a mathematical formula. The formula is
+evaluated to return a numeric value.</p>
+<img alt="_images/operation.jpg" src="_images/operation.jpg" />
+<p>To input items into Operation, an input from the calculator must be placed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You cannot type the input, it has to be entered inside the calculator for
+the operation criteria to populate.</p>
+</div>
+</div>
+<div class="section" id="operation-argument">
+<h4>Operation Argument<a class="headerlink" href="#operation-argument" title="Permalink to this headline">¶</a></h4>
+<p><em>Operation Argument</em> is the second option available after a formula has been chosen.</p>
+<p><strong>Operation Argument</strong>’s are points. As you populate the demand formula within them, it
+will populate the array and string within them.</p>
+<p>From the Operation Argument tab, there will be a dropdown of options to choose from.</p>
+<img alt="_images/operation_Argument.jpg" src="_images/operation_Argument.jpg" />
+<p>When an <em>operation argument</em> is chosen, there will be an option on the right side of the selection bar to <em>+add</em>. This will enable the operation argument
+to the <em>Operation</em> formula chosen from the calculator.</p>
+</div>
+<div class="section" id="demand-formula">
+<h4>Demand Formula<a class="headerlink" href="#demand-formula" title="Permalink to this headline">¶</a></h4>
+<p>Once the operation is produced, then the JSON code on the right side of the screen will populate with the
+correct formula chosen.</p>
+<p>As an operation is produced, in the JSON code on the right side of the screen will be the <strong>Demand Formula</strong>.
+The demand formula can be described as the <em>screen</em> for the calculator. As inputs are selected, they will be
+shown inside of the JSON code with what was inserted.</p>
+<img alt="_images/calculator_Json.jpg" src="_images/calculator_Json.jpg" />
+</div>
+<div class="section" id="clear-formula">
+<h4>Clear formula<a class="headerlink" href="#clear-formula" title="Permalink to this headline">¶</a></h4>
 <p>The <strong>Clear formula</strong> button on the calculator will clear the formula currently in use.</p>
 <img alt="_images/calculator_Clear.jpg" src="_images/calculator_Clear.jpg" />
-<p>the <strong>Save configuration</strong> button will allow you to save the formula that is currently being used.</p>
-<p>// Config calculator section to make sure that it handles AL details of the calculator.</p>
+</div>
+<div class="section" id="save-configuration">
+<h4>Save Configuration<a class="headerlink" href="#save-configuration" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Save Configuration</strong> button will allow you to save the formula that is currently being used.
+Using the <em>Save Configuration*</em> button will store your formula inside the <em>Demand Formula</em> on the right side of the screen in JSON code.</p>
+<p>Saving your formula will store your data in that location unless the <em>Clear Formula</em> button is chosen. If the <em>Clear Formula</em> button is chosen,
+your saved formula will stay in the stored location unless a <em>new</em> formula is created and saved. This will replace the previous formula.</p>
+<img alt="_images/calculator_Save.jpg" src="_images/calculator_Save.jpg" />
+</div>
+</div>
+<div class="section" id="json">
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p><em>JSON</em> code will be visible throughout the application on the <em>right</em> side of the screen. As items are
+implemented inside of the program itself, they will populate inside the JSON code as well.</p>
+<p>Each section within the JSON code will have subsections dedicated to their corresponding categories.</p>
+<p>For example, inside of this panel, these results are a screen for results that the user has input into the application
+options on the left side.</p>
+<img alt="_images/example_Json2.jpg" src="_images/example_Json2.jpg" />
+<p>This is what will be inserted into the Main Configuration Page</p>
+<img alt="_images/example_Json.jpg" src="_images/example_Json.jpg" />
+<p>After the items are inserted, they will be displayed inside of the Json code.</p>
+<p>There will also be an option to choose drop down arrows inside of the JSON code
+to expand within a sub category and see where exactly inserted strings will be stored.</p>
+<p>This will show you, in real time, where all of the information inserted will be, which category they will be in,
+formulas printed from the <em>Calculator</em> and items inserted from the <em>Main Configuration File</em>.</p>
 </div>
 <div class="section" id="main-configuration-store">
 <h3>Main configuration Store<a class="headerlink" href="#main-configuration-store" title="Permalink to this headline">¶</a></h3>
-<p>The main configuration store contains building-level configuration
+<p>The main configuration store contains building level configuration
 parameters.</p>
 <p>The following list describes each of the configuration parameters in
 the main configuration store.</p>
 <blockquote>
 <div><img alt="_images/main_Config_Master.jpg" src="_images/main_Config_Master.jpg" />
 </div></blockquote>
-<p>This list will go over each of the input options located in the main configuration page:</p>
+<p>This list will go over each of the input options located in the main configuration page:
+-  Campus
+-  Building
+-  Power_meter
+-  Device
+-  Agent ID
+-  Demand Limit
+-  Control Time
+-  Curtailment Confirm
+-  Curtailment Break
+-  Average Building Power Window</p>
 <div class="section" id="campus">
 <h4>Campus<a class="headerlink" href="#campus" title="Permalink to this headline">¶</a></h4>
 <blockquote>
@@ -110,56 +186,41 @@ platform.driver service.</p>
 </div></blockquote>
 </div>
 <div class="section" id="power-meter">
-<h4>Power_meter<a class="headerlink" href="#power-meter" title="Permalink to this headline">¶</a></h4>
+<h4>Power Meter<a class="headerlink" href="#power-meter" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>contains information to identify the
 power meter data published by the platform.driver.
 Expand the Power Meter dropdown to select the device,
 point, and define the Demand Formula using the calculator interface</p>
 <img alt="_images/power_Meter.jpg" src="_images/power_Meter.jpg" />
-<p>Inside power meter, there are the options: <strong>Device</strong>, <strong>Point</strong>, <strong>Operation</strong>, and <strong>Operation argument</strong>.</p>
-<p>At the bottom of these options, there is a calculator used to fill in <em>operation</em> with a formula. Refer to the <em>Calculator</em> section
-of this userguide to familiarize usage of the calculator.</p>
-<img alt="_images/power_Meter_Ex.jpg" src="_images/power_Meter_Ex.jpg" />
-<p>When you choose an <em>operation argument</em> you will see on the right side there is an option to * +add*. This will enable the operation argument
-to the <em>operation</em> formula chosen from the calculator.</p>
-<p><strong>Operation arguments</strong> are “points”. as you populate the demand formula within them it will populate an array and string.</p>
 </div></blockquote>
-</div>
 <div class="section" id="device">
-<h4>Device<a class="headerlink" href="#device" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>The device name for the building power meter as
+<h5>Device<a class="headerlink" href="#device" title="Permalink to this headline">¶</a></h5>
+<p>The device name for the building power meter as
 published by the platform.driver.</p>
 <p>The device will be shown inside of power_Meter.</p>
-<p>The device topic will take in info from the campus and building.</p>
-</div></blockquote>
+<p>Device will take in a string inserted from the <em>Main Configuration File</em> and use it inside the dropdown.</p>
 </div>
 <div class="section" id="point">
-<h4>Point<a class="headerlink" href="#point" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>The point name on the power meter for whole building
+<h5>Point<a class="headerlink" href="#point" title="Permalink to this headline">¶</a></h5>
+<p>The point name on the power meter for whole building
 power as published by the platform.driver.</p>
-</div></blockquote>
+</div>
 </div>
 <div class="section" id="agent-id">
-<h4>agent_id<a class="headerlink" href="#agent-id" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>The ILC instance (running application) name on the
+<h4>Agent ID<a class="headerlink" href="#agent-id" title="Permalink to this headline">¶</a></h4>
+<p>The ILC instance (running application) name on the
 VOLTTRON platform.</p>
 <p>Agent ID will be underneath the <em>power_meter</em> section of the application.</p>
 <img alt="_images/Agent_Id.jpg" src="_images/Agent_Id.jpg" />
-</div></blockquote>
 </div>
 <div class="section" id="demand-limit">
-<h4>Demand_limit<a class="headerlink" href="#demand-limit" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>The ILC application manages devices (curtail) in
+<h4>Demand Limit<a class="headerlink" href="#demand-limit" title="Permalink to this headline">¶</a></h4>
+<p>The ILC application manages devices (curtail) in
 an attempt to keep the average whole building power below this
 kilowatt value. The average time is determined by the <a href="#id3"><span class="problematic" id="id4">average_</span></a>
 building_power_window parameter.</p>
 <p>Demand limit will take an input as a float.</p>
-</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>ILC will manage controllable loads to maintain building demand at this value.</p>
@@ -168,16 +229,15 @@ building_power_window parameter.</p>
 <img alt="_images/demand_Limit.jpg" src="_images/demand_Limit.jpg" />
 </div>
 <div class="section" id="control-time">
-<h4>Control_time<a class="headerlink" href="#control-time" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>The amount of time (minutes) the ILC
+<h4>Control Time<a class="headerlink" href="#control-time" title="Permalink to this headline">¶</a></h4>
+<p>The amount of time (minutes) the ILC
 application holds curtailment of devices once the building goal is
 met. During this period if the average WholeBuildingPower value
 increases above the goal the timer resets and the ILC application
 will attempt to curtail additional available devices. If all devices
 have been curtailed and the WholeBuildingPower is still above
 the goal the timer is not reset.</p>
-<p>control_time asks for your input in minutes.
+<p>Control Time asks for your input in minutes.
 Once input is complete, the number will be seen on the right side in the
 JSON code inside of <em>control_time</em>.</p>
 <div class="admonition note">
@@ -186,23 +246,19 @@ JSON code inside of <em>control_time</em>.</p>
 target, I:C will hold control of devices for this amount of time, then the ILC will begin
 to release devices.</p>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="curtailment-confirm">
-<h4>Curtailment_confirm<a class="headerlink" href="#curtailment-confirm" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>Delay time (minutes) after curtailment
+<h4>Curtailment Confirm<a class="headerlink" href="#curtailment-confirm" title="Permalink to this headline">¶</a></h4>
+<p>Delay time (minutes) after curtailment
 actions to confirm that building demand goal has been met.
 If the building goal has not been met, additional curtailment
 action(s) will be taken if possible.</p>
 <p>Curtailment Confirm will be located right below control time on
 the <em>main Configuration</em> page.</p>
-</div></blockquote>
 </div>
 <div class="section" id="curtailment-break">
-<h4>Curtailment_break<a class="headerlink" href="#curtailment-break" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>The time (minutes) after the completion
+<h4>Curtailment Break<a class="headerlink" href="#curtailment-break" title="Permalink to this headline">¶</a></h4>
+<p>The time (minutes) after the completion
 of curtailment actions where no further curtailment actions
 are taken. Completion of curtailment actions happens
 after the curtailment_time timer elapses (i.e., the average
@@ -215,21 +271,18 @@ curtailment_time timer elapsed).</p>
 <p>ILC will release devices in a staggered manner over
 amount of time.</p>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="average-building-power-window">
-<h4>Average building power window<a class="headerlink" href="#average-building-power-window" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>The average building
+<h4>Average Building Power Window<a class="headerlink" href="#average-building-power-window" title="Permalink to this headline">¶</a></h4>
+<p>The average building
 power is calculated using a moving window. This parameter
 configures the length (minutes) of that window.</p>
 <p>The <em>Average building power window</em> is located at the bottom of the
 <a href="#id1"><span class="problematic" id="id2">**</span></a>Main Configuration* Page. This will take an input in minutes.</p>
-</div></blockquote>
 </div>
 <div class="section" id="stagger-release-off-time">
-<h4>Stagger release/ Off Time<a class="headerlink" href="#stagger-release-off-time" title="Permalink to this headline">¶</a></h4>
-<p>The stagger release algorithm is in testing to
+<h4>Stagger Release/ Off Time<a class="headerlink" href="#stagger-release-off-time" title="Permalink to this headline">¶</a></h4>
+<p>The Stagger Release algorithm is in testing to
 alleviate the potential rebound effect caused by returning devices
 to normal operations.</p>
 <p>The Stagger release and stagger Off time buttons will be located
@@ -246,17 +299,14 @@ When unchecked, they will default to false.</p>
 </div>
 <div class="section" id="clusters">
 <h3>Clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Array containing information on each cluster of devices (a cluster consists of a group of devices with
+<p>Array containing information on each cluster of devices (a cluster consists of a group of devices with
 the same criterion):</p>
-</div></blockquote>
 <img alt="_images/cluster_Example.jpg" src="_images/cluster_Example.jpg" />
 <p>Creating a cluster will grant access to  <strong>Pairwise Configuration</strong>, <strong>Criteria Configuration</strong>,
 <strong>Control configuration</strong>.</p>
 <div class="section" id="cluster-priority">
-<h4>Cluster priority<a class="headerlink" href="#cluster-priority" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>Weighting factor assigned to this cluster.
+<h4>Cluster Priority<a class="headerlink" href="#cluster-priority" title="Permalink to this headline">¶</a></h4>
+<p>Weighting factor assigned to this cluster.
 The sum of these weighting factors for all clusters should
 equal 1.0. If the sum of the cluster weighting factors is not
 1.0, the ILC application returns an error upon startup and
@@ -266,22 +316,20 @@ shutdown.</p>
 <p>The cluster priority section needs to be set to 1 if only one cluster
 is present.</p>
 </div>
-</div></blockquote>
-<p>The cluster priority will be shown at the bottom of the <strong>Add cluster</strong> Page.</p>
+<p>The Cluster Priority will be shown at the bottom of the <strong>Add cluster</strong> Page.</p>
 <img alt="_images/cluster_priority.jpg" src="_images/cluster_priority.jpg" />
 </div>
 <div class="section" id="adding-a-cluster">
-<h4>Adding a cluster<a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h4>
+<h4>Adding A Cluster<a class="headerlink" href="#adding-a-cluster" title="Permalink to this headline">¶</a></h4>
 <p>There is a drop down menu on the bottom of the sidebar labeled as <strong>+Add cluster</strong>.</p>
-<blockquote>
-<div><img alt="_images/add_Cluster.jpg" src="_images/add_Cluster.jpg" />
-</div></blockquote>
+<img alt="_images/add_Cluster.jpg" src="_images/add_Cluster.jpg" />
 <p>set your cluster to priority 1 if there is only one cluster.</p>
 <img alt="_images/Cluster_1.jpg" src="_images/Cluster_1.jpg" />
-<p>You have the option to insert from the following list: <em>RTU</em>, <em>AHU</em> and <em>Light</em> into each of the options.
-Once <em>Save new cluster</em> is chosen, a new dropdown is available with <em>Pairwise Configuration</em>, <em>Criteria configuration</em>
+<p>You have the option to insert from the following list:
+<em>RTU</em>, <em>AHU</em> and <em>Light</em> into each of the options.</p>
+<p>Once <em>Save new cluster</em> is chosen,
+a new dropdown is available with <em>Pairwise Configuration</em>, <em>Criteria configuration</em>
 and <em>Control Configuration</em>.</p>
-<img alt="../source/_images/cluster_Dropdown.jpg" src="../source/_images/cluster_Dropdown.jpg" />
 <img alt="_images/cluster_type.jpg" src="_images/cluster_type.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -292,12 +340,16 @@ of 0.</p>
 </div>
 </div>
 <div class="section" id="pairwise-configuration">
-<h3>Pairwise configuration<a class="headerlink" href="#pairwise-configuration" title="Permalink to this headline">¶</a></h3>
-<p>In the dropdown menu on the left, there will be an additional dropdown when you create your custom cluster.
+<h3>Pairwise Configuration<a class="headerlink" href="#pairwise-configuration" title="Permalink to this headline">¶</a></h3>
+<p>In the dropdown menu on the left, there will be an
+additional dropdown when you create your custom cluster.
 The custom cluster will be listed with 3 items listed as such:</p>
 <img alt="_images/cluster_Options.jpg" src="_images/cluster_Options.jpg" />
-<p>Underneath the custom list, you will see a dropdown called: <strong>Pairwise Criteria</strong>. This is a customizable drag
-and drop list. Whichever order this list is placed in, the list for the settings below will follow.</p>
+<p>Underneath the custom list, you will see a dropdown called: <strong>Pairwise Criteria</strong>. This is a
+customizable drag and drop list. Whichever order this list is placed in,</p>
+<blockquote>
+<div><p>the list for the settings below will follow.</p>
+</div></blockquote>
 <img alt="_images/custom_Cluster.jpg" src="_images/custom_Cluster.jpg" />
 <p>inside of each of the options, there will be a power mode you can set.
 in a dropdown for each. inside each dropdown there is an option to set a number on
@@ -325,7 +377,7 @@ once this option is selected, you will see an button appear in the center of the
 <p>when an option is selected, a dropdown will appear:</p>
 <img alt="_images/criteria_Configuration_Ex.jpg" src="_images/criteria_Configuration_Ex.jpg" />
 <p>Once an option within the drop down is chosen, there will be an button to
-<em>choose operation type</em>. Within each operation type, the functionallity differs.
+<em>choose operation type</em>. Within each operation type, the functionality differs.
 <em>formula</em>, <em>status</em>, <em>mapper</em>, <em>constant</em>, and <em>history</em>.</p>
 <img alt="_images/criteria_order.jpg" src="_images/criteria_order.jpg" />
 <p>Any number of relevant criteria can be used to prioritize loads for
@@ -450,8 +502,8 @@ comparison configuration file.</p>
 <img alt="_images/figure_9.jpg" src="_images/figure_9.jpg" />
 </div>
 </div>
-<div class="section" id="control-configuration">
-<h3>Control configuration<a class="headerlink" href="#control-configuration" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="control-onfiguration">
+<h3>Control onfiguration<a class="headerlink" href="#control-onfiguration" title="Permalink to this headline">¶</a></h3>
 <p>Inside of the sidebar on the left side of the screen inside of <em>Device clusters</em>, there will be the
 option <strong>Control configuration</strong>.</p>
 <img alt="_images/control_Config_Sidebar.jpg" src="_images/control_Config_Sidebar.jpg" />
@@ -540,29 +592,39 @@ option.</p>
 <li><a class="reference internal" href="#">ILC Web application: User guide</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#ilc-application-configuration">ILC APPLICATION CONFIGURATION</a><ul>
-<li><a class="reference internal" href="#importing-master-driver-configuration-store">Importing master driver configuration store</a></li>
-<li><a class="reference internal" href="#calculator">Calculator</a></li>
+<li><a class="reference internal" href="#importing-master-driver-configuration-store">Importing Master Driver Configuration Store</a></li>
+<li><a class="reference internal" href="#calculator">Calculator</a><ul>
+<li><a class="reference internal" href="#operation">Operation</a></li>
+<li><a class="reference internal" href="#operation-argument">Operation Argument</a></li>
+<li><a class="reference internal" href="#demand-formula">Demand Formula</a></li>
+<li><a class="reference internal" href="#clear-formula">Clear formula</a></li>
+<li><a class="reference internal" href="#save-configuration">Save Configuration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#json">JSON</a></li>
 <li><a class="reference internal" href="#main-configuration-store">Main configuration Store</a><ul>
 <li><a class="reference internal" href="#campus">Campus</a></li>
 <li><a class="reference internal" href="#building">Building</a></li>
-<li><a class="reference internal" href="#power-meter">Power_meter</a></li>
+<li><a class="reference internal" href="#power-meter">Power Meter</a><ul>
 <li><a class="reference internal" href="#device">Device</a></li>
 <li><a class="reference internal" href="#point">Point</a></li>
-<li><a class="reference internal" href="#agent-id">agent_id</a></li>
-<li><a class="reference internal" href="#demand-limit">Demand_limit</a></li>
-<li><a class="reference internal" href="#control-time">Control_time</a></li>
-<li><a class="reference internal" href="#curtailment-confirm">Curtailment_confirm</a></li>
-<li><a class="reference internal" href="#curtailment-break">Curtailment_break</a></li>
-<li><a class="reference internal" href="#average-building-power-window">Average building power window</a></li>
-<li><a class="reference internal" href="#stagger-release-off-time">Stagger release/ Off Time</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#agent-id">Agent ID</a></li>
+<li><a class="reference internal" href="#demand-limit">Demand Limit</a></li>
+<li><a class="reference internal" href="#control-time">Control Time</a></li>
+<li><a class="reference internal" href="#curtailment-confirm">Curtailment Confirm</a></li>
+<li><a class="reference internal" href="#curtailment-break">Curtailment Break</a></li>
+<li><a class="reference internal" href="#average-building-power-window">Average Building Power Window</a></li>
+<li><a class="reference internal" href="#stagger-release-off-time">Stagger Release/ Off Time</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#clusters">Clusters</a><ul>
-<li><a class="reference internal" href="#cluster-priority">Cluster priority</a></li>
-<li><a class="reference internal" href="#adding-a-cluster">Adding a cluster</a></li>
+<li><a class="reference internal" href="#cluster-priority">Cluster Priority</a></li>
+<li><a class="reference internal" href="#adding-a-cluster">Adding A Cluster</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pairwise-configuration">Pairwise configuration</a></li>
+<li><a class="reference internal" href="#pairwise-configuration">Pairwise Configuration</a></li>
 <li><a class="reference internal" href="#criteria-configuration">Criteria Configuration</a><ul>
 <li><a class="reference internal" href="#formula">Formula</a></li>
 <li><a class="reference internal" href="#status">Status</a></li>
@@ -571,7 +633,7 @@ option.</p>
 <li><a class="reference internal" href="#history">History</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#control-configuration">Control configuration</a><ul>
+<li><a class="reference internal" href="#control-onfiguration">Control onfiguration</a><ul>
 <li><a class="reference internal" href="#offset">Offset</a></li>
 <li><a class="reference internal" href="#value">Value</a></li>
 <li><a class="reference internal" href="#equation">Equation</a></li>

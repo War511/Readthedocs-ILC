@@ -66,6 +66,7 @@ html_theme_options = {
     'bodyfont' : 'Helvetica',
     'headfont' : 'Arial',
     'body_max_width' : 'none'
+   
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
