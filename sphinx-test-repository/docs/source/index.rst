@@ -14,160 +14,40 @@ ILC Web application: User guide
 Introduction
 ************
 
-
+The ILC configuration tool is used to create an ILC configuration store for use in VOLTTRON. The configuration store content being created will be shown in the viewing pane on the right side of the application. 
 
 *****************************
 ILC APPLICATION CONFIGURATION
 *****************************
 
-**!This doc is a test for creating a user guide. Edit this out when entire doc draft is finished.!**
-
 The ILC application behavior is controlled through these
 configuration Pages:
 
-1. The main configuration file page
+1. The main configuration page
 2. The device/criteria configuration page
 3. The pairwise configuration page
-4. The Criteria configuration page
+4. The criteria configuration page
 5. The control configuration page
 
 The following sections describe what each configuration file
 controls and the parameters defined within these configuration
 files.
-
-.. Note:: There is an option for this document to be used in dark mode. 
-
-Click the *Sun* button on the top right corner of the page. 
-
-.. image:: ../source/_images/dark_Mode.jpg
       
 
-Importing Master Driver Configuration Store
-*******************************************
-This is the main configuration tool. There is an option right at the start that allows you to upload a file. This will allow you to import
-your **Master Configuration File**. 
+Importing the Master Driver Configuration Store
+***********************************************
+At the initial homepage, the user will be prompted to upload the **Master Driver Configuration Store** file. Values within the Master Driver Configuration Store will be parsed to provide options for Campus, Buidling, Device and Points throughout the application.
 
 .. image:: ../source/_images/master_Driver.jpg
 
 
-To import a configuration file, or choose a separate file, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 options: 
+Once the user has selected the Master Driver Configuration Store, this homepage will not appear again. However, if the user needs to upload a different Master Driver Configuration Store at any point, this option can be accessed via the Menu icon in the top left of the application.
 
-1. Save configuration file 
-2. Import New Master Driver Configuration File. 
-
-Choosing the import new master driver configuration file will give you an option to import your
-master configuration file. Once the file is uploaded, it will give you the option to choose from the uploaded settings. 
+.. Warning:: Uploading a new Master Driver Configuration Store will remove all current data in the application.
 
 .. image:: ../source/_images/import_Master_driver.jpg
 
-
-After uploading a *file*, pages can now be filled out based upon the file you have uploaded to the application.
-
-Example: There is a dropdown for the option inside *Building* in the *Main Configuration* page. Before inserting the *Configuration File*,
-there is an option to click the dropdown. Once this Dropdown is chosen, nothing will appear. After inserting the chosen *Master Configuration File*, choosing 
-the dropdown will insert a *string* from the File inserted into the application. 
-
-.. image:: ../source/_images/string_Capture.jpg
-
-This example image shows the string selected in the dropdown of *Building*.
-
-Calculator
-**********
-
-The calculator is a tool that you will see throughout the configuration tool. 
-
-
-.. image:: ../source/_images/calculator.jpg
-
-The calculator has a variety of different options to utilize within it. There is **Operation**, and 
-**Operation argument**. These parts of the calculator will be explained within subsections of this category.
-
-Operation
----------
-
-*Operation* is the first Calculator option. 
-
-An *operation* in this application is a string representation of a mathematical formula. The formula is
-evaluated to return a numeric value. 
-
-.. image:: ../source/_images/operation.jpg
-
-To input items into Operation, an input from the calculator must be placed. 
-
-.. Note:: You cannot type the input, it has to be entered inside the calculator for 
-      the operation criteria to populate. 
-
-Operation Argument
-------------------
-*Operation Argument* is the second option available after a formula has been chosen. 
-
-**Operation Argument**'s are points. As you populate the demand formula within them, it 
-will populate the array and string within them. 
-
-From the Operation Argument tab, there will be a dropdown of options to choose from.
-
-.. image:: ../source/_images/operation_Argument.jpg
-
-   
-When an *operation argument* is chosen, there will be an option on the right side of the selection bar to *+add*. This will enable the operation argument
-to the *Operation* formula chosen from the calculator. 
-
-Demand Formula
-----------------
-Once the operation is produced, then the JSON code on the right side of the screen will populate with the 
-correct formula chosen. 
-
-As an operation is produced, in the JSON code on the right side of the screen will be the **Demand Formula**. 
-The demand formula can be described as the *screen* for the calculator. As inputs are selected, they will be 
-shown inside of the JSON code with what was inserted. 
-
-.. image:: ../source/_images/calculator_Json.jpg
-
-Clear formula
--------------
-
-The **Clear formula** button on the calculator will clear the formula currently in use.
-
-.. image:: ../source/_images/calculator_Clear.jpg
-Save Configuration
-------------------
-
-The **Save Configuration** button will allow you to save the formula that is currently being used.
-Using the *Save Configuration** button will store your formula inside the *Demand Formula* on the right side of the screen in JSON code.
-
-Saving your formula will store your data in that location unless the *Clear Formula* button is chosen. If the *Clear Formula* button is chosen, 
-your saved formula will stay in the stored location unless a *new* formula is created and saved. This will replace the previous formula. 
-
-.. image:: ../source/_images/calculator_Save.jpg
-
-
-JSON 
-****
-*JSON* code will be visible throughout the application on the *right* side of the screen. As items are 
-implemented inside of the program itself, they will populate inside the JSON code as well. 
-
-Each section within the JSON code will have subsections dedicated to their corresponding categories. 
-
-For example, inside of this panel, these results are a screen for results that the user has input into the application 
-options on the left side. 
-
-.. image:: ../source/_images/example_Json2.jpg
-
-This is what will be inserted into the Main Configuration Page
-
-.. image:: ../source/_images/example_Json.jpg
-
-After the items are inserted, they will be displayed inside of the Json code.
-
-There will also be an option to choose drop down arrows inside of the JSON code 
-to expand within a sub category and see where exactly inserted strings will be stored. 
-
-This will show you, in real time, where all of the information inserted will be, which category they will be in,
-formulas printed from the *Calculator* and items inserted from the *Main Configuration File*. 
-
-
-
-Main configuration Store
+Main Configuration
 ************************  
 
 The main configuration store contains building level configuration
@@ -177,7 +57,6 @@ The following list describes each of the configuration parameters in
 the main configuration store. 
 
  .. image:: ../source/_images/main_Config_Master.jpg
-
 
 This list will go over each of the input options located in the main configuration page:
 -  Campus
@@ -191,237 +70,117 @@ This list will go over each of the input options located in the main configurati
 -  Curtailment Break
 -  Average Building Power Window
 
-Campus
-------
+**Campus**
    The campus name as published by the VOLTTRON
    platform.driver service.
-   
-   The campus filled in is **PNNL**.
-Building
---------
+
+**Building**
    The building name as published by the VOLTTRON
    platform.driver service.
 
   
-Power Meter 
------------
-   contains information to identify the
-   power meter data published by the platform.driver.
-   Expand the Power Meter dropdown to select the device,
-   point, and define the Demand Formula using the calculator interface
+**Power Meter**
+   contains information to identify the power meter data published by the platform.driver. Expand the Power Meter dropdown to select the device, point, and define the Demand Formula using the calculator interface
 
    .. image:: ../source/_images/power_Meter.jpg
-
-
-    
-Device
-++++++
-
-The device name for the building power meter as
-published by the platform.driver.
-
-The device will be shown inside of power_Meter. 
-
-Device will take in a string inserted from the *Main Configuration File* and use it inside the dropdown. 
-
-Point
-+++++
-
-The point name on the power meter for whole building
-power as published by the platform.driver.
-
   
+**Agent ID**
+   The ILC instance (running application) name on the VOLTTRON platform.
   
-Agent ID
---------
-The ILC instance (running application) name on the
-VOLTTRON platform.
+**Demand Limit**
+   The ILC application manages devices (curtail) in an attempt to keep the average whole building power below this kilowatt value. The average time is determined by the average_building_power_window parameter.
 
-Agent ID will be underneath the *power_meter* section of the application. 
-
-.. image:: ../source/_images/Agent_Id.jpg
-   
-  
-Demand Limit
-------------
-The ILC application manages devices (curtail) in
-an attempt to keep the average whole building power below this
-kilowatt value. The average time is determined by the average_
-building_power_window parameter.
-
-Demand limit will take an input as a float.
+   Demand limit will take an input as a float.
 
 .. Note:: ILC will manage controllable loads to maintain building demand at this value. 
 
-**demand_limit** will show underneath *Agent Id*:
-
-.. image:: ../source/_images/demand_Limit.jpg
-
-Control Time 
-------------
-The amount of time (minutes) the ILC
-application holds curtailment of devices once the building goal is
-met. During this period if the average WholeBuildingPower value
-increases above the goal the timer resets and the ILC application
-will attempt to curtail additional available devices. If all devices
-have been curtailed and the WholeBuildingPower is still above
-the goal the timer is not reset.
-
-Control Time asks for your input in minutes. 
-Once input is complete, the number will be seen on the right side in the 
-JSON code inside of *control_time*. 
+**Control Time**
+   The amount of time (minutes) the ILC application holds curtailment of devices once the building goal is met. During this period if the average WholeBuildingPower value increases above the goal the timer resets and the ILC application will attempt to curtail additional available devices. If all devices have been curtailed and the WholeBuildingPower is still above the goal the timer is not reset.
 
 .. Note:: After ILC control brings the building demand to the demand
    target, I:C will hold control of devices for this amount of time, then the ILC will begin 
    to release devices. 
 
-   
-     
+**Curtailment Confirm**
+   Delay time (minutes) after curtailment actions to confirm that building demand goal has been met. If the building goal has not been met, additional curtailment action(s) will be taken if possible.
 
-Curtailment Confirm
--------------------
-Delay time (minutes) after curtailment
-actions to confirm that building demand goal has been met.
-If the building goal has not been met, additional curtailment
-action(s) will be taken if possible.
+**Curtailment Break**
+   The time (minutes) after the completion of curtailment actions where no further curtailment actions are taken. Completion of curtailment actions happens after the curtailment_time timer elapses (i.e., the average WholeBuildingPower goals was met and maintained for the curtailment_time or all devices were curtailed and the curtailment_time timer elapsed).
 
-Curtailment Confirm will be located right below control time on 
-the *main Configuration* page. 
+**Average Building Power Window**
+   The average building power is calculated using a moving window. This parameter configures the length (minutes) of that window.
 
-  
+**Stagger Release/ Off Time**
+   The Stagger Release algorithm is in testing to alleviate the potential rebound effect caused by returning devices to normal operations.
 
-Curtailment Break
------------------
-The time (minutes) after the completion
-of curtailment actions where no further curtailment actions
-are taken. Completion of curtailment actions happens
-after the curtailment_time timer elapses (i.e., the average
-WholeBuildingPower goals was met and maintained for
-the curtailment_time or all devices were curtailed and the
-curtailment_time timer elapsed).
+   Both buttons can be checked or unchecked: 
 
-Curtailment Break will be shown inside the *Main Configuration* page. 
+Calculator
+**********
 
-.. Note:: ILC will release devices in a staggered manner over 
-   amount of time. 
-
-Average Building Power Window 
------------------------------
-The average building
-power is calculated using a moving window. This parameter
-configures the length (minutes) of that window.
-
-The *Average building power window* is located at the bottom of the 
-**Main Configuration* Page. This will take an input in minutes. 
-
-    
-
-Stagger Release/ Off Time
--------------------------
-The Stagger Release algorithm is in testing to
-alleviate the potential rebound effect caused by returning devices
-to normal operations.
-
-The Stagger release and stagger Off time buttons will be located 
-towards the bottom of the *Main Configuration* Page. Both buttons 
-can be checked or unchecked: 
-
-.. image:: ../source/_images/stagger_Release.jpg
-   
-.. Note:: These will be automatically set as Boolean values. 
-      When checked, either items will be set inside of JSON code to : *True*.
-      When unchecked, they will default to false. 
+The calculator is a tool that is used throughout the configuration tool to create an operation string and arrays of operation arguments. There are variations on options based upon locations within the application.
 
 
+.. image:: ../source/_images/calculator.jpg
+
+The calculator pad buttons when pressed will populate the **operation** string above. Once the *save operation* button is pressed, the values in the ILC Configuration Store will be updated.
+
+**Operation**
+   An *operation* is a string representation of a mathematical formula. 
+
+.. image:: ../source/_images/operation.jpg
+
+.. Note:: You cannot directly enter characters into the operation string, it has to be populated by using the calculator pad buttons.
+
+**Operation Argument**
+   *Operation Arguments* are points derived from the selected device. To enter an operation argument into the operation, select an operation argument from the dropdown input and press the *+ADD* button to the right of the dropdown input.
+
+**Clear formula**
+   The *Clear formula* button on the calculator will clear the formula currently in use.
+
+**Save Operation**
+   The *Save Operation* button will save the formula that is currently being used to the ILC Configuration Store. If the Operation is not saved, the ILC Configuraiton Store will not be updated.
+
+.. image:: ../source/_images/calculator_Save.jpg
+ 
 Clusters
 ********
-Array containing information on each cluster of devices (a cluster consists of a group of devices with
-the same criterion):
+A *cluster* consists of a group of devices with the same criterion. To add a cluster, click on the *+Add Cluster* button in the Left Panel. Creating a cluster will populate a dropdown within the left side panel where the user will gain access to the Pairwise Configuration, Criteria Configuration, Control configuration.
+
+.. image:: ../source/_images/add_Cluster.jpg
+
+**Cluster Name**
+   The referenced name of the cluster. 
+
+**Cluster Type**
+   The system type of the cluster. 
+
+**Cluster Priority**
+   Weighting factor assigned to this cluster. The sum of these weighting factors for all clusters will equal 1.0.
 
 .. image:: ../source/_images/cluster_Example.jpg
 
+.. Note:: The cluster priority section needs to be set to 1 if only one cluster is present. When there are multiple clusters, existing cluster priorities can be updated by changing the priority value for the existing cluster and pressing the *Save New Priority* button.
 
-Creating a cluster will grant access to  **Pairwise Configuration**, **Criteria Configuration**,
-**Control configuration**. 
-
-Cluster Priority
-----------------
-Weighting factor assigned to this cluster.
-The sum of these weighting factors for all clusters should
-equal 1.0. If the sum of the cluster weighting factors is not
-1.0, the ILC application returns an error upon startup and
-shutdown.
-
-.. Note:: The cluster priority section needs to be set to 1 if only one cluster
-   is present. 
-
-The Cluster Priority will be shown at the bottom of the **Add cluster** Page. 
-
-.. image:: ../source/_images/cluster_priority.jpg
-   
-
-Adding A Cluster
-----------------
-There is a drop down menu on the bottom of the sidebar labeled as **+Add cluster**. 
-
-.. image:: ../source/_images/add_Cluster.jpg
-  
-
-set your cluster to priority 1 if there is only one cluster. 
-
-.. image:: ../source/_images/Cluster_1.jpg
-
-
-You have the option to insert from the following list:
-*RTU*, *AHU* and *Light* into each of the options. 
-
-Once *Save new cluster* is chosen,
-a new dropdown is available with *Pairwise Configuration*, *Criteria configuration*
-and *Control Configuration*.
-
-.. image:: ../source/_images/cluster_type.jpg
-
-   
-.. Note:: For multiple clusters, the cluster priority MUST be equal to 1. 
-   if *Cluster 1* has a priority of 1, then *Cluster 2* must have a priority 
-   of 0.
-
+**Cluster Editing**
+   The cluster name, type and priority can be revised after the creation of the cluster by navigating to the *Edit Clusters* page, a link to which is found in the left side panel. 
 
 Pairwise Configuration
 **********************
-In the dropdown menu on the left, there will be an 
-additional dropdown when you create your custom cluster.
-The custom cluster will be listed with 3 items listed as such: 
+In the left side panel tree, there will be a Cluster dropdown created upon adding a new cluster. After expanding a Cluster tree, the **Pairwise Criteria** page can be reached.
 
 .. image:: ../source/_images/cluster_Options.jpg
 
-Underneath the custom list, you will see a dropdown called: **Pairwise Criteria**. This is a 
-customizable drag and drop list. Whichever order this list is placed in,
- the list for the settings below will follow. 
-
+**Criteria**
+   The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the *+Add Criteria** button. Deletion of a cluster criteria is done by pressing the *X* on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.  
 
 .. image:: ../source/_images/custom_Cluster.jpg
    
-
-   
-inside of each of the options, there will be a power mode you can set.
-in a dropdown for each. inside each dropdown there is an option to set a number on 
-both sides of a horizontal number line. The **Red** line indicates the reciprocal to the said number.
-i.e. 2 being 1/2 and 3 being 1/3. The **Blue** line indicates an integer represented as the number shown. 
-
-in the drag and drop section, there is also an option to add another item to the list with the *add criteria* button.
-
-.. Warning:: If you have set numbers in the graphs below and need to change the drag and drop lists, those 
-      numbers will reset back to their default state. 
+Expanding the criteria dropdowns below will expose sliding scales to set comparison curtail values. Inside each dropdown the **Red** line indicates a lesser curtail value, which is the recipriocal of the value shown i.e. 2 will be 1/2 and 3 will be 1/3. The **Blue** line a greater curtail value.  
 
 .. image:: ../source/_images/zonetemperature_Setpoint.jpg
- 
-.. image:: ../source/_images/stage.jpg
 
-.. image:: ../source/_images/history_Zonetemperature.jpg
-
-.. image:: ../source/_images/rated_Power.jpg
-
+.. Warning:: When reordering, adding or deleting criteria, criteria curtail values will reset back to the default value of 1. 
 
 Criteria Configuration
 **********************
@@ -429,7 +188,6 @@ Criteria Configuration
 Criteria configuration is the second dropdown inside the created curtail options. It will be listed as shown: 
 
 .. image:: ../source/_images/criteria_Configuration_Sidebar.jpg
-  
 
 *Criteria configuration* takes in stored values from *pairwise configuration* and lists them as they are 
 in that page. 
@@ -437,18 +195,13 @@ once this option is selected, you will see an button appear in the center of the
 
 .. image:: ../source/_images/criteria_Configuration_Nodrop.jpg
  
-
 when an option is selected, a dropdown will appear: 
 
 .. image:: ../source/_images/criteria_Configuration_Ex.jpg
      
-
 Once an option within the drop down is chosen, there will be an button to 
 *choose operation type*. Within each operation type, the functionality differs. 
 *formula*, *status*, *mapper*, *constant*, and *history*. 
-
-.. image:: ../source/_images/criteria_order.jpg
-
 
 Any number of relevant criteria can be used to prioritize loads for
 curtailment to manage consumption (e.g., electricity or natural gas).
@@ -456,8 +209,6 @@ The ILC application supports five types of configurable criteria
 which include the following:
 
 .. image:: ../source/_images/operation_Type.jpg
-
-
 
 The criteria type is controlled by setting the operation_type
 parameter for each criterion. Once a criteria is selected, there will be a difference 
@@ -715,6 +466,12 @@ Indices and tables
 ******************
 * :ref:`search`
 
+Settings
+--------
 
-      
+.. Note:: There is an option for this document to be used in dark mode. 
+
+Click the *Contrast* button on the top right corner of the page. 
+
+.. image:: ../source/_images/dark_Mode.jpg
 
