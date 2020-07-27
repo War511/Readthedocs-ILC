@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILC Web application: User guide &#8212; Intelligent Load Control Application 2020 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Intelligent Load Control Application 2020 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ILC Web application: User guide</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="toctree-wrapper compound">
+</div>
+<div class="section" id="ilc-web-application-user-guide">
+<h1>ILC Web application: User guide<a class="headerlink" href="#ilc-web-application-user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The ILC configuration tool is used to create an ILC configuration store for use in VOLTTRON. The configuration store content being created will be shown in the viewing pane on the right side of the application.</p>
+</div>
+<div class="section" id="ilc-application-configuration">
+<h2>ILC APPLICATION CONFIGURATION<a class="headerlink" href="#ilc-application-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The ILC application behavior is controlled through these
+configuration Pages:</p>
+<ol class="arabic simple">
+<li><p>The main configuration page</p></li>
+<li><p>The device/criteria configuration page</p></li>
+<li><p>The pairwise configuration page</p></li>
+<li><p>The criteria configuration page</p></li>
+<li><p>The control configuration page</p></li>
+</ol>
+<p>The following sections describe what each configuration file
+controls and the parameters defined within these configuration
+files.</p>
+<div class="section" id="importing-the-master-driver-configuration-store">
+<h3>Importing the Master Driver Configuration Store<a class="headerlink" href="#importing-the-master-driver-configuration-store" title="Permalink to this headline">¶</a></h3>
+<p>At the initial homepage, the user will be prompted to upload the <strong>Master Driver Configuration Store</strong> file. Values within the Master Driver Configuration Store will be parsed to provide options for Campus, Buidling, Device and Points throughout the application.</p>
+<img alt="_images/master_Driver.JPG" src="_images/master_Driver.JPG" />
+<p>Once the user has selected the Master Driver Configuration Store, this homepage will not appear again. However, if the user needs to upload a different Master Driver Configuration Store at any point, this option can be accessed via the Menu icon in the top left of the application.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Uploading a new Master Driver Configuration Store will remove all current data in the application.</p>
+</div>
+<img alt="_images/import_Master_driver.JPG" src="_images/import_Master_driver.JPG" />
+</div>
+<div class="section" id="main-configuration">
+<h3>Main Configuration<a class="headerlink" href="#main-configuration" title="Permalink to this headline">¶</a></h3>
+<p>The main configuration store contains building level configuration
+parameters.</p>
+<p>The following list describes each of the configuration parameters in
+the main configuration store.</p>
+<blockquote>
+<div><img alt="_images/main_Config_Master.JPG" src="_images/main_Config_Master.JPG" />
+</div></blockquote>
+<p>This list will go over each of the input options located in the main configuration page:
+-  Campus
+-  Building
+-  Power_meter
+-  Device
+-  Agent ID
+-  Demand Limit
+-  Control Time
+-  Curtailment Confirm
+-  Curtailment Break
+-  Average Building Power Window</p>
+<dl>
+<dt><strong>Campus</strong></dt><dd><p>The campus name as published by the VOLTTRON
+platform.driver service.</p>
+</dd>
+<dt><strong>Building</strong></dt><dd><p>The building name as published by the VOLTTRON
+platform.driver service.</p>
+</dd>
+<dt><strong>Power Meter</strong></dt><dd><p>contains information to identify the power meter data published by the platform.driver. Expand the Power Meter dropdown to select the device, point, and define the Demand Formula using the calculator interface</p>
+<img alt="_images/power_Meter.jpg" src="_images/power_Meter.jpg" />
+</dd>
+<dt><strong>Agent ID</strong></dt><dd><p>The ILC instance (running application) name on the VOLTTRON platform.</p>
+</dd>
+<dt><strong>Demand Limit</strong></dt><dd><p>The ILC application manages devices (curtail) in an attempt to keep the average whole building power below this kilowatt value. The average time is determined by the average_building_power_window parameter.</p>
+<p>Demand limit will take an input as a float.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ILC will manage controllable loads to maintain building demand at this value.</p>
+</div>
+<dl class="simple">
+<dt><strong>Control Time</strong></dt><dd><p>The amount of time (minutes) the ILC application holds curtailment of devices once the building goal is met. During this period if the average WholeBuildingPower value increases above the goal the timer resets and the ILC application will attempt to curtail additional available devices. If all devices have been curtailed and the WholeBuildingPower is still above the goal the timer is not reset.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After ILC control brings the building demand to the demand
+target, I:C will hold control of devices for this amount of time, then the ILC will begin
+to release devices.</p>
+</div>
+<dl>
+<dt><strong>Curtailment Confirm</strong></dt><dd><p>Delay time (minutes) after curtailment actions to confirm that building demand goal has been met. If the building goal has not been met, additional curtailment action(s) will be taken if possible.</p>
+</dd>
+<dt><strong>Curtailment Break</strong></dt><dd><p>The time (minutes) after the completion of curtailment actions where no further curtailment actions are taken. Completion of curtailment actions happens after the curtailment_time timer elapses (i.e., the average WholeBuildingPower goals was met and maintained for the curtailment_time or all devices were curtailed and the curtailment_time timer elapsed).</p>
+</dd>
+<dt><strong>Average Building Power Window</strong></dt><dd><p>The average building power is calculated using a moving window. This parameter configures the length (minutes) of that window.</p>
+</dd>
+<dt><strong>Stagger Release/ Off Time</strong></dt><dd><p>The Stagger Release algorithm is in testing to alleviate the potential rebound effect caused by returning devices to normal operations.</p>
+<p>Both buttons can be checked or unchecked:</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="calculator">
+<h3>Calculator<a class="headerlink" href="#calculator" title="Permalink to this headline">¶</a></h3>
+<p>The calculator is a tool that is used throughout the configuration tool to create an operation string and arrays of operation arguments. There are variations on options based upon locations within the application.</p>
+<img alt="_images/calculator.jpg" src="_images/calculator.jpg" />
+<p>The calculator pad buttons when pressed will populate the <strong>operation</strong> string above. Once the <em>save operation</em> button is pressed, the values in the ILC Configuration Store will be updated.</p>
+<dl class="simple">
+<dt><strong>Operation</strong></dt><dd><p>An <em>operation</em> is a string representation of a mathematical formula.</p>
+</dd>
+</dl>
+<img alt="_images/operation.jpg" src="_images/operation.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You cannot directly enter characters into the operation string, it has to be populated by using the calculator pad buttons.</p>
+</div>
+<dl class="simple">
+<dt><strong>Operation Argument</strong></dt><dd><p><em>Operation Arguments</em> are points derived from the selected device. To enter an operation argument into the operation, select an operation argument from the dropdown input and press the <em>+ADD</em> button to the right of the dropdown input.</p>
+</dd>
+<dt><strong>Clear formula</strong></dt><dd><p>The <em>Clear formula</em> button on the calculator will clear the formula currently in use.</p>
+</dd>
+<dt><strong>Save Operation</strong></dt><dd><p>The <em>Save Operation</em> button will save the formula that is currently being used to the ILC Configuration Store. If the Operation is not saved, the ILC Configuration Store will not be updated.</p>
+</dd>
+</dl>
+<img alt="_images/calculator_Save.jpg" src="_images/calculator_Save.jpg" />
+</div>
+<div class="section" id="clusters">
+<h3>Clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h3>
+<p>A <em>cluster</em> consists of a group of devices with the same criterion. To add a cluster, click on the <em>+Add Cluster</em> button in the Left Panel. Creating a cluster will populate a dropdown within the left side panel where the user will gain access to the Pairwise Configuration, Criteria Configuration, Control configuration.</p>
+<img alt="_images/add_Cluster.jpg" src="_images/add_Cluster.jpg" />
+<dl class="simple">
+<dt><strong>Cluster Name</strong></dt><dd><p>The referenced name of the cluster.</p>
+</dd>
+<dt><strong>Cluster Type</strong></dt><dd><p>The system type of the cluster.</p>
+</dd>
+<dt><strong>Cluster Priority</strong></dt><dd><p>Weighting factor assigned to this cluster. The sum of these weighting factors for all clusters will equal 1.0.</p>
+</dd>
+</dl>
+<img alt="_images/cluster_Example.jpg" src="_images/cluster_Example.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The cluster priority section needs to be set to 1 if only one cluster is present. When there are multiple clusters, existing cluster priorities can be updated by changing the priority value for the existing cluster and pressing the <em>Save New Priority</em> button.</p>
+</div>
+<dl class="simple">
+<dt><strong>Cluster Editing</strong></dt><dd><p>The cluster name, type and priority can be revised after the creation of the cluster by navigating to the <em>Edit Clusters</em> page, a link to which is found in the left side panel.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="pairwise-configuration">
+<h3>Pairwise Configuration<a class="headerlink" href="#pairwise-configuration" title="Permalink to this headline">¶</a></h3>
+<p>In the left side panel tree, there will be a Cluster dropdown created upon adding a new cluster. After expanding a Cluster tree, the <strong>Pairwise Criteria</strong> page can be reached.</p>
+<img alt="_images/cluster_Options.JPG" src="_images/cluster_Options.JPG" />
+<dl class="simple">
+<dt><strong>Criteria</strong></dt><dd><p>The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the <em>+Add Criteria*</em> button. Deletion of a cluster criteria is done by pressing the <em>X</em> on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.</p>
+</dd>
+</dl>
+<img alt="_images/custom_Cluster.JPG" src="_images/custom_Cluster.JPG" />
+<p>Expanding the criteria dropdowns below will expose sliding scales to set comparison curtail values. Inside each dropdown the <strong>Red</strong> line indicates a lesser curtail value, which is the reciprocal of the value shown i.e. 2 will be 1/2 and 3 will be 1/3. The <strong>Blue</strong> line a greater curtail value.</p>
+<img alt="_images/zonetemperature_Setpoint.jpg" src="_images/zonetemperature_Setpoint.jpg" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When reordering, adding or deleting criteria, criteria curtail values will reset back to the default value of 1.</p>
+</div>
+</div>
+<div class="section" id="criteria-configuration">
+<h3>Criteria Configuration<a class="headerlink" href="#criteria-configuration" title="Permalink to this headline">¶</a></h3>
+<p>Criteria configuration is the second dropdown inside the created Cluster. It will be listed as shown:</p>
+<img alt="_images/criteria_Configuration_Sidebar.jpg" src="_images/criteria_Configuration_Sidebar.jpg" />
+<p><em>Criteria configuration</em> takes in stored values from <em>pairwise configuration</em> and reflects the device topic criteria and their order.
+once this option is selected, you will see an button appear in the center of the application:</p>
+<img alt="_images/criteria_Configuration_Nodrop.JPG" src="_images/criteria_Configuration_Nodrop.JPG" />
+<p>Expand the device topic to view criteria configuration options:</p>
+<img alt="_images/criteria_Configuration_Ex.JPG" src="_images/criteria_Configuration_Ex.JPG" />
+<p>Once an option within the drop down is chosen, there will be an input to
+<em>choose operation type</em>. The different operations types are
+<em>formula</em>, <em>status</em>, <em>mapper</em>, <em>constant</em>, and <em>history</em>.</p>
+<p>Any number of relevant criteria can be used to prioritize loads for
+curtailment to manage consumption (e.g., electricity or natural gas).
+The ILC application supports five types of configurable criteria
+which include the following:</p>
+<img alt="_images/operation_Type.JPG" src="_images/operation_Type.JPG" />
+<dl class="simple">
+<dt><strong>Formula</strong></dt><dd><p>Formula allows a user to declare mathematical formulas that are evaluated using current device measurements(data from the device are published by the VOLTTRON platform.driver service).</p>
+</dd>
+</dl>
+<img alt="_images/formula.jpg" src="_images/formula.jpg" />
+<ul class="simple">
+<li><p>operation : String representation of a mathematical formula.
+This mathematical formula is evaluated to return a numeric value.</p></li>
+<li><p>operation_args : List of point names from the device
+used to evaluate the mathematical formula in the operation
+parameter. The values associated with each point are updated
+when new device data are published by the platform.driver.</p></li>
+</ul>
+<p><strong>Status</strong></p>
+<blockquote>
+<div><p>The status criterion reads a point (Boolean or enumeration) on the device and returns either an on_value or an off_value depending on whether the current status of the point is True (enumeration value of 1) or False(enumeration value of 0), respectively. The following list contains the status criterion configuration parameters:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>point_name : The point on the device that is evaluated.
+This device point should be a Boolean or an enumeration with a
+value of 0 or 1.</p></li>
+<li><p>on_value : The numeric value returned by the criterion if the
+point on the device indicates a True or enumeration value of 1.</p></li>
+<li><p>off_value : The numeric value returned by the criterion if the
+point on the device indicates a False or enumeration value of 0.
+Figure 6 shows an example of a status criterion configured for
+a heat pump. The criterion name, rated-power, should match
+the name for the same criterion used in the pairwise comparison
+configuration file.</p></li>
+</ul>
+<img alt="_images/figure_6.jpg" src="_images/figure_6.jpg" />
+<dl class="simple">
+<dt><strong>Mapper</strong></dt><dd><p>The mapper criterion allows a user to categorize loads and assign values to the categories. For example, room type can be used to set the importance of the rooms (heating or cooling of the room constitutes the load) for curtailment of power consumption. Rooms assigned higher numerical values are regarded as less important (more likely to be curtailed first) than rooms assigned lower numerical values. Users set their own priority depending on the importance of the room (1: most important and 7: less important). Table 2 shows an example of AHP priority based on room type.</p>
+</dd>
+</dl>
+<img alt="_images/mapper.jpg" src="_images/mapper.jpg" />
+<img alt="_images/table_2.JPG" src="_images/table_2.JPG" />
+<dl class="simple">
+<dt><strong>Mapper Editor</strong></dt><dd><p>At the top of the Criteria Configuration page, there is a dropdown to edit map keys and dist names. <em>ADD TO THIS</em>.</p>
+</dd>
+</dl>
+<p>The following list contains the mapper criterion configuration
+parameters:
+-  Map Key – The category assigned to the device.</p>
+<blockquote>
+<div><p>Figure 7 shows an example of a mapper criterion configured for
+a heat pump. The criterion name, room-type, should match the
+name for the same criterion used in the pairwise comparison
+configuration file.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>dict_name : The dictionary name in the main ILC configuration
+file that contains the key (category) and value assigned to that
+category.</p></li>
+</ul>
+<img alt="_images/figure_7.JPG" src="_images/figure_7.JPG" />
+<p><strong>Constant</strong></p>
+<img alt="_images/constant.JPG" src="_images/constant.JPG" />
+<p>The constant criterion returns a constant value for inclusion in the AHP. The following list contains the constant criterion configuration parameters:</p>
+<ul class="simple">
+<li><p>value : The value returned by this criterion for inclusion in the
+AHP.</p></li>
+</ul>
+<p>Figure 8 shows a constant criterion example, configured for a heat
+pump. The criterion name, stage, will match the name for the
+same criterion used in the pairwise comparison configuration file.</p>
+<img alt="_images/figure_8.JPG" src="_images/figure_8.JPG" />
+<p><strong>History</strong></p>
+<img alt="_images/history.JPG" src="_images/history.JPG" />
+<p>The history criterion evaluates the rate of change of a point on the
+device to return a numeric value. The following list contains the
+history criterion configuration parameters:</p>
+<ul class="simple">
+<li><p>Point Name : The point on the device that is evaluated.</p></li>
+<li><p>Comparison Type : This configuration parameter can be
+configured to be direct or inverse. A direct comparison returns
+the value of the point at the current time minus the value of the
+point at some time in the past (configured as previous_time).
+An inverse comparison returns unity divided by the value of the
+point at the current time minus the value of the point at some
+time in the past (configured as previous_time).</p></li>
+<li><p>Previous Time : Time in minutes in the past to compare to
+current value of the point on the device.</p></li>
+<li><p>Minimum:</p></li>
+<li><p>Maximum:</p></li>
+</ul>
+<p>The figure below shows an example of a history criterion configured for
+a heat pump. The criterion name, historical-comparison,
+should match the name for the same criterion used in the pairwise
+comparison configuration file.</p>
+<img alt="_images/figure_9.JPG" src="_images/figure_9.JPG" />
+</div>
+<div class="section" id="control-configuration">
+<h3>Control Configuration<a class="headerlink" href="#control-configuration" title="Permalink to this headline">¶</a></h3>
+<p>The Control Configuration page can be accessed under the Cluster dropdown menu in the left side bar.</p>
+<img alt="_images/control_Config_Sidebar.JPG" src="_images/control_Config_Sidebar.JPG" />
+<p>The once navigated to the page, the list of device topics determined in the criteria configuration will be shown:</p>
+<img alt="_images/control_Configuration_Nodrop.JPG" src="_images/control_Configuration_Nodrop.JPG" />
+<p>Upon expansion of the device topic dropdown, the Curtail Device Status operation and Curtailment Settings forms will be available.</p>
+<img alt="_images/control_Config_Drop.JPG" src="_images/control_Config_Drop.JPG" />
+<dl class="simple">
+<dt><strong>Curtail Device Status</strong></dt><dd><p>This section allows the user to enter in an operation equation using the Calculator component.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please refer to the <em>Calculator</em> Section of this user guide for instructions on calculator use.</p>
+</div>
+<dl>
+<dt><strong>Curtailment Setting</strong></dt><dd><p>Under Curtailment Setting, the user will select a Point</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The point on the device (i.e., HP1) that is commanded to
+achieve the load reduction.</p>
+</div>
+</dd>
+</dl>
+<p>There will be a dropdown list that will show as you select point.</p>
+<p><strong>Control Method</strong> : The options for Control Methods are offset, value and equation.</p>
+<ul class="simple">
+<li><p>Offset: If offset parameter is chosen, then the current value of the point on the device plus the offset is commanded to the point on the device to achieve the desired load reduction.</p></li>
+</ul>
+<img alt="_images/control_Method.jpg" src="_images/control_Method.jpg" />
+<img alt="_images/offset.JPG" src="_images/offset.JPG" />
+<ul class="simple">
+<li><p>Value : <a href="#id1"><span class="problematic" id="id2">*</span></a>The value the point is commanded to, in order to achieve the load reduction.</p></li>
+</ul>
+<img alt="_images/value_Config.jpg" src="_images/value_Config.jpg" />
+<ul class="simple">
+<li><p>Equation : equation allows operation string creation from the calculator. Reference the <em>Calculator</em> section for further instructions on calculator usage.</p></li>
+</ul>
+<dl class="simple">
+<dt><strong>Load</strong> :</dt><dd><p>The last item in the curtailment settings section is the load determination. The type of load values are Equation, which will prompt for values using the Calculator feature, and Float, enabling the user to enter a numerical float value. Toggle between the options by pressing the corresponding radio button.</p>
+</dd>
+<dt><strong>Augment</strong> :</dt><dd><p>At the bottom of the device topic section there is a button to <em>ADD AUGMENT</em>. By default, this will copy values currently entered for the curtail section into a duplicate Augment section for customization. The Augment section can be removed at any time by pressing the <em>REMOVE AUGMENT</em> button.</p>
+</dd>
+</dl>
+<div class="section" id="settings">
+<h4>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h4>
+<p><strong>Dark Mode</strong> : There is an option for this document to be used in dark mode. Click the <em>Contrast</em> icon on the top right corner of the page to toggle this option.</p>
+<img alt="_images/dark_Mode.jpg" src="_images/dark_Mode.jpg" />
+</div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ILC Web application: User guide</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#ilc-application-configuration">ILC APPLICATION CONFIGURATION</a><ul>
+<li><a class="reference internal" href="#importing-the-master-driver-configuration-store">Importing the Master Driver Configuration Store</a></li>
+<li><a class="reference internal" href="#main-configuration">Main Configuration</a></li>
+<li><a class="reference internal" href="#calculator">Calculator</a></li>
+<li><a class="reference internal" href="#clusters">Clusters</a></li>
+<li><a class="reference internal" href="#pairwise-configuration">Pairwise Configuration</a></li>
+<li><a class="reference internal" href="#criteria-configuration">Criteria Configuration</a></li>
+<li><a class="reference internal" href="#control-configuration">Control Configuration</a><ul>
+<li><a class="reference internal" href="#settings">Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Intelligent Load Control Application 2020 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ILC Web application: User guide</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, cw.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+    </div>
+  </body>
+</html>
