@@ -38,14 +38,14 @@ Importing the Master Driver Configuration Store
 ***********************************************
 At the initial homepage, the user will be prompted to upload the **Master Driver Configuration Store** file. Values within the Master Driver Configuration Store will be parsed to provide options for Campus, Buidling, Device and Points throughout the application.
 
-.. image:: ../source/_images/master_Driver.jpg
+.. image:: ../source/_images/master_Driver.JPG
 
 
 Once the user has selected the Master Driver Configuration Store, this homepage will not appear again. However, if the user needs to upload a different Master Driver Configuration Store at any point, this option can be accessed via the Menu icon in the top left of the application.
 
 .. Warning:: Uploading a new Master Driver Configuration Store will remove all current data in the application.
 
-.. image:: ../source/_images/import_Master_driver.jpg
+.. image:: ../source/_images/import_Master_driver.JPG
 
 Main Configuration
 ************************  
@@ -56,7 +56,7 @@ parameters.
 The following list describes each of the configuration parameters in
 the main configuration store. 
 
- .. image:: ../source/_images/main_Config_Master.jpg
+ .. image:: ../source/_images/main_Config_Master.JPG
 
 This list will go over each of the input options located in the main configuration page:
 -  Campus
@@ -169,12 +169,12 @@ Pairwise Configuration
 **********************
 In the left side panel tree, there will be a Cluster dropdown created upon adding a new cluster. After expanding a Cluster tree, the **Pairwise Criteria** page can be reached.
 
-.. image:: ../source/_images/cluster_Options.jpg
+.. image:: ../source/_images/cluster_Options.JPG
 
 **Criteria**
    The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the *+Add Criteria** button. Deletion of a cluster criteria is done by pressing the *X* on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.  
 
-.. image:: ../source/_images/custom_Cluster.jpg
+.. image:: ../source/_images/custom_Cluster.JPG
    
 Expanding the criteria dropdowns below will expose sliding scales to set comparison curtail values. Inside each dropdown the **Red** line indicates a lesser curtail value, which is the reciprocal of the value shown i.e. 2 will be 1/2 and 3 will be 1/3. The **Blue** line a greater curtail value.  
 
@@ -192,11 +192,11 @@ Criteria configuration is the second dropdown inside the created Cluster. It wil
 *Criteria configuration* takes in stored values from *pairwise configuration* and reflects the device topic criteria and their order. 
 once this option is selected, you will see an button appear in the center of the application: 
 
-.. image:: ../source/_images/criteria_Configuration_Nodrop.jpg
+.. image:: ../source/_images/criteria_Configuration_Nodrop.JPG
  
 Expand the device topic to view criteria configuration options:
 
-.. image:: ../source/_images/criteria_Configuration_Ex.jpg
+.. image:: ../source/_images/criteria_Configuration_Ex.JPG
      
 Once an option within the drop down is chosen, there will be an input to 
 *choose operation type*. The different operations types are  
@@ -207,7 +207,7 @@ curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
 which include the following:
 
-.. image:: ../source/_images/operation_Type.jpg
+.. image:: ../source/_images/operation_Type.JPG
 
 
 **Formula**
@@ -249,7 +249,7 @@ which include the following:
 
 .. image:: ../source/_images/mapper.jpg
 
-.. image:: ../source/_images/table_2.jpg
+.. image:: ../source/_images/table_2.JPG
   
 **Mapper Editor**
    At the top of the Criteria Configuration page, there is a dropdown to edit map keys and dist names. *ADD TO THIS*.
@@ -265,12 +265,12 @@ parameters:
    file that contains the key (category) and value assigned to that
    category.
 
-.. image:: ../source/_images/figure_7.jpg
+.. image:: ../source/_images/figure_7.JPG
  
 
 **Constant**
 
-.. image:: ../source/_images/constant.jpg
+.. image:: ../source/_images/constant.JPG
    
 The constant criterion returns a constant value for inclusion in the AHP. The following list contains the constant criterion configuration parameters:
 
@@ -281,13 +281,13 @@ Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, will match the name for the
 same criterion used in the pairwise comparison configuration file.
 
-.. image:: ../source/_images/figure_8.jpg
+.. image:: ../source/_images/figure_8.JPG
     
    
 
 **History**
 
-.. image:: ../source/_images/history.jpg
+.. image:: ../source/_images/history.JPG
   
    
 The history criterion evaluates the rate of change of a point on the
@@ -316,7 +316,7 @@ a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.
 
-.. image:: ../source/_images/figure_9.jpg
+.. image:: ../source/_images/figure_9.JPG
    
    
 
@@ -324,17 +324,17 @@ Control Configuration
 *********************
 The Control Configuration page can be accessed under the Cluster dropdown menu in the left side bar.  
 
-.. image:: ../source/_images/control_Config_Sidebar.jpg
+.. image:: ../source/_images/control_Config_Sidebar.JPG
    
    
 The once navigated to the page, the list of device topics determined in the criteria configuration will be shown: 
 
-.. image:: ../source/_images/control_Configuration_Nodrop.jpg
+.. image:: ../source/_images/control_Configuration_Nodrop.JPG
    
    
 Upon expansion of the device topic dropdown, the Curtail Device Status operation and Curtailment Settings forms will be available. 
 
-.. image:: ../source/_images/control_Config_Drop.jpg
+.. image:: ../source/_images/control_Config_Drop.JPG
    
 **Curtail Device Status**
    This section allows the user to enter in an operation equation using the Calculator component. 
@@ -357,7 +357,7 @@ There will be a dropdown list that will show as you select point.
 
 .. image:: ../source/_images/control_Method.jpg
 
-.. image:: ../source/_images/offset.jpg
+.. image:: ../source/_images/offset.JPG
  
 - Value : *The value the point is commanded to, in order to achieve the load reduction.
 
