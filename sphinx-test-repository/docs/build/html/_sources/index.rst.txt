@@ -39,7 +39,7 @@ files.
 
 Click the *Sun* button on the top right corner of the page. 
 
-.. image:: ../source/_images/dark_Mode.jpg
+.. image:: ../source/_images/dark_Mode.JPG
       
 
 Importing Master Driver Configuration Store
@@ -47,7 +47,7 @@ Importing Master Driver Configuration Store
 This is the main configuration tool. There is an option right at the start that allows you to upload a file. This will allow you to import
 your **Master Configuration File**. 
 
-.. image:: ../source/_images/master_Driver.jpg
+.. image:: ../source/_images/master_Driver.JPG
 
 
 To import a configuration file, or choose a separate file, in the top left corner of the screen you will see a hamburger drop down menu. once you click on that drop down you will see 2 options: 
@@ -58,7 +58,7 @@ To import a configuration file, or choose a separate file, in the top left corne
 Choosing the import new master driver configuration file will give you an option to import your
 master configuration file. Once the file is uploaded, it will give you the option to choose from the uploaded settings. 
 
-.. image:: ../source/_images/import_Master_driver.jpg
+.. image:: ../source/_images/import_Master_driver.JPG
 
 
 After uploading a *file*, pages can now be filled out based upon the file you have uploaded to the application.
@@ -67,7 +67,7 @@ Example: There is a dropdown for the option inside *Building* in the *Main Confi
 there is an option to click the dropdown. Once this Dropdown is chosen, nothing will appear. After inserting the chosen *Master Configuration File*, choosing 
 the dropdown will insert a *string* from the File inserted into the application. 
 
-.. image:: ../source/_images/string_Capture.jpg
+.. image:: ../source/_images/string_Capture.JPG
 
 This example image shows the string selected in the dropdown of *Building*.
 
@@ -77,7 +77,7 @@ Calculator
 The calculator is a tool that you will see throughout the configuration tool. 
 
 
-.. image:: ../source/_images/calculator.jpg
+.. image:: ../source/_images/calculator.JPG
 
 The calculator has a variety of different options to utilize within it. There is **Operation**, and 
 **Operation argument**. These parts of the calculator will be explained within subsections of this category.
@@ -90,7 +90,7 @@ Operation
 An *operation* in this application is a string representation of a mathematical formula. The formula is
 evaluated to return a numeric value. 
 
-.. image:: ../source/_images/operation.jpg
+.. image:: ../source/_images/operation.JPG
 
 To input items into Operation, an input from the calculator must be placed. 
 
@@ -106,7 +106,7 @@ will populate the array and string within them.
 
 From the Operation Argument tab, there will be a dropdown of options to choose from.
 
-.. image:: ../source/_images/operation_Argument.jpg
+.. image:: ../source/_images/operation_Argument.JPG
 
    
 When an *operation argument* is chosen, there will be an option on the right side of the selection bar to *+add*. This will enable the operation argument
@@ -121,14 +121,14 @@ As an operation is produced, in the JSON code on the right side of the screen wi
 The demand formula can be described as the *screen* for the calculator. As inputs are selected, they will be 
 shown inside of the JSON code with what was inserted. 
 
-.. image:: ../source/_images/calculator_Json.jpg
+.. image:: ../source/_images/calculator_Json.JPG
 
 Clear formula
 -------------
 
 The **Clear formula** button on the calculator will clear the formula currently in use.
 
-.. image:: ../source/_images/calculator_Clear.jpg
+.. image:: ../source/_images/calculator_Clear.JPG
 Save Configuration
 ------------------
 
@@ -138,7 +138,7 @@ Using the *Save Configuration** button will store your formula inside the *Deman
 Saving your formula will store your data in that location unless the *Clear Formula* button is chosen. If the *Clear Formula* button is chosen, 
 your saved formula will stay in the stored location unless a *new* formula is created and saved. This will replace the previous formula. 
 
-.. image:: ../source/_images/calculator_Save.jpg
+.. image:: ../source/_images/calculator_Save.JPG
 
 
 JSON 
@@ -151,11 +151,11 @@ Each section within the JSON code will have subsections dedicated to their corre
 For example, inside of this panel, these results are a screen for results that the user has input into the application 
 options on the left side. 
 
-.. image:: ../source/_images/example_Json2.jpg
+.. image:: ../source/_images/example_Json2.JPG
 
 This is what will be inserted into the Main Configuration Page
 
-.. image:: ../source/_images/example_Json.jpg
+.. image:: ../source/_images/example_Json.JPG
 
 After the items are inserted, they will be displayed inside of the Json code.
 
@@ -176,7 +176,7 @@ parameters.
 The following list describes each of the configuration parameters in
 the main configuration store. 
 
- .. image:: ../source/_images/main_Config_Master.jpg
+ .. image:: ../source/_images/main_Config_Master.JPG
 
 
 This list will go over each of the input options located in the main configuration page:
@@ -210,7 +210,7 @@ Power Meter
    Expand the Power Meter dropdown to select the device,
    point, and define the Demand Formula using the calculator interface
 
-   .. image:: ../source/_images/power_Meter.jpg
+   .. image:: ../source/_images/power_Meter.JPG
 
 
     
@@ -239,7 +239,7 @@ VOLTTRON platform.
 
 Agent ID will be underneath the *power_meter* section of the application. 
 
-.. image:: ../source/_images/Agent_Id.jpg
+.. image:: ../source/_images/Agent_Id.JPG
    
   
 Demand Limit
@@ -255,7 +255,7 @@ Demand limit will take an input as a float.
 
 **demand_limit** will show underneath *Agent Id*:
 
-.. image:: ../source/_images/demand_Limit.jpg
+.. image:: ../source/_images/demand_Limit.JPG
 
 Control Time 
 ------------
@@ -326,7 +326,7 @@ The Stagger release and stagger Off time buttons will be located
 towards the bottom of the *Main Configuration* Page. Both buttons 
 can be checked or unchecked: 
 
-.. image:: ../source/_images/stagger_Release.jpg
+.. image:: ../source/_images/stagger_Release.JPG
    
 .. Note:: These will be automatically set as Boolean values. 
       When checked, either items will be set inside of JSON code to : *True*.
@@ -338,7 +338,7 @@ Clusters
 Array containing information on each cluster of devices (a cluster consists of a group of devices with
 the same criterion):
 
-.. image:: ../source/_images/cluster_Example.jpg
+.. image:: ../source/_images/cluster_Example.JPG
 
 
 Creating a cluster will grant access to  **Pairwise Configuration**, **Criteria Configuration**,
@@ -357,19 +357,19 @@ shutdown.
 
 The Cluster Priority will be shown at the bottom of the **Add cluster** Page. 
 
-.. image:: ../source/_images/cluster_priority.jpg
+.. image:: ../source/_images/cluster_priority.JPG
    
 
 Adding A Cluster
 ----------------
 There is a drop down menu on the bottom of the sidebar labeled as **+Add cluster**. 
 
-.. image:: ../source/_images/add_Cluster.jpg
+.. image:: ../source/_images/add_Cluster.JPG
   
 
 set your cluster to priority 1 if there is only one cluster. 
 
-.. image:: ../source/_images/Cluster_1.jpg
+.. image:: ../source/_images/Cluster_1.JPG
 
 
 You have the option to insert from the following list:
@@ -379,7 +379,7 @@ Once *Save new cluster* is chosen,
 a new dropdown is available with *Pairwise Configuration*, *Criteria configuration*
 and *Control Configuration*.
 
-.. image:: ../source/_images/cluster_type.jpg
+.. image:: ../source/_images/cluster_type.JPG
 
    
 .. Note:: For multiple clusters, the cluster priority MUST be equal to 1. 
@@ -393,14 +393,14 @@ In the dropdown menu on the left, there will be an
 additional dropdown when you create your custom cluster.
 The custom cluster will be listed with 3 items listed as such: 
 
-.. image:: ../source/_images/cluster_Options.jpg
+.. image:: ../source/_images/cluster_Options.JPG
 
 Underneath the custom list, you will see a dropdown called: **Pairwise Criteria**. This is a 
 customizable drag and drop list. Whichever order this list is placed in,
  the list for the settings below will follow. 
 
 
-.. image:: ../source/_images/custom_Cluster.jpg
+.. image:: ../source/_images/custom_Cluster.JPG
    
 
    
@@ -414,13 +414,13 @@ in the drag and drop section, there is also an option to add another item to the
 .. Warning:: If you have set numbers in the graphs below and need to change the drag and drop lists, those 
       numbers will reset back to their default state. 
 
-.. image:: ../source/_images/zonetemperature_Setpoint.jpg
+.. image:: ../source/_images/zonetemperature_Setpoint.JPG
  
-.. image:: ../source/_images/stage.jpg
+.. image:: ../source/_images/stage.JPG
 
-.. image:: ../source/_images/history_Zonetemperature.jpg
+.. image:: ../source/_images/history_Zonetemperature.JPG
 
-.. image:: ../source/_images/rated_Power.jpg
+.. image:: ../source/_images/rated_Power.JPG
 
 
 Criteria Configuration
@@ -428,26 +428,26 @@ Criteria Configuration
 
 Criteria configuration is the second dropdown inside the created curtail options. It will be listed as shown: 
 
-.. image:: ../source/_images/criteria_Configuration_Sidebar.jpg
+.. image:: ../source/_images/criteria_Configuration_Sidebar.JPG
   
 
 *Criteria configuration* takes in stored values from *pairwise configuration* and lists them as they are 
 in that page. 
 once this option is selected, you will see an button appear in the center of the application: 
 
-.. image:: ../source/_images/criteria_Configuration_Nodrop.jpg
+.. image:: ../source/_images/criteria_Configuration_Nodrop.JPG
  
 
 when an option is selected, a dropdown will appear: 
 
-.. image:: ../source/_images/criteria_Configuration_Ex.jpg
+.. image:: ../source/_images/criteria_Configuration_Ex.JPG
      
 
 Once an option within the drop down is chosen, there will be an button to 
 *choose operation type*. Within each operation type, the functionality differs. 
 *formula*, *status*, *mapper*, *constant*, and *history*. 
 
-.. image:: ../source/_images/criteria_order.jpg
+.. image:: ../source/_images/criteria_order.JPG
 
 
 Any number of relevant criteria can be used to prioritize loads for
@@ -455,7 +455,7 @@ curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
 which include the following:
 
-.. image:: ../source/_images/operation_Type.jpg
+.. image:: ../source/_images/operation_Type.JPG
 
 
 
@@ -466,7 +466,7 @@ in what each operation does. They will be described in the sections below:
 Formula
 -------
 
-.. image:: ../source/_images/formula.jpg
+.. image:: ../source/_images/formula.JPG
     
 
 formula allows a user to declare mathematical
@@ -484,7 +484,7 @@ configuration parameters:
    when new device data are published by the platform.driver.
    
 
-.. image:: ../source/_images/math_Table.jpg
+.. image:: ../source/_images/math_Table.JPG
    
    
 
@@ -493,7 +493,7 @@ heat pump. The criterion name, zonetemperature-setpointdeviation,
 should match the name for the same criterion used in
 the pairwise comparison configuration file.
 
-.. image:: ../source/_images/figure_5.jpg
+.. image:: ../source/_images/figure_5.JPG
 
    
 
@@ -520,14 +520,14 @@ following list contains the status criterion configuration parameters:
    the name for the same criterion used in the pairwise comparison
    configuration file.
 
-.. image:: ../source/_images/figure_6.jpg
+.. image:: ../source/_images/figure_6.JPG
   
    
 
 Mapper
 ------
 
-.. image:: ../source/_images/mapper.jpg
+.. image:: ../source/_images/mapper.JPG
   
 
 The mapper criterion allows a user to categorize loads and assign
@@ -540,7 +540,7 @@ values. Users set their own priority depending on the
 importance of the room (1: most important and 7: less important).
 Table 2 shows an example of AHP priority based on room type.
 
-.. image:: ../source/_images/table_2.jpg
+.. image:: ../source/_images/table_2.JPG
   
    
 
@@ -556,13 +556,13 @@ parameters:
    name for the same criterion used in the pairwise comparison
    configuration file.
 
-.. image:: ../source/_images/figure_7.jpg
+.. image:: ../source/_images/figure_7.JPG
  
 
 Constant
 --------
 
-.. image:: ../source/_images/constant.jpg
+.. image:: ../source/_images/constant.JPG
    
 
    
@@ -577,14 +577,14 @@ Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, should match the name for the
 same criterion used in the pairwise comparison configuration file.
 
-.. image:: ../source/_images/figure_8.jpg
+.. image:: ../source/_images/figure_8.JPG
     
    
 
 History
 -------
 
-.. image:: ../source/_images/history.jpg
+.. image:: ../source/_images/history.JPG
   
    
 The history criterion evaluates the rate of change of a point on the
@@ -609,7 +609,7 @@ a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.
 
-.. image:: ../source/_images/figure_9.jpg
+.. image:: ../source/_images/figure_9.JPG
    
    
 
@@ -618,19 +618,19 @@ Control onfiguration
 Inside of the sidebar on the left side of the screen inside of *Device clusters*, there will be the 
 option **Control configuration**. 
 
-.. image:: ../source/_images/control_Config_Sidebar.jpg
+.. image:: ../source/_images/control_Config_Sidebar.JPG
    
    
 once *control configuration* is chosen, there will be an button in the center of the screen that will appear: 
 
-.. image:: ../source/_images/control_Configuration_Nodrop.jpg
+.. image:: ../source/_images/control_Configuration_Nodrop.JPG
    
    
 first, when a device is selected, it will auto fill the campus and building number 
 previously selected. it will look like *Campus/building/device*. When a device is selected, 
 there will be more options that appear. 
 
-.. image:: ../source/_images/control_Config_Drop.jpg
+.. image:: ../source/_images/control_Config_Drop.JPG
    
 
 At the top there will be an option called: *Operation*. Input can be inserted by using the calculator 
@@ -640,13 +640,13 @@ and its functions.
 
 When an operation is inserted, an operation argument may be inserted as well: 
 
-.. image:: ../source/_images/control_Config_Calc.jpg
+.. image:: ../source/_images/control_Config_Calc.JPG
 
 
 After an operation and operation argument is chosen, choose the *+Add* next to the operation 
 argument selection and that will be shown inside of operation: 
 
-.. image:: ../source/_images/control_Config_Arg.jpg
+.. image:: ../source/_images/control_Config_Arg.JPG
    
 
 Once there is a set operation and operation argument, there will be a *curtailment Setting* below the calculator.
@@ -657,7 +657,7 @@ The first button that is accessible is *Point*.
 
 There will be a dropdown list that will show as you select point. 
 
-.. image:: ../source/_images/curtail_Setting_Pnt.jpg
+.. image:: ../source/_images/curtail_Setting_Pnt.JPG
  
 
 Once a selection is chosen, the next option on the list will be the *Control Method*. 
@@ -670,7 +670,7 @@ Offset
 The first of the list chosen will be **offset**.
 Once offset is chosen, a list of new configurations will appear. 
 
-.. image:: ../source/_images/control_Method.jpg
+.. image:: ../source/_images/control_Method.JPG
   
 
 **Offset:** *If offset parameter is present, then the value parameter
@@ -681,7 +681,7 @@ the desired load reduction.*
 once *offset* is chosen, there will be 2 items to configure. 
 The first one is the *offset* input, and the *load* input. 
 
-.. image:: ../source/_images/offset.jpg
+.. image:: ../source/_images/offset.JPG
  
 
 Value
@@ -694,7 +694,7 @@ an input for *Value* and there will be an input for *load*.
 **Value**: *The value the point is commanded to, in order to achieve
 the load reduction.*
 
-.. image:: ../source/_images/value_Config.jpg
+.. image:: ../source/_images/value_Config.JPG
   
 
 The selected inputs will be shown inside of the *curtail_settings* inside of the
@@ -708,7 +708,7 @@ equation allows an equation input from the calculator. Once an operation is
 set, then an operation argument can be set as well. Equation also has a *load* 
 option. 
 
-.. image:: ../source/_images/equation.jpg
+.. image:: ../source/_images/equation.JPG
      
  
 Indices and tables
