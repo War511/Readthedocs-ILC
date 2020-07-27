@@ -38,14 +38,14 @@ Importing the Master Driver Configuration Store
 ***********************************************
 At the initial homepage, the user will be prompted to upload the **Master Driver Configuration Store** file. Values within the Master Driver Configuration Store will be parsed to provide options for Campus, Buidling, Device and Points throughout the application.
 
-.. image:: ./_images/master_Driver.JPG
+.. image:: _images/master_Driver.jpg
 
 
 Once the user has selected the Master Driver Configuration Store, this homepage will not appear again. However, if the user needs to upload a different Master Driver Configuration Store at any point, this option can be accessed via the Menu icon in the top left of the application.
 
 .. Warning:: Uploading a new Master Driver Configuration Store will remove all current data in the application.
 
-.. image:: ./_images/import_Master_driver.JPG
+.. image:: _images/import_Master_driver.jpg
 
 Main Configuration
 ************************  
@@ -56,7 +56,7 @@ parameters.
 The following list describes each of the configuration parameters in
 the main configuration store. 
 
- .. image:: ./_images/main_Config_Master.JPG
+ .. image:: _images/main_Config_master.jpg
 
 This list will go over each of the input options located in the main configuration page:
 -  Campus
@@ -82,7 +82,7 @@ This list will go over each of the input options located in the main configurati
 **Power Meter**
    contains information to identify the power meter data published by the platform.driver. Expand the Power Meter dropdown to select the device, point, and define the Demand Formula using the calculator interface
 
-   .. image:: ./_images/power_Meter.jpg
+   .. image:: _images/power_Meter.jpg
   
 **Agent ID**
    The ILC instance (running application) name on the VOLTTRON platform.
@@ -121,14 +121,14 @@ Calculator
 The calculator is a tool that is used throughout the configuration tool to create an operation string and arrays of operation arguments. There are variations on options based upon locations within the application.
 
 
-.. image:: ./_images/calculator.jpg
+.. image:: _images/calculator.jpg
 
 The calculator pad buttons when pressed will populate the **operation** string above. Once the *save operation* button is pressed, the values in the ILC Configuration Store will be updated.
 
 **Operation**
    An *operation* is a string representation of a mathematical formula. 
 
-.. image:: ./_images/operation.jpg
+.. image:: _images/operation.jpg
 
 .. Note:: You cannot directly enter characters into the operation string, it has to be populated by using the calculator pad buttons.
 
@@ -141,13 +141,13 @@ The calculator pad buttons when pressed will populate the **operation** string a
 **Save Operation**
    The *Save Operation* button will save the formula that is currently being used to the ILC Configuration Store. If the Operation is not saved, the ILC Configuration Store will not be updated.
 
-.. image:: ./_images/calculator_Save.jpg
+.. image:: _images/calculator_Save.jpg
  
 Clusters
 ********
 A *cluster* consists of a group of devices with the same criterion. To add a cluster, click on the *+Add Cluster* button in the Left Panel. Creating a cluster will populate a dropdown within the left side panel where the user will gain access to the Pairwise Configuration, Criteria Configuration, Control configuration.
 
-.. image:: ./_images/add_Cluster.jpg
+.. image:: _images/add_Cluster.jpg
 
 **Cluster Name**
    The referenced name of the cluster. 
@@ -158,7 +158,7 @@ A *cluster* consists of a group of devices with the same criterion. To add a clu
 **Cluster Priority**
    Weighting factor assigned to this cluster. The sum of these weighting factors for all clusters will equal 1.0.
 
-.. image:: ./_images/cluster_Example.jpg
+.. image:: _images/cluster_Example.jpg
 
 .. Note:: The cluster priority section needs to be set to 1 if only one cluster is present. When there are multiple clusters, existing cluster priorities can be updated by changing the priority value for the existing cluster and pressing the *Save New Priority* button.
 
@@ -169,16 +169,16 @@ Pairwise Configuration
 **********************
 In the left side panel tree, there will be a Cluster dropdown created upon adding a new cluster. After expanding a Cluster tree, the **Pairwise Criteria** page can be reached.
 
-.. image:: ./_images/cluster_Options.JPG
+.. image:: _images/cluster_Options.JPG
 
 **Criteria**
    The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the *+Add Criteria** button. Deletion of a cluster criteria is done by pressing the *X* on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.  
 
-.. image:: ./_images/custom_Cluster.JPG
+.. image:: _images/custom_Cluster.JPG
    
 Expanding the criteria dropdowns below will expose sliding scales to set comparison curtail values. Inside each dropdown the **Red** line indicates a lesser curtail value, which is the reciprocal of the value shown i.e. 2 will be 1/2 and 3 will be 1/3. The **Blue** line a greater curtail value.  
 
-.. image:: ./_images/zonetemperature_Setpoint.jpg
+.. image:: _images/zonetemperature_Setpoint.jpg
 
 .. Warning:: When reordering, adding or deleting criteria, criteria curtail values will reset back to the default value of 1. 
 
@@ -187,16 +187,16 @@ Criteria Configuration
 
 Criteria configuration is the second dropdown inside the created Cluster. It will be listed as shown: 
 
-.. image:: ./_images/criteria_Configuration_Sidebar.jpg
+.. image:: _images/criteria_Configuration_Sidebar.jpg
 
 *Criteria configuration* takes in stored values from *pairwise configuration* and reflects the device topic criteria and their order. 
 once this option is selected, you will see an button appear in the center of the application: 
 
-.. image:: ./_images/criteria_Configuration_Nodrop.JPG
+.. image:: _images/criteria_Configuration_Nodrop.JPG
  
 Expand the device topic to view criteria configuration options:
 
-.. image:: ./_images/criteria_Configuration_Ex.JPG
+.. image:: _images/criteria_Configuration_Ex.JPG
      
 Once an option within the drop down is chosen, there will be an input to 
 *choose operation type*. The different operations types are  
@@ -207,13 +207,13 @@ curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
 which include the following:
 
-.. image:: ./_images/operation_Type.JPG
+.. image:: _images/operation_Type.JPG
 
 
 **Formula**
    Formula allows a user to declare mathematical formulas that are evaluated using current device measurements(data from the device are published by the VOLTTRON platform.driver service). 
 
-.. image:: ./_images/formula.jpg
+.. image:: _images/formula.jpg
 
 -  operation : String representation of a mathematical formula.
    This mathematical formula is evaluated to return a numeric value.
@@ -241,15 +241,15 @@ which include the following:
    the name for the same criterion used in the pairwise comparison
    configuration file.
 
-.. image:: ./_images/figure_6.jpg
+.. image:: _images/figure_6.jpg
 
 
 **Mapper**
    The mapper criterion allows a user to categorize loads and assign values to the categories. For example, room type can be used to set the importance of the rooms (heating or cooling of the room constitutes the load) for curtailment of power consumption. Rooms assigned higher numerical values are regarded as less important (more likely to be curtailed first) than rooms assigned lower numerical values. Users set their own priority depending on the importance of the room (1: most important and 7: less important). Table 2 shows an example of AHP priority based on room type.
 
-.. image:: ./_images/mapper.jpg
+.. image:: _images/mapper.jpg
 
-.. image:: ./_images/table_2.JPG
+.. image:: _images/table_2.JPG
   
 **Mapper Editor**
    At the top of the Criteria Configuration page, there is a dropdown to edit map keys and dist names. *ADD TO THIS*.
@@ -265,12 +265,12 @@ parameters:
    file that contains the key (category) and value assigned to that
    category.
 
-.. image:: ./_images/figure_7.JPG
+.. image:: _images/figure_7.JPG
  
 
 **Constant**
 
-.. image:: ./_images/constant.JPG
+.. image:: _images/constant.JPG
    
 The constant criterion returns a constant value for inclusion in the AHP. The following list contains the constant criterion configuration parameters:
 
@@ -281,13 +281,13 @@ Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, will match the name for the
 same criterion used in the pairwise comparison configuration file.
 
-.. image:: ./_images/figure_8.JPG
+.. image:: _images/figure_8.JPG
     
    
 
 **History**
 
-.. image:: ./_images/history.JPG
+.. image:: _images/history.JPG
   
    
 The history criterion evaluates the rate of change of a point on the
@@ -316,7 +316,7 @@ a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.
 
-.. image:: ./_images/figure_9.JPG
+.. image:: _images/figure_9.JPG
    
    
 
@@ -324,17 +324,17 @@ Control Configuration
 *********************
 The Control Configuration page can be accessed under the Cluster dropdown menu in the left side bar.  
 
-.. image:: ./_images/control_Config_Sidebar.JPG
+.. image:: _images/control_Config_Sidebar.JPG
    
    
 The once navigated to the page, the list of device topics determined in the criteria configuration will be shown: 
 
-.. image:: ./_images/control_Configuration_Nodrop.JPG
+.. image:: _images/control_Configuration_Nodrop.JPG
    
    
 Upon expansion of the device topic dropdown, the Curtail Device Status operation and Curtailment Settings forms will be available. 
 
-.. image:: ./_images/control_Config_Drop.JPG
+.. image:: _images/control_Config_Drop.JPG
    
 **Curtail Device Status**
    This section allows the user to enter in an operation equation using the Calculator component. 
@@ -355,13 +355,13 @@ There will be a dropdown list that will show as you select point.
 
 - Offset: If offset parameter is chosen, then the current value of the point on the device plus the offset is commanded to the point on the device to achieve the desired load reduction.
 
-.. image:: ./_images/control_Method.jpg
+.. image:: _images/control_Method.jpg
 
-.. image:: ./_images/offset.JPG
+.. image:: _images/offset.JPG
  
 - Value : *The value the point is commanded to, in order to achieve the load reduction.
 
-.. image:: ./_images/value_Config.jpg
+.. image:: _images/value_Config.jpg
 
 - Equation : equation allows operation string creation from the calculator. Reference the *Calculator* section for further instructions on calculator usage.
 
@@ -376,5 +376,5 @@ Settings
 
 **Dark Mode** : There is an option for this document to be used in dark mode. Click the *Contrast* icon on the top right corner of the page to toggle this option. 
 
-.. image:: ./_images/dark_Mode.jpg
+.. image:: _images/dark_Mode.jpg
 
