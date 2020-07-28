@@ -23,11 +23,11 @@ ILC APPLICATION CONFIGURATION
 The ILC application behavior is controlled through these
 configuration Pages:
 
-1. The main configuration page
-2. The device/criteria configuration page
-3. The pairwise configuration page
-4. The criteria configuration page
-5. The control configuration page
+1. The *main configuration* page
+2. The *device/criteria configuration* page
+3. The *pairwise configuration* page
+4. The *criteria configuration* page
+5. The *control configuration* page
 
 The following sections describe what each configuration file
 controls and the parameters defined within these configuration
@@ -189,7 +189,7 @@ In the left side panel tree, there will be a Cluster dropdown created upon addin
 .. image:: _images/cluster_Options.JPG
 
 **Criteria**
-   The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the *+Add Criteria** button. Deletion of a cluster criteria is done by pressing the *X* on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.  
+The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the *+Add Criteria** button. Deletion of a cluster criteria is done by pressing the *X* on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.  
 
 .. image:: _images/custom_Cluster.JPG
    
@@ -208,9 +208,45 @@ Criteria configuration is the second dropdown inside the created Cluster. It wil
 
 *Criteria configuration* takes in stored values from *pairwise configuration* and reflects the device topic criteria and their order. 
 once this option is selected, you will see an button appear in the center of the application: 
+There are two drop down options once *Criteria Configuration* is chosen.
 
-.. image:: _images/criteria_Configuration_Nodrop.JPG
- 
+.. image:: _images/mapper_Edit.JPG
+
+.. image:: _images/criteria_Configuration_nodrop.JPG
+
+The first one will be *Mapper Editor*.  
+Inside Mapper Editor there are items set inside by default. These items
+are labeled as *Private office*, *Office*, *Conference Room*, *Lobby*, and *Restroom*.
+
+.. image:: _images/mapper_Edit_ex.JPG
+
+These items will be inside **Mapper Editor** by default, but can be modified 
+or removed completely. 
+
+when the *dist name* icon is selected, this will give an option to add a room name
+and a value for that room (dist val). Once these entries are entered, they will appear along with 
+the other values listed. 
+
+.. image:: _images/mapper_Edit_ex2.JPG
+
+
+
+Expand the device topic to view criteria configuration options:
+
+.. image:: _images/criteria_Configuration_Ex.JPG
+
+.. Note:: When the *remove map key* icon is selected, the mapper Editor
+      in use will be removed. 
+
+If a new Mapper is needed, there is an icon below *Add Dist Name* called 
+*Add Map Key*. 
+
+.. image:: _images/map_Key.JPG
+
+This button will allow for an entire new Mapper Editor to be added. 
+
+**Device Topics**
+
 Expand the device topic to view criteria configuration options:
 
 .. image:: _images/criteria_Configuration_Ex.JPG
@@ -228,30 +264,31 @@ which include the following:
 
 
 **Formula**
-   Formula allows a user to declare mathematical formulas that are evaluated using current device measurements(data from the device are published by the VOLTTRON platform.driver service). 
+
+*Formula* allows a user to declare mathematical formulas that are evaluated using current device measurements(data from the device are published by the VOLTTRON platform.driver service). 
 
 .. image:: _images/formula.jpg
 
--  operation : String representation of a mathematical formula.
+-  *operation* : String representation of a mathematical formula.
    This mathematical formula is evaluated to return a numeric value.
 
--  operation_args : List of point names from the device
-   used to evaluate the mathematical formula in the operation
-   parameter. The values associated with each point are updated
-   when new device data are published by the platform.driver.
+-  *operation_args* : List of point names from the device
+used to evaluate the mathematical formula in the operation
+parameter. The values associated with each point are updated
+when new device data are published by the platform.driver.
 
 **Status**
 
-   The status criterion reads a point (Boolean or enumeration) on the device and returns either an on_value or an off_value depending on whether the current status of the point is True (enumeration value of 1) or False(enumeration value of 0), respectively. The following list contains the status criterion configuration parameters:
+The status criterion reads a point (Boolean or enumeration) on the device and returns either an on_value or an off_value depending on whether the current status of the point is True (enumeration value of 1) or False(enumeration value of 0), respectively. The following list contains the status criterion configuration parameters:
 
--  point_name : The point on the device that is evaluated.
+-  *point_name* : The point on the device that is evaluated.
    This device point should be a Boolean or an enumeration with a
    value of 0 or 1.
 
--  on_value : The numeric value returned by the criterion if the
+-  *on_value* : The numeric value returned by the criterion if the
    point on the device indicates a True or enumeration value of 1.
 
--  off_value : The numeric value returned by the criterion if the
+-  *off_value* : The numeric value returned by the criterion if the
    point on the device indicates a False or enumeration value of 0.
    Figure 6 shows an example of a status criterion configured for
    a heat pump. The criterion name, rated-power, should match
@@ -269,16 +306,16 @@ which include the following:
 .. image:: _images/table_2.JPG
   
 **Mapper Editor**
-   At the top of the Criteria Configuration page, there is a dropdown to edit map keys and dist names. *ADD TO THIS*.
+Shown at the top of the *Criteria Configuration Page*. 
 
 The following list contains the mapper criterion configuration
 parameters:
--  Map Key – The category assigned to the device.
+-  *Map Key* – The category assigned to the device.
    Figure 7 shows an example of a mapper criterion configured for
    a heat pump. The criterion name, room-type, should match the
    name for the same criterion used in the pairwise comparison
    configuration file.
--  dict_name : The dictionary name in the main ILC configuration
+-  *dict_name* : The dictionary name in the main ILC configuration
    file that contains the key (category) and value assigned to that
    category.
 
@@ -346,7 +383,7 @@ The Control Configuration page can be accessed under the Cluster dropdown menu i
    
 The once navigated to the page, the list of device topics determined in the criteria configuration will be shown: 
 
-.. image:: _images/control_Configuration_Nodrop.JPG
+.. image:: _images/control_Configuration_nodrop.JPG
    
    
 Upon expansion of the device topic dropdown, the Curtail Device Status operation and Curtailment Settings forms will be available. 
