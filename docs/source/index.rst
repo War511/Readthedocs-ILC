@@ -56,7 +56,7 @@ parameters.
 The following list describes each of the configuration parameters in
 the main configuration store. 
 
- .. image:: _images/main_Config_master.jpg
+ .. image:: _images/main_Config_master.JPG
 
 This list will go over each of the input options located in the main configuration page:
 -  Campus
