@@ -47,11 +47,11 @@
 <p>The ILC application behavior is controlled through these
 configuration Pages:</p>
 <ol class="arabic simple">
-<li><p>The main configuration page</p></li>
-<li><p>The device/criteria configuration page</p></li>
-<li><p>The pairwise configuration page</p></li>
-<li><p>The criteria configuration page</p></li>
-<li><p>The control configuration page</p></li>
+<li><p>The <em>main configuration</em> page</p></li>
+<li><p>The <em>device/criteria configuration</em> page</p></li>
+<li><p>The <em>pairwise configuration</em> page</p></li>
+<li><p>The <em>criteria configuration</em> page</p></li>
+<li><p>The <em>control configuration</em> page</p></li>
 </ol>
 <p>The following sections describe what each configuration file
 controls and the parameters defined within these configuration
@@ -74,7 +74,7 @@ parameters.</p>
 <p>The following list describes each of the configuration parameters in
 the main configuration store.</p>
 <blockquote>
-<div><img alt="_images/main_Config_master.jpg" src="_images/main_Config_master.jpg" />
+<div><img alt="_images/main_Config_master.JPG" src="_images/main_Config_master.JPG" />
 </div></blockquote>
 <p>This list will go over each of the input options located in the main configuration page:
 -  Campus
@@ -98,6 +98,7 @@ platform.driver service.</p>
 <img alt="_images/power_Meter.jpg" src="_images/power_Meter.jpg" />
 </dd>
 <dt><strong>Agent ID</strong></dt><dd><p>The ILC instance (running application) name on the VOLTTRON platform.</p>
+<img alt="_images/agent_Id.JPG" src="_images/agent_Id.JPG" />
 </dd>
 <dt><strong>Demand Limit</strong></dt><dd><p>The ILC application manages devices (curtail) in an attempt to keep the average whole building power below this kilowatt value. The average time is determined by the average_building_power_window parameter.</p>
 <p>Demand limit will take an input as a float.</p>
@@ -132,13 +133,13 @@ to release devices.</p>
 <div class="section" id="calculator">
 <h3>Calculator<a class="headerlink" href="#calculator" title="Permalink to this headline">¶</a></h3>
 <p>The calculator is a tool that is used throughout the configuration tool to create an operation string and arrays of operation arguments. There are variations on options based upon locations within the application.</p>
-<img alt="_images/calculator.jpg" src="_images/calculator.jpg" />
+<img alt="_images/calculator.JPG" src="_images/calculator.JPG" />
 <p>The calculator pad buttons when pressed will populate the <strong>operation</strong> string above. Once the <em>save operation</em> button is pressed, the values in the ILC Configuration Store will be updated.</p>
 <dl class="simple">
 <dt><strong>Operation</strong></dt><dd><p>An <em>operation</em> is a string representation of a mathematical formula.</p>
 </dd>
 </dl>
-<img alt="_images/operation.jpg" src="_images/operation.jpg" />
+<img alt="_images/operation.JPG" src="_images/operation.JPG" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You cannot directly enter characters into the operation string, it has to be populated by using the calculator pad buttons.</p>
@@ -148,6 +149,9 @@ to release devices.</p>
 </dd>
 <dt><strong>Clear formula</strong></dt><dd><p>The <em>Clear formula</em> button on the calculator will clear the formula currently in use.</p>
 </dd>
+</dl>
+<img alt="_images/calculator_Clear.JPG" src="_images/calculator_Clear.JPG" />
+<dl class="simple">
 <dt><strong>Save Operation</strong></dt><dd><p>The <em>Save Operation</em> button will save the formula that is currently being used to the ILC Configuration Store. If the Operation is not saved, the ILC Configuration Store will not be updated.</p>
 </dd>
 </dl>
@@ -165,13 +169,20 @@ to release devices.</p>
 <dt><strong>Cluster Priority</strong></dt><dd><p>Weighting factor assigned to this cluster. The sum of these weighting factors for all clusters will equal 1.0.</p>
 </dd>
 </dl>
-<img alt="_images/cluster_Example.jpg" src="_images/cluster_Example.jpg" />
+<img alt="_images/cluster_Example.JPG" src="_images/cluster_Example.JPG" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The cluster priority section needs to be set to 1 if only one cluster is present. When there are multiple clusters, existing cluster priorities can be updated by changing the priority value for the existing cluster and pressing the <em>Save New Priority</em> button.</p>
 </div>
-<dl class="simple">
+<img alt="_images/cluster_Priority.JPG" src="_images/cluster_Priority.JPG" />
+<dl>
 <dt><strong>Cluster Editing</strong></dt><dd><p>The cluster name, type and priority can be revised after the creation of the cluster by navigating to the <em>Edit Clusters</em> page, a link to which is found in the left side panel.</p>
+<img alt="_images/cluster_Edit_icon.JPG" src="_images/cluster_Edit_icon.JPG" />
+<p>When chosen, the current clusters that are currently created will appear
+inside of the center of the screen.</p>
+<img alt="_images/cluster_Edit.JPG" src="_images/cluster_Edit.JPG" />
+<p>Editing the clusters allows you to change the <em>name</em> of the cluster, the <em>cluster type</em>, and
+the <a href="#id1"><span class="problematic" id="id2">*</span></a>cluster priority.</p>
 </dd>
 </dl>
 </div>
@@ -179,13 +190,11 @@ to release devices.</p>
 <h3>Pairwise Configuration<a class="headerlink" href="#pairwise-configuration" title="Permalink to this headline">¶</a></h3>
 <p>In the left side panel tree, there will be a Cluster dropdown created upon adding a new cluster. After expanding a Cluster tree, the <strong>Pairwise Criteria</strong> page can be reached.</p>
 <img alt="_images/cluster_Options.JPG" src="_images/cluster_Options.JPG" />
-<dl class="simple">
-<dt><strong>Criteria</strong></dt><dd><p>The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the <em>+Add Criteria*</em> button. Deletion of a cluster criteria is done by pressing the <em>X</em> on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.</p>
-</dd>
-</dl>
-<img alt="_images/custom_Cluster.JPG" src="_images/custom_Cluster.JPG" />
+<p><strong>Criteria</strong>
+The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the <em>+Add Criteria*</em> button. Deletion of a cluster criteria is done by pressing the <em>X</em> on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.</p>
+<img alt="_images/custom_Cluster.jpg" src="_images/custom_Cluster.jpg" />
 <p>Expanding the criteria dropdowns below will expose sliding scales to set comparison curtail values. Inside each dropdown the <strong>Red</strong> line indicates a lesser curtail value, which is the reciprocal of the value shown i.e. 2 will be 1/2 and 3 will be 1/3. The <strong>Blue</strong> line a greater curtail value.</p>
-<img alt="_images/zonetemperature_Setpoint.jpg" src="_images/zonetemperature_Setpoint.jpg" />
+<img alt="_images/zonetemperature_Setpoint.JPG" src="_images/zonetemperature_Setpoint.JPG" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>When reordering, adding or deleting criteria, criteria curtail values will reset back to the default value of 1.</p>
@@ -194,10 +203,34 @@ to release devices.</p>
 <div class="section" id="criteria-configuration">
 <h3>Criteria Configuration<a class="headerlink" href="#criteria-configuration" title="Permalink to this headline">¶</a></h3>
 <p>Criteria configuration is the second dropdown inside the created Cluster. It will be listed as shown:</p>
-<img alt="_images/criteria_Configuration_Sidebar.jpg" src="_images/criteria_Configuration_Sidebar.jpg" />
+<img alt="_images/criteria_Configuration_sidebar.JPG" src="_images/criteria_Configuration_sidebar.JPG" />
 <p><em>Criteria configuration</em> takes in stored values from <em>pairwise configuration</em> and reflects the device topic criteria and their order.
-once this option is selected, you will see an button appear in the center of the application:</p>
-<img alt="_images/criteria_Configuration_Nodrop.JPG" src="_images/criteria_Configuration_Nodrop.JPG" />
+once this option is selected, you will see an button appear in the center of the application:
+There are two drop down options once <em>Criteria Configuration</em> is chosen.</p>
+<img alt="_images/mapper_Edit.JPG" src="_images/mapper_Edit.JPG" />
+<img alt="_images/criteria_Configuration_nodrop.JPG" src="_images/criteria_Configuration_nodrop.JPG" />
+<p>The first one will be <em>Mapper Editor</em>.
+Inside Mapper Editor there are items set inside by default. These items
+are labeled as <em>Private office</em>, <em>Office</em>, <em>Conference Room</em>, <em>Lobby</em>, and <em>Restroom</em>.</p>
+<img alt="_images/mapper_Edit_ex.JPG" src="_images/mapper_Edit_ex.JPG" />
+<p>These items will be inside <strong>Mapper Editor</strong> by default, but can be modified
+or removed completely.</p>
+<p>when the <em>dist name</em> icon is selected, this will give an option to add a room name
+and a value for that room (dist val). Once these entries are entered, they will appear along with
+the other values listed.</p>
+<img alt="_images/mapper_Edit_ex2.JPG" src="_images/mapper_Edit_ex2.JPG" />
+<p>Expand the device topic to view criteria configuration options:</p>
+<img alt="_images/criteria_Configuration_Ex.JPG" src="_images/criteria_Configuration_Ex.JPG" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the <em>remove map key</em> icon is selected, the mapper Editor
+in use will be removed.</p>
+</div>
+<p>If a new Mapper is needed, there is an icon below <em>Add Dist Name</em> called
+<em>Add Map Key</em>.</p>
+<img alt="_images/map_Key.JPG" src="_images/map_Key.JPG" />
+<p>This button will allow for an entire new Mapper Editor to be added.</p>
+<p><strong>Device Topics</strong></p>
 <p>Expand the device topic to view criteria configuration options:</p>
 <img alt="_images/criteria_Configuration_Ex.JPG" src="_images/criteria_Configuration_Ex.JPG" />
 <p>Once an option within the drop down is chosen, there will be an input to
@@ -207,31 +240,27 @@ once this option is selected, you will see an button appear in the center of the
 curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
 which include the following:</p>
-<img alt="_images/operation_Type.JPG" src="_images/operation_Type.JPG" />
-<dl class="simple">
-<dt><strong>Formula</strong></dt><dd><p>Formula allows a user to declare mathematical formulas that are evaluated using current device measurements(data from the device are published by the VOLTTRON platform.driver service).</p>
-</dd>
-</dl>
+<img alt="_images/operation_Type.jpg" src="_images/operation_Type.jpg" />
+<p><strong>Formula</strong></p>
+<p><em>Formula</em> allows a user to declare mathematical formulas that are evaluated using current device measurements(data from the device are published by the VOLTTRON platform.driver service).</p>
 <img alt="_images/formula.jpg" src="_images/formula.jpg" />
 <ul class="simple">
-<li><p>operation : String representation of a mathematical formula.
+<li><p><em>operation</em> : String representation of a mathematical formula.
 This mathematical formula is evaluated to return a numeric value.</p></li>
-<li><p>operation_args : List of point names from the device
-used to evaluate the mathematical formula in the operation
-parameter. The values associated with each point are updated
-when new device data are published by the platform.driver.</p></li>
+<li><p><em>operation_args</em> : List of point names from the device</p></li>
 </ul>
+<p>used to evaluate the mathematical formula in the operation
+parameter. The values associated with each point are updated
+when new device data are published by the platform.driver.</p>
 <p><strong>Status</strong></p>
-<blockquote>
-<div><p>The status criterion reads a point (Boolean or enumeration) on the device and returns either an on_value or an off_value depending on whether the current status of the point is True (enumeration value of 1) or False(enumeration value of 0), respectively. The following list contains the status criterion configuration parameters:</p>
-</div></blockquote>
+<p>The status criterion reads a point (Boolean or enumeration) on the device and returns either an on_value or an off_value depending on whether the current status of the point is True (enumeration value of 1) or False(enumeration value of 0), respectively. The following list contains the status criterion configuration parameters:</p>
 <ul class="simple">
-<li><p>point_name : The point on the device that is evaluated.
+<li><p><em>point_name</em> : The point on the device that is evaluated.
 This device point should be a Boolean or an enumeration with a
 value of 0 or 1.</p></li>
-<li><p>on_value : The numeric value returned by the criterion if the
+<li><p><em>on_value</em> : The numeric value returned by the criterion if the
 point on the device indicates a True or enumeration value of 1.</p></li>
-<li><p>off_value : The numeric value returned by the criterion if the
+<li><p><em>off_value</em> : The numeric value returned by the criterion if the
 point on the device indicates a False or enumeration value of 0.
 Figure 6 shows an example of a status criterion configured for
 a heat pump. The criterion name, rated-power, should match
@@ -245,13 +274,11 @@ configuration file.</p></li>
 </dl>
 <img alt="_images/mapper.jpg" src="_images/mapper.jpg" />
 <img alt="_images/table_2.JPG" src="_images/table_2.JPG" />
-<dl class="simple">
-<dt><strong>Mapper Editor</strong></dt><dd><p>At the top of the Criteria Configuration page, there is a dropdown to edit map keys and dist names. <em>ADD TO THIS</em>.</p>
-</dd>
-</dl>
+<p><strong>Mapper Editor</strong>
+Shown at the top of the <em>Criteria Configuration Page</em>.</p>
 <p>The following list contains the mapper criterion configuration
 parameters:
--  Map Key – The category assigned to the device.</p>
+-  <em>Map Key</em> – The category assigned to the device.</p>
 <blockquote>
 <div><p>Figure 7 shows an example of a mapper criterion configured for
 a heat pump. The criterion name, room-type, should match the
@@ -259,13 +286,13 @@ name for the same criterion used in the pairwise comparison
 configuration file.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>dict_name : The dictionary name in the main ILC configuration
+<li><p><em>dict_name</em> : The dictionary name in the main ILC configuration
 file that contains the key (category) and value assigned to that
 category.</p></li>
 </ul>
-<img alt="_images/figure_7.JPG" src="_images/figure_7.JPG" />
+<img alt="_images/figure_7.jpg" src="_images/figure_7.jpg" />
 <p><strong>Constant</strong></p>
-<img alt="_images/constant.JPG" src="_images/constant.JPG" />
+<img alt="_images/constant.jpg" src="_images/constant.jpg" />
 <p>The constant criterion returns a constant value for inclusion in the AHP. The following list contains the constant criterion configuration parameters:</p>
 <ul class="simple">
 <li><p>value : The value returned by this criterion for inclusion in the
@@ -274,9 +301,9 @@ AHP.</p></li>
 <p>Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, will match the name for the
 same criterion used in the pairwise comparison configuration file.</p>
-<img alt="_images/figure_8.JPG" src="_images/figure_8.JPG" />
+<img alt="_images/figure_8.jpg" src="_images/figure_8.jpg" />
 <p><strong>History</strong></p>
-<img alt="_images/history.JPG" src="_images/history.JPG" />
+<img alt="_images/history.jpg" src="_images/history.jpg" />
 <p>The history criterion evaluates the rate of change of a point on the
 device to return a numeric value. The following list contains the
 history criterion configuration parameters:</p>
@@ -298,7 +325,7 @@ current value of the point on the device.</p></li>
 a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.</p>
-<img alt="_images/figure_9.JPG" src="_images/figure_9.JPG" />
+<img alt="_images/figure_9.jpg" src="_images/figure_9.jpg" />
 </div>
 <div class="section" id="control-configuration">
 <h3>Control Configuration<a class="headerlink" href="#control-configuration" title="Permalink to this headline">¶</a></h3>
@@ -307,7 +334,7 @@ comparison configuration file.</p>
 <p>The once navigated to the page, the list of device topics determined in the criteria configuration will be shown:</p>
 <img alt="_images/control_Configuration_Nodrop.JPG" src="_images/control_Configuration_Nodrop.JPG" />
 <p>Upon expansion of the device topic dropdown, the Curtail Device Status operation and Curtailment Settings forms will be available.</p>
-<img alt="_images/control_Config_Drop.JPG" src="_images/control_Config_Drop.JPG" />
+<img alt="_images/control_Config_drop.JPG" src="_images/control_Config_drop.JPG" />
 <dl class="simple">
 <dt><strong>Curtail Device Status</strong></dt><dd><p>This section allows the user to enter in an operation equation using the Calculator component.</p>
 </dd>
@@ -333,9 +360,9 @@ achieve the load reduction.</p>
 <img alt="_images/control_Method.jpg" src="_images/control_Method.jpg" />
 <img alt="_images/offset.JPG" src="_images/offset.JPG" />
 <ul class="simple">
-<li><p>Value : <a href="#id1"><span class="problematic" id="id2">*</span></a>The value the point is commanded to, in order to achieve the load reduction.</p></li>
+<li><p>Value : <a href="#id3"><span class="problematic" id="id4">*</span></a>The value the point is commanded to, in order to achieve the load reduction.</p></li>
 </ul>
-<img alt="_images/value_Config.jpg" src="_images/value_Config.jpg" />
+<img alt="_images/value_Config.JPG" src="_images/value_Config.JPG" />
 <ul class="simple">
 <li><p>Equation : equation allows operation string creation from the calculator. Reference the <em>Calculator</em> section for further instructions on calculator usage.</p></li>
 </ul>
@@ -348,7 +375,7 @@ achieve the load reduction.</p>
 <div class="section" id="settings">
 <h4>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h4>
 <p><strong>Dark Mode</strong> : There is an option for this document to be used in dark mode. Click the <em>Contrast</em> icon on the top right corner of the page to toggle this option.</p>
-<img alt="_images/dark_Mode.jpg" src="_images/dark_Mode.jpg" />
+<img alt="_images/dark_Mode.JPG" src="_images/dark_Mode.JPG" />
 </div>
 </div>
 </div>
