@@ -87,7 +87,7 @@ This list will go over each of the input options located in the main configurati
 **Agent ID**
    The ILC instance (running application) name on the VOLTTRON platform.
    
-   .. image:: _images/agent_Id.jpg
+   .. image:: _images/agent_Id.JPG
   
 **Demand Limit**
    The ILC application manages devices (curtail) in an attempt to keep the average whole building power below this kilowatt value. The average time is determined by the average_building_power_window parameter.
@@ -123,14 +123,14 @@ Calculator
 The calculator is a tool that is used throughout the configuration tool to create an operation string and arrays of operation arguments. There are variations on options based upon locations within the application.
 
 
-.. image:: _images/calculator.jpg
+.. image:: _images/calculator.JPG
 
 The calculator pad buttons when pressed will populate the **operation** string above. Once the *save operation* button is pressed, the values in the ILC Configuration Store will be updated.
 
 **Operation**
    An *operation* is a string representation of a mathematical formula. 
 
-.. image:: _images/operation.jpg
+.. image:: _images/operation.JPG
 
 .. Note:: You cannot directly enter characters into the operation string, it has to be populated by using the calculator pad buttons.
 
@@ -140,7 +140,7 @@ The calculator pad buttons when pressed will populate the **operation** string a
 **Clear formula**
    The *Clear formula* button on the calculator will clear the formula currently in use.
 
-.. image:: _images/calculator_Clear.jpg
+.. image:: _images/calculator_Clear.JPG
 
 **Save Operation**
    The *Save Operation* button will save the formula that is currently being used to the ILC Configuration Store. If the Operation is not saved, the ILC Configuration Store will not be updated.
@@ -163,21 +163,21 @@ A *cluster* consists of a group of devices with the same criterion. To add a clu
 **Cluster Priority**
    Weighting factor assigned to this cluster. The sum of these weighting factors for all clusters will equal 1.0.
 
-.. image:: _images/cluster_Example.jpg
+.. image:: _images/cluster_Example.JPG
 
 .. Note:: The cluster priority section needs to be set to 1 if only one cluster is present. When there are multiple clusters, existing cluster priorities can be updated by changing the priority value for the existing cluster and pressing the *Save New Priority* button.
 
-.. image:: _images/cluster_Priority.jpg
+.. image:: _images/cluster_Priority.JPG
 
 **Cluster Editing**
    The cluster name, type and priority can be revised after the creation of the cluster by navigating to the *Edit Clusters* page, a link to which is found in the left side panel. 
 
-   .. image:: _images/cluster_Edit_icon.jpg
+   .. image:: _images/cluster_Edit_icon.JPG
 
    When chosen, the current clusters that are currently created will appear
    inside of the center of the screen.
 
-   .. image:: _images/cluster_Edit.jpg
+   .. image:: _images/cluster_Edit.JPG
 
    Editing the clusters allows you to change the *name* of the cluster, the *cluster type*, and 
    the *cluster priority. 
@@ -191,11 +191,11 @@ In the left side panel tree, there will be a Cluster dropdown created upon addin
 **Criteria**
 The creation, deletion and ordering of cluster criteria is handled here. Adding a criteria is done by pressing the *+Add Criteria** button. Deletion of a cluster criteria is done by pressing the *X* on the right side of the criteria. Order of the criteria is changed by dragging and dropping criteria.  
 
-.. image:: _images/custom_Cluster.JPG
+.. image:: _images/custom_Cluster.jpg
    
 Expanding the criteria dropdowns below will expose sliding scales to set comparison curtail values. Inside each dropdown the **Red** line indicates a lesser curtail value, which is the reciprocal of the value shown i.e. 2 will be 1/2 and 3 will be 1/3. The **Blue** line a greater curtail value.  
 
-.. image:: _images/zonetemperature_Setpoint.jpg
+.. image:: _images/zonetemperature_Setpoint.JPG
 
 .. Warning:: When reordering, adding or deleting criteria, criteria curtail values will reset back to the default value of 1. 
 
@@ -204,7 +204,7 @@ Criteria Configuration
 
 Criteria configuration is the second dropdown inside the created Cluster. It will be listed as shown: 
 
-.. image:: _images/criteria_Configuration_Sidebar.jpg
+.. image:: _images/criteria_Configuration_sidebar.JPG
 
 *Criteria configuration* takes in stored values from *pairwise configuration* and reflects the device topic criteria and their order. 
 once this option is selected, you will see an button appear in the center of the application: 
@@ -260,7 +260,7 @@ curtailment to manage consumption (e.g., electricity or natural gas).
 The ILC application supports five types of configurable criteria
 which include the following:
 
-.. image:: _images/operation_Type.JPG
+.. image:: _images/operation_Type.jpg
 
 
 **Formula**
@@ -319,12 +319,12 @@ parameters:
    file that contains the key (category) and value assigned to that
    category.
 
-.. image:: _images/figure_7.JPG
+.. image:: _images/figure_7.jpg
  
 
 **Constant**
 
-.. image:: _images/constant.JPG
+.. image:: _images/constant.jpg
    
 The constant criterion returns a constant value for inclusion in the AHP. The following list contains the constant criterion configuration parameters:
 
@@ -335,13 +335,13 @@ Figure 8 shows a constant criterion example, configured for a heat
 pump. The criterion name, stage, will match the name for the
 same criterion used in the pairwise comparison configuration file.
 
-.. image:: _images/figure_8.JPG
+.. image:: _images/figure_8.jpg
     
    
 
 **History**
 
-.. image:: _images/history.JPG
+.. image:: _images/history.jpg
   
    
 The history criterion evaluates the rate of change of a point on the
@@ -370,7 +370,7 @@ a heat pump. The criterion name, historical-comparison,
 should match the name for the same criterion used in the pairwise
 comparison configuration file.
 
-.. image:: _images/figure_9.JPG
+.. image:: _images/figure_9.jpg
    
    
 
@@ -383,7 +383,7 @@ The Control Configuration page can be accessed under the Cluster dropdown menu i
    
 The once navigated to the page, the list of device topics determined in the criteria configuration will be shown: 
 
-.. image:: _images/control_Configuration_nodrop.JPG
+.. image:: _images/control_Configuration_Nodrop.JPG
    
    
 Upon expansion of the device topic dropdown, the Curtail Device Status operation and Curtailment Settings forms will be available. 
@@ -415,7 +415,7 @@ There will be a dropdown list that will show as you select point.
  
 - Value : *The value the point is commanded to, in order to achieve the load reduction.
 
-.. image:: _images/value_Config.jpg
+.. image:: _images/value_Config.JPG
 
 - Equation : equation allows operation string creation from the calculator. Reference the *Calculator* section for further instructions on calculator usage.
 
@@ -430,5 +430,5 @@ Settings
 
 **Dark Mode** : There is an option for this document to be used in dark mode. Click the *Contrast* icon on the top right corner of the page to toggle this option. 
 
-.. image:: _images/dark_Mode.jpg
+.. image:: _images/dark_Mode.JPG
 
