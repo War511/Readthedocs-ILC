@@ -1,6 +1,6 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}\\sphinx-test-repository\\docs\\source",
     "cSpell.ignoreWords": [
         "volttron"
-    ]
+    ],
+    "restructuredtext.confPath": "${workspaceFolder}\\docs\\source"
 }
