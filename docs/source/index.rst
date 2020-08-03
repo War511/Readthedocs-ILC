@@ -214,7 +214,7 @@ There are two drop down options once *Criteria Configuration* is chosen.
 
 .. image:: _images/criteria_Configuration_nodrop.JPG
 
-The first one will be *Mapper Editor*.  
+The first dropdown option will be *Mapper Editor*.  
 Inside Mapper Editor there are items set inside by default. These items
 are labeled as *Private office*, *Office*, *Conference Room*, *Lobby*, and *Restroom*.
 
@@ -223,7 +223,7 @@ are labeled as *Private office*, *Office*, *Conference Room*, *Lobby*, and *Rest
 These items will be inside **Mapper Editor** by default, but can be modified 
 or removed completely. 
 
-when the *dist name* icon is selected, this will give an option to add a room name
+When the *dist name* button is selected, this will give an option to add a room name
 and a value for that room (dist val). Once these entries are entered, they will appear along with 
 the other values listed. 
 
@@ -243,7 +243,7 @@ If a new Mapper is needed, there is an icon below *Add Dist Name* called
 
 .. image:: _images/map_Key.JPG
 
-This button will allow for an entire new Mapper Editor to be added. 
+This button will create a new Mapper to be edited. 
 
 **Device Topics**
 
@@ -413,7 +413,7 @@ There will be a dropdown list that will show as you select point.
 
 .. image:: _images/offset.JPG
  
-- Value : *The value the point is commanded to, in order to achieve the load reduction.
+- Value : The value the point is commanded to, in order to achieve the load reduction.
 
 .. image:: _images/value_Config.JPG
 
@@ -426,7 +426,7 @@ There will be a dropdown list that will show as you select point.
    At the bottom of the device topic section there is a button to *ADD AUGMENT*. By default, this will copy values currently entered for the curtail section into a duplicate Augment section for customization. The Augment section can be removed at any time by pressing the *REMOVE AUGMENT* button.
 
 Settings
---------
+********
 
 **Dark Mode** : There is an option for this document to be used in dark mode. Click the *Contrast* icon on the top right corner of the page to toggle this option. 
 
